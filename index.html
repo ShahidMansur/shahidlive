@@ -3,6 +3,308 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SM LIVE ZONE SMART IPTV</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+background:#000;
+color:#fff;
+font-family:Arial;
+overflow:hidden;
+}
+
+/* SIDEBAR */
+.sidebar{
+width:240px;
+background:#111;
+padding:10px;
+overflow-y:auto;
+}
+
+.logo{
+color:red;
+font-weight:bold;
+font-size:18px;
+margin-bottom:10px;
+}
+
+.cat{
+padding:8px;
+margin:5px 0;
+background:#1a1a1a;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+}
+.cat:hover{background:red}
+
+/* MAIN */
+.main{
+flex:1;
+display:flex;
+flex-direction:column;
+}
+
+/* TOP */
+.topbar{
+height:50px;
+background:#111;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 10px;
+}
+
+input{
+padding:6px;
+border:none;
+border-radius:6px;
+width:220px;
+}
+
+/* PLAYER */
+.player{
+height:45%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#000;
+}
+
+video{
+width:95%;
+max-width:900px;
+aspect-ratio:16/9;
+border-radius:10px;
+}
+
+/* LIST */
+.list{
+height:55%;
+overflow-y:auto;
+background:#0f0f0f;
+padding:10px;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+gap:10px;
+}
+
+.card{
+background:#1a1a1a;
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+text-align:center;
+font-size:12px;
+}
+.card:hover{background:#333}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<div class="logo">📺 SM LIVE ZONE SMART</div>
+
+<h4>🌐 Language</h4>
+<div class="cat" onclick="filter('lang','bangla')">Bangla</div>
+<div class="cat" onclick="filter('lang','hindi')">Hindi</div>
+<div class="cat" onclick="filter('lang','english')">English</div>
+
+<h4>🌍 Country</h4>
+<div class="cat" onclick="filter('country','bangladesh')">Bangladesh</div>
+<div class="cat" onclick="filter('country','india')">India</div>
+<div class="cat" onclick="filter('country','global')">Global</div>
+
+<div class="cat" onclick="filter('all','all')">All Channels</div>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="topbar">
+<input id="search" placeholder="Search channels..." onkeyup="render()">
+<div>SMART FILTER ✔</div>
+</div>
+
+<div class="player">
+<video id="video" controls autoplay></video>
+</div>
+
+<div class="list" id="list"></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+
+let video=document.getElementById("video");
+
+let all=[];
+
+let sources=[
+"https://iptv-org.github.io/iptv/index.m3u",
+"https://iptvflixbd.github.io/mrgifytv",
+"https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u",
+"https://raw.githubusercontent.com/FunctionError/PiratesTvPlus/main/PiratesPlus.m3u"
+];
+
+let loaded=0;
+
+sources.forEach(url=>{
+
+fetch(url)
+.then(r=>r.text())
+.then(data=>parse(data))
+.catch(()=>{})
+
+.finally(()=>{
+loaded++;
+if(loaded===sources.length){
+all=clean(all);
+current=all.slice(0,500);
+render();
+}
+});
+
+});
+
+function clean(arr){
+let map={};
+return arr.filter(c=>{
+if(map[c.url]) return false;
+map[c.url]=1;
+return true;
+});
+}
+
+function cleanName(n){
+return n
+.replace(/\[.*?\]/g,'')
+.replace(/\(.*?\)/g,'')
+.replace(/-/g,' ')
+.replace(/\|/g,' ')
+.replace(/\s+/g,' ')
+.trim();
+}
+
+function detectLang(name){
+name=name.toLowerCase();
+if(name.includes("bangla")||name.includes("bd"))return "bangla";
+if(name.includes("hindi")||name.includes("india"))return "hindi";
+if(name.includes("english"))return "english";
+return "unknown";
+}
+
+function detectCountry(name){
+name=name.toLowerCase();
+if(name.includes("bd")||name.includes("bangladesh"))return "bangladesh";
+if(name.includes("india")||name.includes("in"))return "india";
+return "global";
+}
+
+function parse(data){
+
+let lines=data.split("\n");
+let name="";
+
+lines.forEach(l=>{
+
+l=l.trim();
+
+if(l.startsWith("#EXTINF")){
+name=cleanName(l.split(",")[1]||"Channel");
+}
+
+else if(l.startsWith("http")){
+all.push({
+name:name,
+url:l,
+lang:detectLang(name),
+country:detectCountry(name),
+type:"all"
+});
+}
+
+});
+
+}
+
+let current=[];
+let modeType="all";
+let modeValue="all";
+
+function filter(type,value){
+
+modeType=type;
+modeValue=value;
+
+if(type=="all"){
+current=all;
+}
+else{
+current=all.filter(c=>c[type]==value);
+}
+
+render();
+}
+
+function render(){
+
+let list=document.getElementById("list");
+let s=document.getElementById("search").value.toLowerCase();
+
+list.innerHTML="";
+
+current
+.filter(c=>c.name.toLowerCase().includes(s))
+.slice(0,300)
+.forEach(ch=>{
+
+let div=document.createElement("div");
+div.className="card";
+
+div.innerHTML=`
+${ch.name}<br>
+<small>${ch.lang} | ${ch.country}</small>
+`;
+
+div.onclick=()=>play(ch.url);
+
+list.appendChild(div);
+
+});
+
+}
+
+function play(url){
+
+if(Hls.isSupported()){
+let hls=new Hls();
+hls.loadSource(url);
+hls.attachMedia(video);
+}else{
+video.src=url;
+}
+
+}
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SM LIVE ZONE WORKING</title>
 
 <style>
