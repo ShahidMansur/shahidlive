@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SM Live Zone</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+margin:0;
+background:#080808;
+color:white;
+}
+
+
+/* Header */
+
+.header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 25px;
+background:#151515;
+}
+
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:25px;
+font-weight:bold;
+}
+
+
+.logo-icon{
+width:50px;
+height:50px;
+border-radius:50%;
+background:#e50914;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+}
+
+
+/* Search */
+
+.search{
+padding:10px;
+border-radius:20px;
+border:none;
+width:220px;
+}
+
+
+/* Player */
+
+.player{
+text-align:center;
+padding:20px;
+}
+
+
+video{
+width:95%;
+max-width:900px;
+background:black;
+border-radius:15px;
+}
+
+
+/* Categories */
+
+.categories{
+display:flex;
+gap:10px;
+padding:15px;
+overflow:auto;
+}
+
+
+.cat{
+background:#222;
+padding:10px 20px;
+border-radius:20px;
+cursor:pointer;
+}
+
+
+.cat:hover{
+background:#e50914;
+}
+
+
+/* Channels */
+
+.channels{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+padding:20px;
+
+}
+
+
+.card{
+
+background:#171717;
+padding:20px;
+border-radius:15px;
+text-align:center;
+cursor:pointer;
+
+}
+
+
+.card:hover{
+transform:scale(1.05);
+background:#222;
+}
+
+
+.card img{
+
+width:70px;
+height:70px;
+border-radius:50%;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+
+
+<div class="logo">
+
+<div class="logo-icon">
+▶
+</div>
+
+SM Live Zone
+
+</div>
+
+
+<input 
+class="search"
+placeholder="Search channel..."
+onkeyup="search(this.value)"
+>
+
+
+</div>
+
+
+
+<div class="player">
+
+<h2>Live Player</h2>
+
+<video id="video" controls autoplay></video>
+
+</div>
+
+
+
+
+<div class="categories">
+
+<div class="cat">All</div>
+<div class="cat">News</div>
+<div class="cat">Sports</div>
+<div class="cat">Movies</div>
+<div class="cat">Music</div>
+
+</div>
+
+
+
+<div class="channels" id="channels">
+
+
+<div class="card" onclick="play('YOUR_LINK.m3u8')">
+
+<img src="https://via.placeholder.com/100">
+
+<h3>Channel 1</h3>
+
+<p>News</p>
+
+</div>
+
+
+
+<div class="card" onclick="play('YOUR_LINK.m3u8')">
+
+<img src="https://via.placeholder.com/100">
+
+<h3>Channel 2</h3>
+
+<p>Sports</p>
+
+</div>
+
+
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+
+<script>
+
+
+let video=document.getElementById("video");
+
+
+function play(url){
+
+
+if(Hls.isSupported()){
+
+
+let hls=new Hls();
+
+hls.loadSource(url);
+
+hls.attachMedia(video);
+
+
+}
+
+else{
+
+video.src=url;
+
+}
+
+}
+
+
+
+
+function search(text){
+
+
+let cards=document.querySelectorAll(".card");
+
+
+cards.forEach(c=>{
+
+
+c.style.display=
+
+c.innerText.toLowerCase()
+.includes(text.toLowerCase())
+?
+"block"
+:
+"none";
+
+
+});
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
