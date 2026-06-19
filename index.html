@@ -1,126 +1,184 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SM Live Zone - Shahid</title>
 
-const DEFAULT_CHANNELS = [
-  { id: "1", name: "Sample stream", url: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" },
-];
+<style>
 
-const STATUS = {
-  idle: { label: "idle", dotColor: "#7C8389" },
-  loading: { label: "connecting", dotColor: "#F5A623" },
-  live: { label: "live", dotColor: "#F5333F" },
-  error: { label: "error", dotColor: "#F5333F" },
-  stalled: { label: "buffering", dotColor: "#F5A623" },
-};
-
-function StatusDot({ state, pulse }) {
-  const conf = STATUS[state] || STATUS.idle;
-  return (
-    <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-      <span
-        style={{
-          width: 8,
-          height: 8,
-          borderRadius: "50%",
-          background: conf.dotColor,
-          boxShadow: pulse ? `0 0 0 0 ${conf.dotColor}` : "none",
-          animation: pulse ? "hlsPulse 1.6s infinite" : "none",
-          flexShrink: 0,
-        }}
-      />
-      <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: 11, letterSpacing: "0.08em", textTransform: "uppercase", color: "#9DA3A8" }}>
-        {conf.label}
-      </span>
-    </span>
-  );
+body{
+margin:0;
+font-family:Arial;
+background:#0a0a0a;
+color:white;
 }
 
-function formatTime(s) {
-  if (!isFinite(s) || s < 0) return "--:--";
-  const m = Math.floor(s / 60);
-  const sec = Math.floor(s % 60);
-  return `${m}:${sec.toString().padStart(2, "0")}`;
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:#141414;
+position:sticky;
+top:0;
 }
 
-export default function HlsPlayer() {
-  const videoRef = useRef(null);
-  const hlsRef = useRef(null);
-  const [channels, setChannels] = useState(DEFAULT_CHANNELS);
-  const [activeId, setActiveId] = useState(DEFAULT_CHANNELS[0].id);
-  const [status, setStatus] = useState("idle");
-  const [errorMsg, setErrorMsg] = useState("");
-  const [muted, setMuted] = useState(true);
-  const [playing, setPlaying] = useState(false);
-  const [bufferHealth, setBufferHealth] = useState(0);
-  const [levelInfo, setLevelInfo] = useState(null);
-  const [showAdd, setShowAdd] = useState(false);
-  const [newName, setNewName] = useState("");
-  const [newUrl, setNewUrl] = useState("");
-  const [hlsReady, setHlsReady] = useState(typeof window !== "undefined" && !!window.Hls);
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#ff2d2d;
+}
 
-  const activeChannel = channels.find((c) => c.id === activeId) || channels[0];
+input{
+padding:8px;
+border-radius:20px;
+border:none;
+width:200px;
+}
 
-  useEffect(() => {
-    if (window.Hls) {
-      setHlsReady(true);
-      return;
-    }
-    const script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js";
-    script.async = true;
-    script.onload = () => setHlsReady(true);
-    script.onerror = () => setErrorMsg("Could not load hls.js from CDN.");
-    document.body.appendChild(script);
-    return () => {};
-  }, []);
+.categories{
+display:flex;
+gap:10px;
+padding:10px;
+overflow:auto;
+}
 
-  const attachStream = useCallback((url) => {
-    const video = videoRef.current;
-    if (!video || !url) return;
+.cat{
+background:#222;
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
+white-space:nowrap;
+}
 
-    setStatus("loading");
-    setErrorMsg("");
-    setLevelInfo(null);
+.cat:hover{
+background:#ff2d2d;
+}
 
-    if (hlsRef.current) {
-      hlsRef.current.destroy();
-      hlsRef.current = null;
-    }
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:15px;
+padding:15px;
+}
 
-    const isNativeHls = video.canPlayType("application/vnd.apple.mpegurl");
+.card{
+background:#1c1c1c;
+padding:15px;
+border-radius:12px;
+text-align:center;
+cursor:pointer;
+transition:0.2s;
+}
 
-    if (window.Hls && window.Hls.isSupported()) {
-      const hls = new window.Hls({ enableWorker: true });
-      hlsRef.current = hls;
+.card:hover{
+transform:scale(1.05);
+background:#333;
+}
 
-      hls.on(window.Hls.Events.MANIFEST_PARSED, () => {
-        setStatus("live");
-      });
+video{
+width:95%;
+max-width:900px;
+display:block;
+margin:15px auto;
+background:black;
+border-radius:10px;
+}
 
-      hls.on(window.Hls.Events.LEVEL_SWITCHED, (_evt, data) => {
-        const level = hls.levels && hls.levels[data.level];
-        if (level) {
-          setLevelInfo({
-            bitrate: Math.round((level.bitrate || 0) / 1000),
-            width: level.width,
-            height: level.height,
-          });
-        }
-      });
+img{
+width:60px;
+height:60px;
+border-radius:50%;
+}
 
-      hls.on(window.Hls.Events.ERROR, (_evt, data) => {
-        if (data.fatal) {
-          setStatus("error");
-          setErrorMsg(data.details || "Fatal stream error");
-        } else if (data.details === "bufferStalledError") {
-          setStatus("stalled");
-        }
-      });
+</style>
 
-      hls.loadSource(url);
-      hls.attachMedia(video);
-    } else if (isNativeHls) {
-      video.src = url;
-      video.addEventListener("loadedmetadata", () => setStatus("live"), { once: true });
-      video.addEventListener("error", () => {
-        setStatus("error");
-        setErrorMsg("Native HLS playback
+</head>
+
+<body>
+
+<header>
+<div class="logo">📺 SM Live Zone</div>
+
+<input type="text" placeholder="Search..." onkeyup="search(this.value)">
+</header>
+
+<div class="categories">
+<div class="cat" onclick="filter('all')">All</div>
+<div class="cat" onclick="filter('news')">News</div>
+<div class="cat" onclick="filter('sports')">Sports</div>
+<div class="cat" onclick="filter('movies')">Movies</div>
+</div>
+
+<video id="video" controls autoplay></video>
+
+<div class="container" id="list">
+
+<div class="card" data-type="news" onclick="play('https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8')">
+<img src="https://via.placeholder.com/80?text=N">
+<p>News Channel</p>
+</div>
+
+<div class="card" data-type="sports" onclick="play('https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8')">
+<img src="https://via.placeholder.com/80?text=S">
+<p>Sports Channel</p>
+</div>
+
+<div class="card" data-type="movies" onclick="play('https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8')">
+<img src="https://via.placeholder.com/80?text=M">
+<p>Movie Channel</p>
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+
+let video = document.getElementById("video");
+
+function play(url){
+
+if(Hls.isSupported()){
+let hls = new Hls();
+hls.loadSource(url);
+hls.attachMedia(video);
+}
+else{
+video.src = url;
+}
+
+}
+
+// SEARCH
+function search(val){
+let cards=document.querySelectorAll(".card");
+cards.forEach(c=>{
+c.style.display =
+c.innerText.toLowerCase().includes(val.toLowerCase())
+? "block":"none";
+});
+}
+
+// CATEGORY FILTER
+function filter(type){
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(c=>{
+if(type=="all"){
+c.style.display="block";
+}
+else{
+c.style.display =
+c.dataset.type==type ? "block":"none";
+}
+});
+
+}
+
+</script>
+
+</body>
+</html>
