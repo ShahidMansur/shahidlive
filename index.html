@@ -3,258 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SM LIVE ZONE - IPTV ORG</title>
-
-<style>
-body{
-margin:0;
-background:#000;
-color:#fff;
-font-family:Arial;
-display:flex;
-height:100vh;
-}
-
-/* SIDEBAR */
-.sidebar{
-width:220px;
-background:#111;
-padding:10px;
-overflow-y:auto;
-}
-
-.logo{
-color:red;
-font-size:20px;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-.cat{
-padding:8px;
-margin:5px 0;
-background:#1a1a1a;
-border-radius:6px;
-cursor:pointer;
-}
-
-.cat:hover{
-background:red;
-}
-
-/* MAIN */
-.main{
-flex:1;
-display:flex;
-flex-direction:column;
-}
-
-.top{
-padding:10px;
-background:#111;
-display:flex;
-justify-content:space-between;
-}
-
-input{
-padding:6px;
-border-radius:6px;
-border:none;
-width:200px;
-}
-
-/* PLAYER */
-.player{
-height:45%;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#000;
-}
-
-video{
-width:95%;
-max-width:900px;
-border-radius:10px;
-background:black;
-}
-
-/* LIST */
-.list{
-height:55%;
-overflow-y:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:10px;
-padding:10px;
-background:#0f0f0f;
-}
-
-.card{
-background:#1a1a1a;
-padding:10px;
-border-radius:8px;
-cursor:pointer;
-transition:0.2s;
-}
-
-.card:hover{
-background:#333;
-transform:scale(1.05);
-}
-</style>
-</head>
-
-<body>
-
-<div class="sidebar">
-<div class="logo">📺 SM LIVE ZONE</div>
-
-<div class="cat" onclick="filter('all')">All</div>
-<div class="cat" onclick="filter('news')">News</div>
-<div class="cat" onclick="filter('sports')">Sports</div>
-<div class="cat" onclick="filter('movies')">Movies</div>
-<div class="cat" onclick="filter('kids')">Kids</div>
-<div class="cat" onclick="filter('music')">Music</div>
-<div class="cat" onclick="filter('religious')">Religious</div>
-<div class="cat" onclick="filter('documentary')">Documentary</div>
-
-</div>
-
-<div class="main">
-
-<div class="top">
-<input id="search" placeholder="Search..." onkeyup="render()">
-<div>IPTV-ORG LIVE</div>
-</div>
-
-<div class="player">
-<video id="video" controls autoplay></video>
-</div>
-
-<div class="list" id="list"></div>
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-<script>
-
-let video = document.getElementById("video");
-
-let all = [];
-let current = [];
-
-let url = "https://iptv-org.github.io/iptv/index.m3u";
-
-// 🔥 LOAD IPTV-ORG MASTER LIST
-fetch(url)
-.then(r=>r.text())
-.then(data=>{
-
-let lines = data.split("\n");
-let name="";
-
-lines.forEach(line=>{
-
-line = line.trim();
-
-if(line.startsWith("#EXTINF")){
-name = line.split(",")[1] || "Unknown";
-}
-
-else if(line.startsWith("http")){
-all.push({
-name:name,
-url:line,
-type:guessType(name)
-});
-}
-
-});
-
-current = all.slice(0,500); // 🔥 limit for speed
-render();
-
-});
-
-function guessType(name){
-
-name = name.toLowerCase();
-
-if(name.includes("news")) return "news";
-if(name.includes("sport")) return "sports";
-if(name.includes("movie")) return "movies";
-if(name.includes("kids")) return "kids";
-if(name.includes("music")) return "music";
-if(name.includes("relig")) return "religious";
-if(name.includes("doc")) return "documentary";
-
-return "other";
-}
-
-function render(){
-
-let list=document.getElementById("list");
-let search=document.getElementById("search").value.toLowerCase();
-
-list.innerHTML="";
-
-current
-.filter(c=>c.name.toLowerCase().includes(search))
-.slice(0,200)
-.forEach(ch=>{
-
-let div=document.createElement("div");
-div.className="card";
-
-div.innerHTML=`
-<b>${ch.name}</b><br>
-<small>${ch.type}</small>
-`;
-
-div.onclick=()=>play(ch.url);
-
-list.appendChild(div);
-
-});
-
-}
-
-function play(url){
-
-if(Hls.isSupported()){
-let hls=new Hls();
-hls.loadSource(url);
-hls.attachMedia(video);
-}
-else{
-video.src=url;
-}
-
-}
-
-function filter(type){
-
-if(type=="all"){
-current=all;
-}else{
-current=all.filter(c=>c.type==type);
-}
-
-render();
-
-}
-
-</script>
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SM LIVE ZONE PRO MAX</title>
+<title>SM LIVE ZONE ULTIMATE OTT 4.0</title>
 
 <style>
 body{
@@ -302,10 +51,11 @@ flex-direction:column;
 
 /* TOP BAR */
 .topbar{
-display:flex;
-justify-content:space-between;
 padding:10px;
 background:#111;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 input{
@@ -317,7 +67,7 @@ width:200px;
 
 /* PLAYER */
 .player{
-height:50%;
+height:45%;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -327,46 +77,46 @@ background:#000;
 video{
 width:95%;
 max-width:900px;
-background:black;
 border-radius:10px;
+background:black;
 }
 
-/* CHANNEL LIST */
+/* LIST (NETFLIX STYLE ROWS) */
 .list{
-height:50%;
+height:55%;
 overflow-y:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:10px;
 padding:10px;
 background:#0f0f0f;
 }
 
+.row{
+margin-bottom:15px;
+}
+
+.row h3{
+margin:5px 0;
+color:#aaa;
+}
+
+.row-items{
+display:flex;
+gap:10px;
+overflow-x:auto;
+}
+
 .card{
+min-width:160px;
 background:#1a1a1a;
 padding:10px;
 border-radius:8px;
 cursor:pointer;
-text-align:center;
 transition:0.2s;
-position:relative;
+text-align:center;
 }
 
 .card:hover{
 background:#333;
 transform:scale(1.05);
-}
-
-.active{
-border:2px solid red;
-}
-
-.star{
-position:absolute;
-top:5px;
-right:8px;
-color:yellow;
-cursor:pointer;
 }
 </style>
 </head>
@@ -381,13 +131,10 @@ cursor:pointer;
 <div class="cat" onclick="filter('news')">News</div>
 <div class="cat" onclick="filter('sports')">Sports</div>
 <div class="cat" onclick="filter('movies')">Movies</div>
-<div class="cat" onclick="filter('entertainment')">Entertainment</div>
 <div class="cat" onclick="filter('kids')">Kids</div>
 <div class="cat" onclick="filter('music')">Music</div>
 <div class="cat" onclick="filter('religious')">Religious</div>
 <div class="cat" onclick="filter('documentary')">Documentary</div>
-<div class="cat" onclick="filter('regional')">Regional</div>
-<div class="cat" onclick="filter('live')">Live Events</div>
 
 </div>
 
@@ -396,7 +143,7 @@ cursor:pointer;
 
 <div class="topbar">
 <input id="search" placeholder="Search channels..." onkeyup="render()">
-<div>⭐ Favorites Enabled</div>
+<div>🔥 ULTIMATE OTT 4.0</div>
 </div>
 
 <div class="player">
@@ -413,22 +160,57 @@ cursor:pointer;
 
 let video = document.getElementById("video");
 
-let favorites = [];
+let allChannels = [];
+let current = [];
 
-let channels = [
-{name:"News HD",type:"news",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
-{name:"Sports Live",type:"sports",url:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"},
-{name:"Movie Zone",type:"movies",url:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"},
-{name:"Kids Fun",type:"kids",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
-{name:"Music 24/7",type:"music",url:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"},
-{name:"Islamic TV",type:"religious",url:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"},
-{name:"Discovery HD",type:"documentary",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
-{name:"Bangla TV",type:"regional",url:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"},
-{name:"Live Concert",type:"live",url:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"}
-];
+// IPTV ORG MASTER LIST
+let url = "https://iptv-org.github.io/iptv/index.m3u";
 
-let current = channels;
-let activeIndex = null;
+// 🔥 LOAD M3U
+fetch(url)
+.then(r=>r.text())
+.then(data=>{
+
+let lines = data.split("\n");
+let name="";
+
+lines.forEach(line=>{
+
+line = line.trim();
+
+if(line.startsWith("#EXTINF")){
+name = line.split(",")[1] || "Unknown";
+}
+
+else if(line.startsWith("http")){
+allChannels.push({
+name:name,
+url:line,
+type:guessType(name)
+});
+}
+
+});
+
+current = allChannels.slice(0,600); // safe limit
+render();
+
+});
+
+function guessType(name){
+
+name = name.toLowerCase();
+
+if(name.includes("news")) return "news";
+if(name.includes("sport")) return "sports";
+if(name.includes("movie")) return "movies";
+if(name.includes("kids")) return "kids";
+if(name.includes("music")) return "music";
+if(name.includes("relig")) return "religious";
+if(name.includes("doc")) return "documentary";
+
+return "other";
+}
 
 function render(){
 
@@ -437,71 +219,70 @@ let search = document.getElementById("search").value.toLowerCase();
 
 list.innerHTML="";
 
-current
-.filter(c=>c.name.toLowerCase().includes(search))
-.forEach((ch,i)=>{
+let filtered = current.filter(c=>c.name.toLowerCase().includes(search));
+
+// GROUP BY CATEGORY (Netflix style)
+let groups = {};
+
+filtered.forEach(ch=>{
+if(!groups[ch.type]) groups[ch.type]=[];
+groups[ch.type].push(ch);
+});
+
+for(let cat in groups){
+
+let row = document.createElement("div");
+row.className="row";
+
+row.innerHTML = `<h3>${cat.toUpperCase()}</h3>`;
+
+let rowItems = document.createElement("div");
+rowItems.className="row-items";
+
+groups[cat].slice(0,15).forEach(ch=>{
 
 let div=document.createElement("div");
 div.className="card";
 
-if(activeIndex===ch) div.classList.add("active");
+div.innerHTML=`${ch.name}`;
 
-div.innerHTML=`
-${ch.name}
-<div class="star" onclick="toggleFav(event,'${ch.name}')">⭐</div>
-<small>${ch.type}</small>
-`;
+div.onclick=()=>play(ch.url);
 
-div.onclick=()=>play(ch,i);
-
-list.appendChild(div);
+rowItems.appendChild(div);
 
 });
 
+row.appendChild(rowItems);
+list.appendChild(row);
+
 }
 
-function play(ch,index){
+}
 
-activeIndex = ch;
+function play(url){
 
 if(Hls.isSupported()){
 let hls=new Hls();
-hls.loadSource(ch.url);
+hls.loadSource(url);
 hls.attachMedia(video);
 }
 else{
-video.src=ch.url;
+video.src=url;
 }
-
-render();
 
 }
 
 function filter(type){
 
 if(type=="all"){
-current=channels;
+current = allChannels.slice(0,600);
 }else{
-current=channels.filter(c=>c.type==type);
+current = allChannels.filter(c=>c.type==type);
 }
 
 render();
 
 }
-
-function toggleFav(e,name){
-e.stopPropagation();
-
-if(favorites.includes(name)){
-favorites = favorites.filter(f=>f!==name);
-}else{
-favorites.push(name);
-}
-
-alert("Favorite updated ⭐");
-}
-
-render();
 
 </script>
 
