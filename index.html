@@ -3,180 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SM Live Zone - Shahid</title>
+<title>SM Live Zone - FINAL IPTV</title>
 
 <style>
-
 body{
 margin:0;
+background:#000;
+color:#fff;
 font-family:Arial;
-background:#0a0a0a;
-color:white;
 }
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px;
-background:#141414;
+padding:12px;
+background:#111;
 position:sticky;
 top:0;
 }
 
 .logo{
-font-size:22px;
+font-size:20px;
 font-weight:bold;
-color:#ff2d2d;
+color:red;
 }
 
-input{
-padding:8px;
-border-radius:20px;
-border:none;
-width:200px;
-}
-
-.categories{
+.controls{
 display:flex;
-gap:10px;
+gap:8px;
+align-items:center;
+}
+
+input, select{
+padding:6px;
+border-radius:6px;
+border:none;
+outline:none;
+}
+
+.player{
+text-align:center;
 padding:10px;
-overflow:auto;
 }
 
-.cat{
-background:#222;
-padding:8px 15px;
-border-radius:20px;
-cursor:pointer;
-white-space:nowrap;
+video{
+width:95%;
+max-width:900px;
+border-radius:10px;
+background:black;
 }
 
-.cat:hover{
-background:#ff2d2d;
-}
-
-.container{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:15px;
+gap:10px;
 padding:15px;
 }
 
 .card{
-background:#1c1c1c;
-padding:15px;
-border-radius:12px;
+background:#1a1a1a;
+padding:12px;
+border-radius:10px;
 text-align:center;
 cursor:pointer;
 transition:0.2s;
 }
 
 .card:hover{
-transform:scale(1.05);
 background:#333;
+transform:scale(1.05);
 }
 
-video{
-width:95%;
-max-width:900px;
-display:block;
-margin:15px auto;
-background:black;
-border-radius:10px;
-}
-
-img{
-width:60px;
-height:60px;
-border-radius:50%;
+.badge{
+font-size:12px;
+color:#aaa;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-<div class="logo">📺 SM Live Zone</div>
+<div class="logo">📺 SM LIVE ZONE</div>
 
-<input type="text" placeholder="Search..." onkeyup="search(this.value)">
+<div class="controls">
+<input id="search" placeholder="Search..." onkeyup="render()">
+
+<select id="quality" onchange="play(currentChannel)">
+<option value="auto">Auto</option>
+<option value="360">360p</option>
+<option value="720">720p</option>
+<option value="1080">1080p</option>
+</select>
+</div>
 </header>
 
-<div class="categories">
-<div class="cat" onclick="filter('all')">All</div>
-<div class="cat" onclick="filter('news')">News</div>
-<div class="cat" onclick="filter('sports')">Sports</div>
-<div class="cat" onclick="filter('movies')">Movies</div>
-</div>
-
+<div class="player">
 <video id="video" controls autoplay></video>
-
-<div class="container" id="list">
-
-<div class="card" data-type="news" onclick="play('https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8')">
-<img src="https://via.placeholder.com/80?text=N">
-<p>News Channel</p>
 </div>
 
-<div class="card" data-type="sports" onclick="play('https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8')">
-<img src="https://via.placeholder.com/80?text=S">
-<p>Sports Channel</p>
-</div>
-
-<div class="card" data-type="movies" onclick="play('https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8')">
-<img src="https://via.placeholder.com/80?text=M">
-<p>Movie Channel</p>
-</div>
-
-</div>
+<div class="grid" id="list"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 <script>
 
 let video = document.getElementById("video");
+let currentChannel = null;
 
-function play(url){
+const channels = [
+{
+name:"News HD",
+type:"news",
+streams:{
+360:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+720:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+1080:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+}
+},
+{
+name:"Sports HD",
+type:"sports",
+streams:{
+360:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8",
+720:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8",
+1080:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"
+}
+},
+{
+name:"Movies HD",
+type:"movies",
+streams:{
+360:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8",
+720:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8",
+1080:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"
+}
+}
+];
+
+function render(){
+
+let list = document.getElementById("list");
+let search = document.getElementById("search").value.toLowerCase();
+
+list.innerHTML="";
+
+channels
+.filter(c => c.name.toLowerCase().includes(search))
+.forEach((ch,i)=>{
+
+let div = document.createElement("div");
+
+div.className="card";
+
+div.innerHTML=`
+<h3>${ch.name}</h3>
+<div class="badge">${ch.type}</div>
+`;
+
+div.onclick=()=> play(i);
+
+list.appendChild(div);
+
+});
+
+}
+
+function play(index){
+
+currentChannel = index;
+
+let quality = document.getElementById("quality").value;
+let url = channels[index].streams[quality];
+
+if(quality === "auto"){
+url = channels[index].streams["720"];
+}
 
 if(Hls.isSupported()){
 let hls = new Hls();
 hls.loadSource(url);
 hls.attachMedia(video);
-}
-else{
+}else{
 video.src = url;
 }
 
 }
 
-// SEARCH
-function search(val){
-let cards=document.querySelectorAll(".card");
-cards.forEach(c=>{
-c.style.display =
-c.innerText.toLowerCase().includes(val.toLowerCase())
-? "block":"none";
-});
-}
-
-// CATEGORY FILTER
-function filter(type){
-
-let cards=document.querySelectorAll(".card");
-
-cards.forEach(c=>{
-if(type=="all"){
-c.style.display="block";
-}
-else{
-c.style.display =
-c.dataset.type==type ? "block":"none";
-}
-});
-
-}
+render();
 
 </script>
 
