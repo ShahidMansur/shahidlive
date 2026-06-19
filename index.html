@@ -1,296 +1,130 @@
-https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>SM Live Zone</title>
 
 <style>
-
-*{
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
 body{
 margin:0;
-background:#080808;
+font-family:Arial;
+background:#0b0b0b;
 color:white;
 }
 
-
-/* Header */
-
-.header{
+header{
+background:#141414;
+padding:15px;
 display:flex;
-align-items:center;
 justify-content:space-between;
-padding:15px 25px;
-background:#151515;
+align-items:center;
 }
-
 
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
-font-size:25px;
+font-size:22px;
 font-weight:bold;
+color:#ff2d2d;
 }
 
-
-.logo-icon{
-width:50px;
-height:50px;
-border-radius:50%;
-background:#e50914;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:25px;
-}
-
-
-/* Search */
-
-.search{
-padding:10px;
+input{
+padding:8px;
 border-radius:20px;
 border:none;
-width:220px;
+width:200px;
 }
 
+.container{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+padding:15px;
+}
 
-/* Player */
-
-.player{
+.card{
+background:#1c1c1c;
+padding:10px;
+border-radius:10px;
+width:160px;
+cursor:pointer;
 text-align:center;
-padding:20px;
 }
 
+.card:hover{
+background:#333;
+}
 
 video{
 width:95%;
 max-width:900px;
+margin:15px auto;
+display:block;
 background:black;
-border-radius:15px;
+border-radius:10px;
 }
-
-
-/* Categories */
-
-.categories{
-display:flex;
-gap:10px;
-padding:15px;
-overflow:auto;
-}
-
-
-.cat{
-background:#222;
-padding:10px 20px;
-border-radius:20px;
-cursor:pointer;
-}
-
-
-.cat:hover{
-background:#e50914;
-}
-
-
-/* Channels */
-
-.channels{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;
-padding:20px;
-
-}
-
-
-.card{
-
-background:#171717;
-padding:20px;
-border-radius:15px;
-text-align:center;
-cursor:pointer;
-
-}
-
-
-.card:hover{
-transform:scale(1.05);
-background:#222;
-}
-
-
-.card img{
-
-width:70px;
-height:70px;
-border-radius:50%;
-
-}
-
-
-
 </style>
 
 </head>
 
-
 <body>
 
-
-<div class="header">
-
-
-<div class="logo">
-
-<div class="logo-icon">
-▶
-</div>
-
-SM Live Zone
-
-</div>
-
-
-<input 
-class="search"
-placeholder="Search channel..."
-onkeyup="search(this.value)"
->
-
-
-</div>
-
-
-
-<div class="player">
-
-<h2>Live Player</h2>
+<header>
+<div class="logo">📺 SM Live Zone</div>
+<input type="text" placeholder="Search..." onkeyup="search(this.value)">
+</header>
 
 <video id="video" controls autoplay></video>
 
+<div class="container" id="list">
+
+<div class="card" onclick="play('https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8')">
+News Test
 </div>
 
-
-
-
-<div class="categories">
-
-<div class="cat">All</div>
-<div class="cat">News</div>
-<div class="cat">Sports</div>
-<div class="cat">Movies</div>
-<div class="cat">Music</div>
-
+<div class="card" onclick="play('https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8')">
+Sports Test
 </div>
 
-
-
-<div class="channels" id="channels">
-
-
-<div class="card" onclick="play('YOUR_LINK.m3u8')">
-
-<img src="https://via.placeholder.com/100">
-
-<h3>Channel 1</h3>
-
-<p>News</p>
-
+<div class="card" onclick="play('https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8')">
+Live Test
 </div>
 
-
-
-<div class="card" onclick="play('YOUR_LINK.m3u8')">
-
-<img src="https://via.placeholder.com/100">
-
-<h3>Channel 2</h3>
-
-<p>Sports</p>
-
 </div>
-
-
-</div>
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
-
 <script>
 
-
-let video=document.getElementById("video");
-
+let video = document.getElementById("video");
 
 function play(url){
 
-
 if(Hls.isSupported()){
-
-
-let hls=new Hls();
-
+let hls = new Hls();
 hls.loadSource(url);
-
 hls.attachMedia(video);
-
-
 }
-
 else{
-
-video.src=url;
-
+video.src = url;
 }
 
 }
 
+function search(val){
 
-
-
-function search(text){
-
-
-let cards=document.querySelectorAll(".card");
-
+let cards = document.querySelectorAll(".card");
 
 cards.forEach(c=>{
-
-
-c.style.display=
-
-c.innerText.toLowerCase()
-.includes(text.toLowerCase())
-?
-"block"
-:
-"none";
-
-
+if(c.innerText.toLowerCase().includes(val.toLowerCase())){
+c.style.display="block";
+}else{
+c.style.display="none";
+}
 });
-
 
 }
 
-
-
 </script>
-
-
 
 </body>
 </html>
