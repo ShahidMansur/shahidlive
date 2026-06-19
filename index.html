@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SM Live Zone - Categories IPTV</title>
+<title>M3U IPTV Player</title>
 
 <style>
 body{
@@ -14,154 +14,102 @@ font-family:Arial;
 }
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:12px;
+padding:10px;
 background:#111;
-position:sticky;
-top:0;
-}
-
-.logo{
+text-align:center;
 font-size:20px;
 font-weight:bold;
-color:red;
-}
-
-input{
-padding:7px;
-border-radius:20px;
-border:none;
-outline:none;
-width:180px;
-}
-
-.container{
-display:flex;
-overflow-x:auto;
-gap:10px;
-padding:10px;
-background:#0f0f0f;
-}
-
-.cat{
-padding:8px 14px;
-background:#222;
-border-radius:20px;
-cursor:pointer;
-white-space:nowrap;
-}
-
-.cat:hover{
-background:red;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:10px;
-padding:15px;
-}
-
-.card{
-background:#1a1a1a;
-padding:12px;
-border-radius:10px;
-text-align:center;
-cursor:pointer;
-transition:0.2s;
-}
-
-.card:hover{
-background:#333;
-transform:scale(1.05);
 }
 
 video{
 width:95%;
 max-width:900px;
 display:block;
-margin:auto;
-border-radius:10px;
+margin:10px auto;
 background:black;
+border-radius:10px;
 }
 
-.badge{
-font-size:12px;
-color:#aaa;
+.container{
+padding:10px;
+}
+
+.card{
+background:#1a1a1a;
+padding:10px;
+margin:5px 0;
+border-radius:8px;
+cursor:pointer;
+}
+
+.card:hover{
+background:#333;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
-<div class="logo">📺 SM LIVE ZONE</div>
-<input id="search" placeholder="Search..." onkeyup="render()">
-</header>
-
-<div class="container">
-<div class="cat" onclick="filter('all')">All</div>
-<div class="cat" onclick="filter('news')">News</div>
-<div class="cat" onclick="filter('sports')">Sports</div>
-<div class="cat" onclick="filter('movies')">Movies</div>
-<div class="cat" onclick="filter('entertainment')">Entertainment</div>
-<div class="cat" onclick="filter('kids')">Kids</div>
-<div class="cat" onclick="filter('music')">Music</div>
-<div class="cat" onclick="filter('religious')">Religious</div>
-<div class="cat" onclick="filter('documentary')">Documentary</div>
-<div class="cat" onclick="filter('regional')">Regional</div>
-<div class="cat" onclick="filter('live')">Live Events</div>
-</div>
+<header>📺 M3U IPTV PLAYER</header>
 
 <video id="video" controls autoplay></video>
 
-<div class="grid" id="list"></div>
+<div class="container" id="list"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 <script>
 
+let playlistUrl = "http://localhost:8000/TS-JioTV/app/tsjio_playlist.m3u";
+
+let channels = [];
+
 let video = document.getElementById("video");
 
-let channels = [
-{name:"News HD",type:"news",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
-{name:"Sports Live",type:"sports",url:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"},
-{name:"Movie Zone",type:"movies",url:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"},
-{name:"Kids Fun",type:"kids",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
-{name:"Music 24/7",type:"music",url:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"},
-{name:"Islamic TV",type:"religious",url:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"},
-{name:"Discovery Channel",type:"documentary",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
-{name:"Bangla TV",type:"regional",url:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"},
-{name:"Live Concert",type:"live",url:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"},
-{name:"Entertainment HD",type:"entertainment",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"}
-];
+// 🔥 LOAD M3U FILE
+fetch(playlistUrl)
+.then(res => res.text())
+.then(data => {
 
-let current = channels;
+let lines = data.split("\n");
+
+let name = "";
+
+for(let i=0;i<lines.length;i++){
+
+if(lines[i].startsWith("#EXTINF")){
+name = lines[i].split(",")[1];
+}
+
+else if(lines[i].startsWith("http")){
+channels.push({
+name:name,
+url:lines[i]
+});
+}
+}
+
+render();
+
+});
 
 function render(){
 
-let search = document.getElementById("search").value.toLowerCase();
-
 let list = document.getElementById("list");
-list.innerHTML="";
+list.innerHTML = "";
 
-current
-.filter(c=>c.name.toLowerCase().includes(search))
-.forEach((ch,i)=>{
+channels.forEach(ch => {
 
-let div=document.createElement("div");
-div.className="card";
+let div = document.createElement("div");
+div.className = "card";
 
-div.innerHTML=`
-<h4>${ch.name}</h4>
-<div class="badge">${ch.type}</div>
+div.innerHTML = `
+<h3>${ch.name}</h3>
+<p>${ch.url}</p>
 `;
 
-div.onclick=()=>play(ch.url);
+div.onclick = () => play(ch.url);
 
 list.appendChild(div);
 
@@ -172,28 +120,15 @@ list.appendChild(div);
 function play(url){
 
 if(Hls.isSupported()){
-let hls=new Hls();
+let hls = new Hls();
 hls.loadSource(url);
 hls.attachMedia(video);
-}else{
-video.src=url;
+}
+else{
+video.src = url;
 }
 
 }
-
-function filter(type){
-
-if(type=="all"){
-current=channels;
-}else{
-current=channels.filter(c=>c.type==type);
-}
-
-render();
-
-}
-
-render();
 
 </script>
 
