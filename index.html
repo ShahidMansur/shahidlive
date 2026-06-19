@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IPTV PRO DASHBOARD</title>
+<title>SM LIVE ZONE PRO MAX</title>
 
 <style>
 body{
 margin:0;
-background:#0a0a0a;
+background:#000;
 color:#fff;
 font-family:Arial;
 display:flex;
@@ -23,7 +23,7 @@ padding:10px;
 overflow-y:auto;
 }
 
-.brand{
+.logo{
 color:red;
 font-size:20px;
 font-weight:bold;
@@ -49,12 +49,12 @@ display:flex;
 flex-direction:column;
 }
 
-header{
-padding:10px;
-background:#111;
+/* TOP BAR */
+.topbar{
 display:flex;
 justify-content:space-between;
-align-items:center;
+padding:10px;
+background:#111;
 }
 
 input{
@@ -64,78 +64,95 @@ border:none;
 width:200px;
 }
 
-.content{
+/* PLAYER */
+.player{
+height:50%;
 display:flex;
-flex:1;
+align-items:center;
+justify-content:center;
+background:#000;
 }
 
+video{
+width:95%;
+max-width:900px;
+background:black;
+border-radius:10px;
+}
+
+/* CHANNEL LIST */
 .list{
-width:40%;
+height:50%;
 overflow-y:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:10px;
 padding:10px;
-border-right:1px solid #222;
+background:#0f0f0f;
 }
 
 .card{
 background:#1a1a1a;
 padding:10px;
-margin:5px 0;
-border-radius:6px;
+border-radius:8px;
 cursor:pointer;
+text-align:center;
+transition:0.2s;
+position:relative;
 }
 
 .card:hover{
 background:#333;
+transform:scale(1.05);
 }
 
-.player{
-flex:1;
-display:flex;
-align-items:center;
-justify-content:center;
+.active{
+border:2px solid red;
 }
 
-video{
-width:95%;
-max-width:800px;
-background:black;
-border-radius:10px;
+.star{
+position:absolute;
+top:5px;
+right:8px;
+color:yellow;
+cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
+<!-- SIDEBAR -->
 <div class="sidebar">
-<div class="brand">📺 IPTV PRO</div>
+<div class="logo">📺 SM LIVE ZONE</div>
 
-<div class="cat" onclick="loadCategory('all')">All</div>
-<div class="cat" onclick="loadCategory('news')">News</div>
-<div class="cat" onclick="loadCategory('sports')">Sports</div>
-<div class="cat" onclick="loadCategory('movies')">Movies</div>
-<div class="cat" onclick="loadCategory('kids')">Kids</div>
-<div class="cat" onclick="loadCategory('music')">Music</div>
-<div class="cat" onclick="loadCategory('religious')">Religious</div>
-<div class="cat" onclick="loadCategory('documentary')">Documentary</div>
+<div class="cat" onclick="filter('all')">All</div>
+<div class="cat" onclick="filter('news')">News</div>
+<div class="cat" onclick="filter('sports')">Sports</div>
+<div class="cat" onclick="filter('movies')">Movies</div>
+<div class="cat" onclick="filter('entertainment')">Entertainment</div>
+<div class="cat" onclick="filter('kids')">Kids</div>
+<div class="cat" onclick="filter('music')">Music</div>
+<div class="cat" onclick="filter('religious')">Religious</div>
+<div class="cat" onclick="filter('documentary')">Documentary</div>
+<div class="cat" onclick="filter('regional')">Regional</div>
+<div class="cat" onclick="filter('live')">Live Events</div>
 
 </div>
 
+<!-- MAIN -->
 <div class="main">
 
-<header>
-<div>PRO DASHBOARD</div>
-<input id="search" placeholder="Search..." onkeyup="render()">
-</header>
-
-<div class="content">
-
-<div class="list" id="list"></div>
+<div class="topbar">
+<input id="search" placeholder="Search channels..." onkeyup="render()">
+<div>⭐ Favorites Enabled</div>
+</div>
 
 <div class="player">
 <video id="video" controls autoplay></video>
 </div>
 
-</div>
+<div class="list" id="list"></div>
 
 </div>
 
@@ -144,54 +161,23 @@ border-radius:10px;
 <script>
 
 let video = document.getElementById("video");
-let allChannels = [];
-let current = [];
 
-let playlistUrl = "https://iptv-org.github.io/iptv/index.m3u";
+let favorites = [];
 
-// 🔥 LOAD IPTV ORG M3U
-fetch(playlistUrl)
-.then(r=>r.text())
-.then(data=>{
+let channels = [
+{name:"News HD",type:"news",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
+{name:"Sports Live",type:"sports",url:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"},
+{name:"Movie Zone",type:"movies",url:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"},
+{name:"Kids Fun",type:"kids",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
+{name:"Music 24/7",type:"music",url:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"},
+{name:"Islamic TV",type:"religious",url:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"},
+{name:"Discovery HD",type:"documentary",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
+{name:"Bangla TV",type:"regional",url:"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"},
+{name:"Live Concert",type:"live",url:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"}
+];
 
-let lines = data.split("\n");
-let name="";
-
-lines.forEach(line=>{
-
-if(line.startsWith("#EXTINF")){
-name = line.split(",")[1];
-}
-
-else if(line.startsWith("http")){
-allChannels.push({
-name:name,
-url:line,
-type:guessType(name)
-});
-}
-
-});
-
-current = allChannels;
-render();
-
-});
-
-function guessType(name){
-
-name = name.toLowerCase();
-
-if(name.includes("news")) return "news";
-if(name.includes("sport")) return "sports";
-if(name.includes("movie")) return "movies";
-if(name.includes("kids")) return "kids";
-if(name.includes("music")) return "music";
-if(name.includes("relig")) return "religious";
-if(name.includes("doc")) return "documentary";
-
-return "other";
-}
+let current = channels;
+let activeIndex = null;
 
 function render(){
 
@@ -202,17 +188,20 @@ list.innerHTML="";
 
 current
 .filter(c=>c.name.toLowerCase().includes(search))
-.forEach(ch=>{
+.forEach((ch,i)=>{
 
 let div=document.createElement("div");
 div.className="card";
 
+if(activeIndex===ch) div.classList.add("active");
+
 div.innerHTML=`
-<b>${ch.name}</b><br>
+${ch.name}
+<div class="star" onclick="toggleFav(event,'${ch.name}')">⭐</div>
 <small>${ch.type}</small>
 `;
 
-div.onclick=()=>play(ch.url);
+div.onclick=()=>play(ch,i);
 
 list.appendChild(div);
 
@@ -220,30 +209,48 @@ list.appendChild(div);
 
 }
 
-function play(url){
+function play(ch,index){
+
+activeIndex = ch;
 
 if(Hls.isSupported()){
 let hls=new Hls();
-hls.loadSource(url);
+hls.loadSource(ch.url);
 hls.attachMedia(video);
 }
 else{
-video.src=url;
-}
-
-}
-
-function loadCategory(type){
-
-if(type=="all"){
-current = allChannels;
-}else{
-current = allChannels.filter(c=>c.type==type);
+video.src=ch.url;
 }
 
 render();
 
 }
+
+function filter(type){
+
+if(type=="all"){
+current=channels;
+}else{
+current=channels.filter(c=>c.type==type);
+}
+
+render();
+
+}
+
+function toggleFav(e,name){
+e.stopPropagation();
+
+if(favorites.includes(name)){
+favorites = favorites.filter(f=>f!==name);
+}else{
+favorites.push(name);
+}
+
+alert("Favorite updated ⭐");
+}
+
+render();
 
 </script>
 
