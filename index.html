@@ -1,4 +1,21 @@
 <?php
+// SM Live Zone Custom Edition
+// Owner: Anila
+
+error_reporting(0);
+include "app/functions.php";
+
+$file_path = __DIR__ . '/app/assets/data/credskey.jtv';
+$file_exists = file_exists($file_path);
+$isApache = isApache();
+
+if ($file_exists) {
+    $user_data = getUserData();
+    $name = "Anila";
+    $mobile = $user_data['mobile'];
+    $exp_date_time = $user_data['exp_date_time'];
+}
+?><?php
 // * Copyright 2021-2025 SnehTV, Inc.
 // * Licensed under MIT (https://github.com/mitthu786/TS-JioTV/blob/main/LICENSE)
 // * Created By : TechieSneh
