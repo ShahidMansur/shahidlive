@@ -3,6 +3,351 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SM LIVE ZONE</title>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+background:#05060c;
+color:#fff;
+font-family:'Rajdhani',sans-serif;
+overflow:hidden;
+}
+
+.app{display:flex;height:100vh}
+
+/* SIDEBAR */
+.sidebar{
+width:260px;
+background:#0b1020;
+padding:10px;
+overflow:auto;
+border-right:2px solid #00eaff;
+}
+
+.logo{
+font-family:'Orbitron';
+text-align:center;
+color:#00eaff;
+margin:10px 0;
+}
+
+.menu{
+padding:10px;
+margin:6px 0;
+background:#11182d;
+border-radius:10px;
+cursor:pointer;
+border:1px solid #1f2a4a;
+}
+
+.menu:hover{
+background:#00eaff;
+color:#000;
+}
+
+/* MAIN */
+.main{flex:1;display:flex;flex-direction:column}
+
+.top{
+display:flex;
+gap:8px;
+padding:8px;
+background:#070a14;
+}
+
+input{
+flex:1;
+padding:8px;
+border-radius:8px;
+border:1px solid #00eaff;
+background:#111;
+color:#fff;
+}
+
+/* PLAYER */
+.player{
+background:#000;
+display:flex;
+justify-content:center;
+padding:5px;
+}
+
+video{
+width:100%;
+max-width:900px;
+border-radius:10px;
+}
+
+/* GRID */
+.grid{
+flex:1;
+overflow:auto;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+gap:10px;
+padding:10px;
+}
+
+.card{
+background:#11182d;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+border:1px solid #1f2a4a;
+}
+
+.card:hover{
+background:#00eaff;
+color:#000;
+}
+
+.small{font-size:12px;opacity:0.8}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<div class="logo">SM LIVE ZONE</div>
+
+<div class="menu" onclick="setView('all')">📺 ALL</div>
+<div class="menu" onclick="setView('sports')">🏆 SPORTS</div>
+<div class="menu" onclick="setView('news')">📰 NEWS</div>
+<div class="menu" onclick="setView('movies')">🎬 MOVIES</div>
+
+<div class="menu" onclick="setView('bd')">🇧🇩 BANGLADESH</div>
+<div class="menu" onclick="setView('in')">🇮🇳 INDIA</div>
+
+<div class="menu" onclick="setView('bn')">বাংলা</div>
+<div class="menu" onclick="setView('en')">English</div>
+
+<div class="menu" onclick="setView('live')">🔥 LIVE SPORTS</div>
+
+<div class="menu" onclick="setView('fav')">⭐ FAVORITES</div>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="top">
+<input id="search" placeholder="Search..." onkeyup="render()">
+</div>
+
+<div class="player">
+<video id="video" controls></video>
+</div>
+
+<div id="grid" class="grid"></div>
+
+</div>
+
+</div>
+
+<script>
+
+/* ================= IPTV SOURCES ================= */
+const sources = [
+"https://iptv-org.github.io/iptv/index.m3u",
+"https://iptv-org.github.io/iptv/countries/bd.m3u"
+];
+
+/* ================= DATABASE ================= */
+let DB = [];
+let view = "all";
+let fav = JSON.parse(localStorage.getItem("fav")||"[]");
+let hls;
+
+/* ================= CLEAN ================= */
+function clean(n){
+return (n||"").replace(/\[.*?\]|\(.*?\)/g,"").trim();
+}
+
+/* ================= CLASSIFY ENGINE ================= */
+function classify(name){
+
+let n = (name||"").toLowerCase();
+
+return {
+name,
+url:"",
+genre:
+n.includes("sport") ? "sports" :
+n.includes("news") ? "news" :
+n.includes("movie") ? "movies" : "other",
+
+country:
+n.includes("bangladesh") ? "bd" :
+n.includes("india") ? "in" : "global",
+
+lang:
+n.includes("bangla") ? "bn" : "en",
+
+live: n.includes("live") || n.includes("sport") ? 1 : 0
+};
+}
+
+/* ================= LOAD IPTV ================= */
+async function load(){
+
+let raw=[];
+
+for(let s of sources){
+try{
+let r = await fetch(s);
+let t = await r.text();
+
+let name="";
+
+t.split("\n").forEach(l=>{
+l=l.trim();
+
+if(l.startsWith("#EXTINF")){
+name = clean(l.split(",")[1]);
+}
+
+if(l.startsWith("http")){
+raw.push({
+...classify(name),
+url:l
+});
+}
+});
+
+}catch(e){}
+}
+
+/* REMOVE DUPLICATES */
+let map={};
+DB = raw.filter(x=>{
+if(map[x.url]) return false;
+map[x.url]=1;
+return true;
+});
+
+render();
+}
+
+/* ================= FAVORITES ================= */
+function toggleFav(url){
+
+if(fav.includes(url)){
+fav = fav.filter(x=>x!==url);
+}else{
+fav.push(url);
+}
+
+localStorage.setItem("fav",JSON.stringify(fav));
+render();
+}
+
+/* ================= PLAY ================= */
+function play(url){
+
+if(hls) hls.destroy();
+
+if(Hls.isSupported()){
+hls = new Hls();
+hls.loadSource(url);
+hls.attachMedia(video);
+hls.on(Hls.Events.MANIFEST_PARSED,()=>video.play());
+}else{
+video.src=url;
+}
+}
+
+/* ================= VIEW SYSTEM ================= */
+function setView(v){
+view = v;
+render();
+}
+
+/* ================= RENDER ================= */
+function render(){
+
+let box=document.getElementById("grid");
+box.innerHTML="";
+
+let q=document.getElementById("search").value.toLowerCase();
+
+let list = DB.filter(x=>x.name.toLowerCase().includes(q));
+
+switch(view){
+
+case "sports":
+list = list.filter(x=>x.genre==="sports");
+break;
+
+case "news":
+list = list.filter(x=>x.genre==="news");
+break;
+
+case "movies":
+list = list.filter(x=>x.genre==="movies");
+break;
+
+case "bd":
+list = list.filter(x=>x.country==="bd");
+break;
+
+case "in":
+list = list.filter(x=>x.country==="in");
+break;
+
+case "bn":
+list = list.filter(x=>x.lang==="bn");
+break;
+
+case "en":
+list = list.filter(x=>x.lang==="en");
+break;
+
+case "live":
+list = list.filter(x=>x.live===1);
+break;
+
+case "fav":
+list = list.filter(x=>fav.includes(x.url));
+break;
+}
+
+list.forEach(c=>{
+
+let star = fav.includes(c.url) ? "⭐" : "☆";
+
+let d=document.createElement("div");
+d.className="card";
+
+d.innerHTML=`
+<b>${c.name}</b>
+<div class="small">${c.genre} | ${c.country}</div>
+<div onclick="toggleFav('${c.url}')">${star}</div>
+`;
+
+d.onclick=()=>play(c.url);
+
+box.appendChild(d);
+});
+}
+
+load();
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SM LIVE ZONE ULTRA MAX</title>
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
