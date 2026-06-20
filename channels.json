@@ -20,13 +20,8 @@
     "type": "sports"
   },
   {
-    "name": "Bein Sports 1 Max Arabic",
-    "url": "http://starhub.pro/live/farhat-3379/67897-913379/744517.ts",
-    "type": "sports"
-  },
-  {
-    "name": "Fox 5 Sports",
-    "url": "http://84.17.50.102/fox/index.m3u8",
+    "name": "WAZ TV",
+    "url": "https://tplay.live/originals/ilm-tv/index.m3u8",
     "type": "sports"
   },
   {
@@ -35,23 +30,8 @@
     "type": "sports"
   },
   {
-    "name": "Motor Vision",
-    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Bein Sports 1",
-    "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "India A vs Afghanistan A Shamshad TV",
-    "url": "https://5a1178b42cc03.streamlock.net/shamshadtelevision/shamshadtelevision/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Saudia Arabia",
-    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
+    "name": "G Series Drama",
+    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
     "type": "sports"
   },
   {
@@ -60,14 +40,14 @@
     "type": "sports"
   },
   {
-    "name": "Sky Sports",
-    "url": "https://atc.hopto.org/sly-sprts-cricket-hd-sport/playlist.m3u8",
+    "name": "Saudia Arabia",
+    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
     "type": "sports"
   },
   {
-    "name": "Arabica TV",
-    "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
-    "type": "bd"
+    "name": "Sports",
+    "url": "https://live05.msdht.app/live/24561735.m3u8",
+    "type": "sports"
   },
   {
     "name": "FM Radio",
@@ -75,8 +55,13 @@
     "type": "sports"
   },
   {
-    "name": "TPV Sport",
-    "url": "https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8",
+    "name": "Motor Vision",
+    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Sky Sports",
+    "url": "https://atc.hopto.org/sly-sprts-cricket-hd-sport/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -85,9 +70,19 @@
     "type": "sports"
   },
   {
-    "name": "pcv",
-    "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
+    "name": "Desh TV",
+    "url": "https://bozztv.com/rongo/rongo-DeshTV/tracks-v1a1/mono.m3u8",
     "type": "bd"
+  },
+  {
+    "name": "Arabica TV",
+    "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Somoy TV",
+    "url": "https://live.thebosstv.com:30443/dwlive/Somoy-TV/playlist.m3u8",
+    "type": "sports"
   },
   {
     "name": "Bein Sports Tekrar",
@@ -95,13 +90,28 @@
     "type": "sports"
   },
   {
-    "name": "Dhoom Music",
-    "url": "http://103.175.73.12:8080/live/378/378_0.m3u8",
+    "name": "India A vs Afghanistan A Shamshad TV",
+    "url": "https://5a1178b42cc03.streamlock.net/shamshadtelevision/shamshadtelevision/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Somoy TV",
+    "url": "https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "pcv",
+    "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "Kolkata TV",
-    "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
+    "name": "NK",
+    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Dhoom Music",
+    "url": "http://103.175.73.12:8080/live/378/378_0.m3u8",
     "type": "bd"
   },
   {
@@ -118,11 +128,6 @@
     "name": "Star Sports 1",
     "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
     "type": "sports"
-  },
-  {
-    "name": "G Serise",
-    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
-    "type": "bd"
   },
   {
     "name": "R Plus News",
@@ -145,19 +150,14 @@
     "type": "bd"
   },
   {
-    "name": "PTV Sports",
-    "url": "http://119.156.228.231:9983/stream/channelid/679185749?ticket=DED82FB8AE85893524A1035AAE7CD187020FFA04&profile=pass",
-    "type": "sports"
-  },
-  {
     "name": "R Plus Gould",
     "url": "https://cdn-4.pishow.tv/live/1231/1231_2.m3u8",
     "type": "bd"
   },
   {
-    "name": "Akash Aath",
-    "url": "https://live.thebosstv.com:30443/dwlive/AAKAASH-AATH/chunks.m3u8",
-    "type": "bd"
+    "name": "PTV Sports",
+    "url": "http://119.156.228.231:9983/stream/channelid/679185749?ticket=DED82FB8AE85893524A1035AAE7CD187020FFA04&profile=pass",
+    "type": "sports"
   },
   {
     "name": "ATN Music",
@@ -202,6 +202,11 @@
   {
     "name": "Mohona TV",
     "url": "https://bozztv.com/rongo/rongo-MohonaTV/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Movie Bangla",
+    "url": "http://alvetv.com/moviebanglatv/8080/index.m3u8",
     "type": "bd"
   },
   {
