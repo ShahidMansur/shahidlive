@@ -3,36 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BD & Sports TV</title>
+    <title>Premium BD & Sports TV (Global Auto-Sync)</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <style>
         :root {
-            --bg: #0f172a;
-            --panel: #1e293b;
-            --primary: #2563eb;
-            --accent: #ef4444;
-            --text: #f8fafc;
+            --bg: #0f172a; --panel: #1e293b; --primary: #3b82f6; 
+            --accent: #ef4444; --text: #f8fafc; --offline: #7f1d1d;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        
         body { background-color: var(--bg); color: var(--text); display: flex; flex-direction: column; height: 100vh; }
 
         header {
-            background-color: var(--panel);
-            padding: 15px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--primary);
+            background-color: var(--panel); padding: 15px 20px; display: flex;
+            flex-wrap: wrap; gap: 15px; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid var(--primary); box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
-        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text); }
+        .logo { font-size: 1.5rem; font-weight: 700; }
         .logo span { color: var(--accent); }
-
         .search-input {
             background: var(--bg); border: 1px solid #334155; padding: 10px 20px;
             border-radius: 20px; color: white; width: 100%; max-width: 300px; outline: none;
@@ -40,92 +30,86 @@
         .search-input:focus { border-color: var(--primary); }
 
         .container { display: flex; flex: 1; flex-direction: column; overflow: hidden; }
-        
         @media (min-width: 992px) { .container { flex-direction: row; } }
 
         /* Video Section */
-        .player-box {
-            width: 100%;
-            background: #000;
-            position: relative;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-        @media (min-width: 992px) { .player-box { width: 60%; } }
+        .player-box { width: 100%; background: #000; position: relative; z-index: 10; }
+        @media (min-width: 992px) { .player-box { width: 65%; border-right: 1px solid #334155; } }
 
-        .video-wrapper {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #000;
-        }
-        video { width: 100%; height: 100%; }
+        .video-wrapper { width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; }
+        video { width: 100%; height: 100%; outline: none; }
 
         .playing-info {
-            position: absolute; top: 15px; left: 15px;
-            background: rgba(0,0,0,0.7); padding: 5px 15px; border-radius: 20px;
-            display: none; align-items: center; gap: 8px; font-size: 0.9rem; z-index: 10;
+            position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.8);
+            padding: 8px 20px; border-radius: 30px; display: none; align-items: center; 
+            gap: 10px; font-size: 0.9rem; font-weight: 600; z-index: 10; border: 1px solid #334155;
         }
-        .red-dot { width: 10px; height: 10px; background: red; border-radius: 50%; animation: blink 1s infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
+        .status-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .dot-live { background: #22c55e; animation: blink 1s infinite; box-shadow: 0 0 10px #22c55e; }
+        .dot-dead { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+        @keyframes blink { 50% { opacity: 0.4; } }
 
         /* Content Section */
-        .content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
-
-        /* Fixed Channel Bar - Wrap enabled so it never breaks */
+        .content { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: var(--bg); }
         .category-bar {
             display: flex; flex-wrap: wrap; gap: 10px; padding: 15px; background: var(--panel);
             justify-content: center; border-bottom: 1px solid #334155;
         }
-
         .cat-btn {
             background: #334155; color: white; border: none; padding: 8px 20px;
-            border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem;
-            transition: 0.2s;
+            border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem; transition: 0.2s;
         }
         .cat-btn:hover { background: #475569; }
-        .cat-btn.active { background: var(--primary); }
+        .cat-btn.active { background: var(--primary); box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
         .cat-btn.fav { background: var(--accent); }
 
         /* Grid */
-        .grid-wrap { flex: 1; padding: 15px; overflow-y: auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+        .grid-wrap { flex: 1; padding: 15px; overflow-y: auto; scrollbar-width: thin; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
 
         .card {
-            background: var(--panel); border: 1px solid #334155; border-radius: 10px;
+            background: var(--panel); border: 1px solid #334155; border-radius: 12px;
             padding: 15px 10px; text-align: center; cursor: pointer; position: relative;
-            transition: 0.2s; height: 100px; display: flex; align-items: center; justify-content: center;
+            transition: 0.2s; height: 100px; display: flex; flex-direction: column; 
+            align-items: center; justify-content: center; gap: 5px;
         }
         .card:hover { border-color: var(--primary); background: #283548; transform: translateY(-3px); }
-        
         .card span { font-size: 0.85rem; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         
-        .fav-icon { position: absolute; top: 5px; right: 8px; color: #64748b; font-size: 1.2rem; cursor: pointer; }
-        .fav-icon.active { color: var(--accent); }
+        .card.dead { background: var(--offline); border-color: var(--accent); opacity: 0.5; pointer-events: none; }
+        .offline-tag { font-size: 0.7rem; background: var(--accent); padding: 2px 5px; border-radius: 4px; display: none; }
+        .card.dead .offline-tag { display: block; }
 
-        .message { text-align: center; padding: 20px; color: #94a3b8; grid-column: 1/-1; }
+        .fav-icon { position: absolute; top: 8px; right: 8px; color: #64748b; font-size: 1.2rem; cursor: pointer; }
+        .fav-icon.active { color: var(--accent); text-shadow: 0 0 5px rgba(239,68,68,0.5); }
+
+        .message { text-align: center; padding: 30px; color: #94a3b8; grid-column: 1/-1; font-size: 1.1rem; }
+        
+        .refresh-btn { background: #10b981; color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.8rem;}
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">BD<span>&</span>Sports</div>
-        <input type="text" class="search-input" id="searchBox" placeholder="Search channel..." onkeyup="doSearch()">
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <input type="text" class="search-input" id="searchBox" placeholder="Search channel..." onkeyup="doSearch()">
+            <button class="refresh-btn" onclick="start()">🔄 Sync Live</button>
+        </div>
     </header>
 
     <div class="container">
-        <!-- Player -->
         <div class="player-box">
             <div class="video-wrapper">
                 <div class="playing-info" id="playInfo">
-                    <div class="red-dot"></div>
-                    <span id="chName">Loading...</span>
+                    <div class="status-dot dot-live" id="statusDot"></div>
+                    <span id="chName">Select a channel</span>
                 </div>
                 <video id="vidPlayer" controls autoplay></video>
             </div>
         </div>
 
-        <!-- Channels -->
         <div class="content">
-            <!-- Simple & Fixed Category Bar -->
             <div class="category-bar">
                 <button class="cat-btn active" onclick="setCat('All')">📺 All</button>
                 <button class="cat-btn" onclick="setCat('Bangladesh')">🇧🇩 BD Channels</button>
@@ -135,7 +119,7 @@
 
             <div class="grid-wrap">
                 <div class="grid" id="mainGrid">
-                    <div class="message">Filtering only BD & Sports channels... Please wait.</div>
+                    <div class="message">Connecting to Global IPTV & Sunplex...</div>
                 </div>
             </div>
         </div>
@@ -146,6 +130,7 @@
         const grid = document.getElementById('mainGrid');
         const playInfo = document.getElementById('playInfo');
         const chNameText = document.getElementById('chName');
+        const statusDot = document.getElementById('statusDot');
         let hls;
 
         let myChannels = [];
@@ -153,41 +138,38 @@
         let searchTxt = '';
         let favs = JSON.parse(localStorage.getItem('myFavs')) || [];
 
-        // Manual Links (Only BD & Sports)
+        // ✅ NEW: Premium Sunplex & ISP Links added manually for instant load
         const manual = [
-            { name: "T Sports HD", url: "https://live-cdn.tsports.com/live-01/index.m3u8", type: "bd,sports" },
-            { name: "GTV (Gazi TV)", url: "https://rhridoy136.shortcm.li/gtv.m3u8", type: "bd,sports" },
-            { name: "BTV World", url: "https://rhridoy136.shortcm.li/btvworld.m3u8", type: "bd" },
-            { name: "Somoy TV", url: "https://rhridoy136.shortcm.li/shomoytv.m3u8", type: "bd" },
-            { name: "Jamuna TV", url: "https://rhridoy136.shortcm.li/jamunatv.m3u8", type: "bd" },
-            { name: "Channel 24", url: "https://rhridoy136.shortcm.li/channel24.m3u8", type: "bd" },
-            { name: "Independent TV", url: "https://rhridoy136.shortcm.li/independenttv.m3u8", type: "bd" },
-            { name: "ATN News", url: "https://rhridoy136.shortcm.li/atnnews.m3u8", type: "bd" },
-            { name: "ATN Bangla", url: "http://103.205.133.19/hls/atnbangla.m3u8", type: "bd" },
-            { name: "Channel 9", url: "https://rhridoy136.shortcm.li/channel9.m3u8", type: "bd,sports" },
-            { name: "ESPN 2 Global", url: "https://gma2.blab.email/espn2.m3u8", type: "sports" },
-            { name: "ESPN U", url: "https://gma2.blab.email/espnu.m3u8", type: "sports" }
+            { name: "T SPORTS HD (Premium)", url: "https://stream.sunplex.live/T-SPORTS/index.m3u8", type: "bd,sports" },
+            { name: "GAZI TV HD (Premium)", url: "https://stream.sunplex.live/GAZI-TV/index.m3u8", type: "bd,sports" },
+            { name: "SPORTS 18 HD", url: "https://stream.sunplex.live/SPORTS-18/index.m3u8", type: "sports" },
+            { name: "YES TV HD", url: "https://stream.sunplex.live/YES-TV/index.m3u8", type: "sports" },
+            { name: "BTV HD (BDIX)", url: "http://172.32.1.88:1935/tvprogram/BTV/playlist.m3u8", type: "bd" },
+            { name: "SOMOY TV (BDIX)", url: "http://172.32.1.88:1935/tvprogram/SOMOY-TV/playlist.m3u8", type: "bd" },
+            { name: "GTV (Backup)", url: "https://rhridoy136.shortcm.li/gtv.m3u8", type: "bd,sports" }
         ];
 
+        // ✅ NEW: Added Lupael & Romaxa Sources (5000+ Channels)
         const sources = [
+            "https://lupael.github.io/IPTV/running.m3u",
+            "https://lupael.github.io/IPTV/world.m3u",
+            "https://romaxa55.github.io/world_ip_tv/output/index.m3u",
             "https://raw.githubusercontent.com/Shadmanislam/bdiptv/master/BD%20IPTV.m3u",
-            "https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u",
             "https://iptv-org.github.io/iptv/countries/bd.m3u",
-            "https://iptv-org.github.io/iptv/index.m3u",
             "https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u"
         ];
 
         async function start() {
-            manual.forEach(c => myChannels.push({ name: c.name, url: c.url, type: c.type }));
-            showData();
-
-            let fetchJobs = sources.map(u => fetch(u).then(r => r.ok ? r.text() : '').then(txt => parseM3U(txt)).catch(e=>console.log(e)));
+            grid.innerHTML = '<div class="message">Fetching 5000+ Global & Local Sources...</div>';
+            myChannels = []; 
+            
+            manual.forEach(c => myChannels.push({ name: c.name, url: c.url, type: c.type, dead: false }));
+            
+            let fetchJobs = sources.map(u => fetch(u).then(r => r.ok ? r.text() : '').then(txt => parseM3U(txt)).catch(e=>console.log("Source offline", e)));
             await Promise.allSettled(fetchJobs);
             
             cleanDuplicates();
             showData();
-
-            if(myChannels.length > 0) play(myChannels[0].url, myChannels[0].name);
         }
 
         function parseM3U(txt) {
@@ -201,17 +183,16 @@
                     tempName = ln.split(',').pop().replace(/\[.*?\]|\(.*?\)|[-_]/g, ' ').replace(/1080p|720p|HD|SD|FHD/gi, '').trim();
                     let lowLine = ln.toLowerCase();
                     
-                    let isBD = lowLine.includes('bangladesh') || lowLine.includes('bd') || lowLine.includes('bangla');
-                    let isSport = lowLine.includes('sport') || lowLine.includes('espn') || lowLine.includes('fifa') || lowLine.includes('cricket') || lowLine.includes('football') || lowLine.includes('game') || lowLine.includes('star');
+                    let isBD = lowLine.includes('bangladesh') || lowLine.includes('bd') || lowLine.includes('bangla') || lowLine.includes('bengali');
+                    let isSport = lowLine.includes('sport') || lowLine.includes('espn') || lowLine.includes('fifa') || lowLine.includes('cricket') || lowLine.includes('football') || lowLine.includes('star sports');
 
-                    // ONLY KEEP BD OR SPORTS
                     if(isBD && isSport) tempType = 'bd,sports';
                     else if(isBD) tempType = 'bd';
                     else if(isSport) tempType = 'sports';
-                    else tempType = 'skip'; // Skip everything else
+                    else tempType = 'skip'; 
 
                 } else if(ln.startsWith('http') && tempType !== 'skip' && tempName) {
-                    myChannels.push({ name: tempName, url: ln, type: tempType });
+                    myChannels.push({ name: tempName, url: ln, type: tempType, dead: false });
                     tempName = ''; tempType = '';
                 }
             }
@@ -222,10 +203,10 @@
             myChannels.forEach(c => {
                 let k = c.name.toLowerCase();
                 if(!unique.has(k) && !unique.has(c.url)) {
-                    unique.set(k, c);
-                    unique.set(c.url, c);
+                    unique.set(k, c); unique.set(c.url, c);
                 }
             });
+            // Sort: BD & Sports Priority
             myChannels = Array.from(new Set(unique.values())).sort((a,b) => {
                 if(a.type.includes('bd') && !b.type.includes('bd')) return -1;
                 return a.name.localeCompare(b.name);
@@ -262,37 +243,62 @@
             else if(curCat === 'Sports') list = list.filter(c => c.type.includes('sports'));
 
             if(list.length === 0) {
-                grid.innerHTML = `<div class="message">No channels found.</div>`;
+                grid.innerHTML = `<div class="message">No active channels found. Please Sync Live.</div>`;
                 return;
             }
 
-            list.forEach(c => {
+            list.forEach((c, index) => {
                 let isF = favs.includes(c.url);
                 grid.innerHTML += `
-                    <div class="card" onclick="play('${c.url}', '${c.name.replace(/'/g, "\\'")}')">
+                    <div class="card ${c.dead ? 'dead' : ''}" id="card-${index}" onclick="play('${c.url}', '${c.name.replace(/'/g, "\\'")}', ${index})">
                         <div class="fav-icon ${isF ? 'active' : ''}" onclick="toggleFav(event, '${c.url}')">♥</div>
                         <span>${c.name}</span>
+                        <div class="offline-tag">Dead Link</div>
                     </div>
                 `;
             });
         }
 
-        window.play = function(u, n) {
+        window.play = function(u, n, idx) {
             playInfo.style.display = 'flex';
-            chNameText.innerText = n;
+            chNameText.innerText = "Connecting...";
+            statusDot.className = 'status-dot dot-live';
+            statusDot.style.background = '#f59e0b'; // Yellow for loading
             
             if(hls) hls.destroy();
 
             if(Hls.isSupported()) {
-                hls = new Hls();
+                hls = new Hls({ maxLoadingDelay: 4, manifestLoadingTimeOut: 8000 });
                 hls.loadSource(u);
                 hls.attachMedia(video);
-                hls.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(e=>console.log(e)));
+                
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    chNameText.innerText = n;
+                    statusDot.style.background = '#22c55e'; // Green when live
+                    video.play().catch(e => console.log(e));
+                });
+
+                hls.on(Hls.Events.ERROR, function(event, data) {
+                    if (data.fatal) {
+                        markOffline(n, idx);
+                        hls.destroy();
+                    }
+                });
             } else if(video.canPlayType('application/vnd.apple.mpegurl')) {
                 video.src = u;
-                video.addEventListener('loadedmetadata', () => video.play());
+                video.play().catch(() => markOffline(n, idx));
             }
             if(window.innerWidth < 992) window.scrollTo({top:0, behavior:'smooth'});
+        }
+
+        function markOffline(name, idx) {
+            chNameText.innerText = name + " (Offline)";
+            statusDot.className = 'status-dot dot-dead';
+            statusDot.style.background = '#ef4444'; // Red for dead
+            
+            myChannels[idx].dead = true;
+            let deadCard = document.getElementById('card-' + idx);
+            if(deadCard) deadCard.classList.add('dead');
         }
 
         start();
