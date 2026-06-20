@@ -1,307 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium BD & Sports TV (Global Auto-Sync)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <style>
-        :root {
-            --bg: #0f172a; --panel: #1e293b; --primary: #3b82f6; 
-            --accent: #ef4444; --text: #f8fafc; --offline: #7f1d1d;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SM LIVE ZONE ULTRA MAX</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: var(--bg); color: var(--text); display: flex; flex-direction: column; height: 100vh; }
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
-        header {
-            background-color: var(--panel); padding: 15px 20px; display: flex;
-            flex-wrap: wrap; gap: 15px; justify-content: space-between; align-items: center;
-            border-bottom: 2px solid var(--primary); box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
 
-        .logo { font-size: 1.5rem; font-weight: 700; }
-        .logo span { color: var(--accent); }
-        .search-input {
-            background: var(--bg); border: 1px solid #334155; padding: 10px 20px;
-            border-radius: 20px; color: white; width: 100%; max-width: 300px; outline: none;
-        }
-        .search-input:focus { border-color: var(--primary); }
+<style>
+body{
+margin:0;
+background:radial-gradient(circle,#050510,#000,#02030a);
+color:#fff;
+font-family:'Rajdhani',sans-serif;
+overflow:hidden;
+}
 
-        .container { display: flex; flex: 1; flex-direction: column; overflow: hidden; }
-        @media (min-width: 992px) { .container { flex-direction: row; } }
+.app{display:flex;height:100vh}
 
-        /* Video Section */
-        .player-box { width: 100%; background: #000; position: relative; z-index: 10; }
-        @media (min-width: 992px) { .player-box { width: 65%; border-right: 1px solid #334155; } }
+/* SIDEBAR */
+.sidebar{
+width:280px;
+background:#0b1020;
+padding:10px;
+overflow:auto;
+border-right:2px solid #00eaff;
+}
 
-        .video-wrapper { width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; }
-        video { width: 100%; height: 100%; outline: none; }
+.logo{
+font-family:'Orbitron';
+text-align:center;
+color:#00eaff;
+font-size:18px;
+text-shadow:0 0 12px #00eaff;
+margin-bottom:10px;
+}
 
-        .playing-info {
-            position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.8);
-            padding: 8px 20px; border-radius: 30px; display: none; align-items: center; 
-            gap: 10px; font-size: 0.9rem; font-weight: 600; z-index: 10; border: 1px solid #334155;
-        }
-        .status-dot { width: 10px; height: 10px; border-radius: 50%; }
-        .dot-live { background: #22c55e; animation: blink 1s infinite; box-shadow: 0 0 10px #22c55e; }
-        .dot-dead { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
-        @keyframes blink { 50% { opacity: 0.4; } }
+.menu{
+padding:10px;
+margin:5px 0;
+background:#11182d;
+border-radius:10px;
+cursor:pointer;
+transition:.2s;
+border:1px solid #1f2a4a;
+}
 
-        /* Content Section */
-        .content { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: var(--bg); }
-        .category-bar {
-            display: flex; flex-wrap: wrap; gap: 10px; padding: 15px; background: var(--panel);
-            justify-content: center; border-bottom: 1px solid #334155;
-        }
-        .cat-btn {
-            background: #334155; color: white; border: none; padding: 8px 20px;
-            border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem; transition: 0.2s;
-        }
-        .cat-btn:hover { background: #475569; }
-        .cat-btn.active { background: var(--primary); box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
-        .cat-btn.fav { background: var(--accent); }
+.menu:hover{
+background:#00eaff;
+color:#000;
+}
 
-        /* Grid */
-        .grid-wrap { flex: 1; padding: 15px; overflow-y: auto; scrollbar-width: thin; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+/* MAIN */
+.main{flex:1;display:flex;flex-direction:column}
 
-        .card {
-            background: var(--panel); border: 1px solid #334155; border-radius: 12px;
-            padding: 15px 10px; text-align: center; cursor: pointer; position: relative;
-            transition: 0.2s; height: 100px; display: flex; flex-direction: column; 
-            align-items: center; justify-content: center; gap: 5px;
-        }
-        .card:hover { border-color: var(--primary); background: #283548; transform: translateY(-3px); }
-        .card span { font-size: 0.85rem; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        
-        .card.dead { background: var(--offline); border-color: var(--accent); opacity: 0.5; pointer-events: none; }
-        .offline-tag { font-size: 0.7rem; background: var(--accent); padding: 2px 5px; border-radius: 4px; display: none; }
-        .card.dead .offline-tag { display: block; }
+.top{
+display:flex;
+padding:8px;
+background:#070a14;
+gap:8px;
+}
 
-        .fav-icon { position: absolute; top: 8px; right: 8px; color: #64748b; font-size: 1.2rem; cursor: pointer; }
-        .fav-icon.active { color: var(--accent); text-shadow: 0 0 5px rgba(239,68,68,0.5); }
+input{
+flex:1;
+padding:8px;
+border-radius:8px;
+border:1px solid #00eaff;
+background:#111;
+color:#fff;
+}
 
-        .message { text-align: center; padding: 30px; color: #94a3b8; grid-column: 1/-1; font-size: 1.1rem; }
-        
-        .refresh-btn { background: #10b981; color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.8rem;}
-    </style>
+/* PLAYER */
+.player{
+background:#000;
+display:flex;
+justify-content:center;
+padding:6px;
+border-bottom:1px solid #00eaff;
+}
+
+video{
+width:100%;
+max-width:900px;
+border-radius:10px;
+}
+
+/* LIST */
+.list{
+flex:1;
+overflow:auto;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+gap:10px;
+padding:10px;
+}
+
+.card{
+background:#11182d;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+border:1px solid #1f2a4a;
+transition:.2s;
+}
+
+.card:hover{
+background:#00eaff;
+color:#000;
+transform:scale(1.03);
+}
+
+.small{font-size:12px;opacity:0.8}
+
+.star{
+float:right;
+cursor:pointer;
+}
+
+hr{border:0;border-top:1px solid #1f2a4a;margin:10px 0}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <div class="logo">BD<span>&</span>Sports</div>
-        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-            <input type="text" class="search-input" id="searchBox" placeholder="Search channel..." onkeyup="doSearch()">
-            <button class="refresh-btn" onclick="start()">🔄 Sync Live</button>
-        </div>
-    </header>
+<div class="app">
 
-    <div class="container">
-        <div class="player-box">
-            <div class="video-wrapper">
-                <div class="playing-info" id="playInfo">
-                    <div class="status-dot dot-live" id="statusDot"></div>
-                    <span id="chName">Select a channel</span>
-                </div>
-                <video id="vidPlayer" controls autoplay></video>
-            </div>
-        </div>
+<!-- SIDEBAR -->
+<div class="sidebar">
+<div class="logo">SM LIVE ZONE</div>
 
-        <div class="content">
-            <div class="category-bar">
-                <button class="cat-btn active" onclick="setCat('All')">📺 All</button>
-                <button class="cat-btn" onclick="setCat('Bangladesh')">🇧🇩 BD Channels</button>
-                <button class="cat-btn" onclick="setCat('Sports')">🏆 World Sports</button>
-                <button class="cat-btn fav" onclick="setCat('Fav')">❤️ Fav</button>
-            </div>
+<div class="menu" onclick="set('all')">📺 ALL</div>
 
-            <div class="grid-wrap">
-                <div class="grid" id="mainGrid">
-                    <div class="message">Connecting to Global IPTV & Sunplex...</div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="menu" onclick="set('sports')">🏆 Sports</div>
+<div class="menu" onclick="set('news')">📰 News</div>
+<div class="menu" onclick="set('movies')">🎬 Movies</div>
+<div class="menu" onclick="set('music')">🎵 Music</div>
+<div class="menu" onclick="set('kids')">🧸 Kids</div>
 
-    <script>
-        const video = document.getElementById('vidPlayer');
-        const grid = document.getElementById('mainGrid');
-        const playInfo = document.getElementById('playInfo');
-        const chNameText = document.getElementById('chName');
-        const statusDot = document.getElementById('statusDot');
-        let hls;
+<hr>
 
-        let myChannels = [];
-        let curCat = 'All';
-        let searchTxt = '';
-        let favs = JSON.parse(localStorage.getItem('myFavs')) || [];
+<div class="menu" onclick="set('bangladesh')">🇧🇩 Bangladesh</div>
+<div class="menu" onclick="set('india')">🇮🇳 India</div>
+<div class="menu" onclick="set('global')">🌍 Global</div>
 
-        // ✅ NEW: Premium Sunplex & ISP Links added manually for instant load
-        const manual = [
-            { name: "T SPORTS HD (Premium)", url: "https://stream.sunplex.live/T-SPORTS/index.m3u8", type: "bd,sports" },
-            { name: "GAZI TV HD (Premium)", url: "https://stream.sunplex.live/GAZI-TV/index.m3u8", type: "bd,sports" },
-            { name: "SPORTS 18 HD", url: "https://stream.sunplex.live/SPORTS-18/index.m3u8", type: "sports" },
-            { name: "YES TV HD", url: "https://stream.sunplex.live/YES-TV/index.m3u8", type: "sports" },
-            { name: "BTV HD (BDIX)", url: "http://172.32.1.88:1935/tvprogram/BTV/playlist.m3u8", type: "bd" },
-            { name: "SOMOY TV (BDIX)", url: "http://172.32.1.88:1935/tvprogram/SOMOY-TV/playlist.m3u8", type: "bd" },
-            { name: "GTV (Backup)", url: "https://rhridoy136.shortcm.li/gtv.m3u8", type: "bd,sports" }
-        ];
+<hr>
 
-        // ✅ NEW: Added Lupael & Romaxa Sources (5000+ Channels)
-        const sources = [
-            "https://lupael.github.io/IPTV/running.m3u",
-            "https://lupael.github.io/IPTV/world.m3u",
-            "https://romaxa55.github.io/world_ip_tv/output/index.m3u",
-            "https://raw.githubusercontent.com/Shadmanislam/bdiptv/master/BD%20IPTV.m3u",
-            "https://iptv-org.github.io/iptv/countries/bd.m3u",
-            "https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u"
-        ];
+<div class="menu" onclick="set('bangla')">🗣️ Bangla</div>
+<div class="menu" onclick="set('hindi')">🗣️ Hindi</div>
+<div class="menu" onclick="set('english')">🗣️ English</div>
 
-        async function start() {
-            grid.innerHTML = '<div class="message">Fetching 5000+ Global & Local Sources...</div>';
-            myChannels = []; 
-            
-            manual.forEach(c => myChannels.push({ name: c.name, url: c.url, type: c.type, dead: false }));
-            
-            let fetchJobs = sources.map(u => fetch(u).then(r => r.ok ? r.text() : '').then(txt => parseM3U(txt)).catch(e=>console.log("Source offline", e)));
-            await Promise.allSettled(fetchJobs);
-            
-            cleanDuplicates();
-            showData();
-        }
+<hr>
 
-        function parseM3U(txt) {
-            if(!txt) return;
-            let lines = txt.split('\n');
-            let tempName = '', tempType = '';
+<div class="menu" onclick="set('live')">🔴 Live TV</div>
+<div class="menu" onclick="set('fav')">⭐ Favorites</div>
 
-            for(let i=0; i<lines.length; i++) {
-                let ln = lines[i].trim();
-                if(ln.startsWith('#EXTINF:')) {
-                    tempName = ln.split(',').pop().replace(/\[.*?\]|\(.*?\)|[-_]/g, ' ').replace(/1080p|720p|HD|SD|FHD/gi, '').trim();
-                    let lowLine = ln.toLowerCase();
-                    
-                    let isBD = lowLine.includes('bangladesh') || lowLine.includes('bd') || lowLine.includes('bangla') || lowLine.includes('bengali');
-                    let isSport = lowLine.includes('sport') || lowLine.includes('espn') || lowLine.includes('fifa') || lowLine.includes('cricket') || lowLine.includes('football') || lowLine.includes('star sports');
+</div>
 
-                    if(isBD && isSport) tempType = 'bd,sports';
-                    else if(isBD) tempType = 'bd';
-                    else if(isSport) tempType = 'sports';
-                    else tempType = 'skip'; 
+<!-- MAIN -->
+<div class="main">
 
-                } else if(ln.startsWith('http') && tempType !== 'skip' && tempName) {
-                    myChannels.push({ name: tempName, url: ln, type: tempType, dead: false });
-                    tempName = ''; tempType = '';
-                }
-            }
-        }
+<div class="top">
+<input id="search" placeholder="Search channels..." onkeyup="render()">
+</div>
 
-        function cleanDuplicates() {
-            let unique = new Map();
-            myChannels.forEach(c => {
-                let k = c.name.toLowerCase();
-                if(!unique.has(k) && !unique.has(c.url)) {
-                    unique.set(k, c); unique.set(c.url, c);
-                }
-            });
-            // Sort: BD & Sports Priority
-            myChannels = Array.from(new Set(unique.values())).sort((a,b) => {
-                if(a.type.includes('bd') && !b.type.includes('bd')) return -1;
-                return a.name.localeCompare(b.name);
-            });
-        }
+<div class="player">
+<video id="video" controls></video>
+</div>
 
-        window.setCat = function(c) {
-            curCat = c;
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-            showData();
-        }
+<div id="list" class="list"></div>
 
-        window.doSearch = function() {
-            searchTxt = document.getElementById('searchBox').value.toLowerCase();
-            showData();
-        }
+</div>
 
-        window.toggleFav = function(e, u) {
-            e.stopPropagation();
-            if(favs.includes(u)) favs = favs.filter(f => f !== u);
-            else favs.push(u);
-            localStorage.setItem('myFavs', JSON.stringify(favs));
-            showData();
-        }
+</div>
 
-        function showData() {
-            grid.innerHTML = '';
-            let list = myChannels;
+<script>
 
-            if(searchTxt) list = list.filter(c => c.name.toLowerCase().includes(searchTxt));
-            else if(curCat === 'Fav') list = list.filter(c => favs.includes(c.url));
-            else if(curCat === 'Bangladesh') list = list.filter(c => c.type.includes('bd'));
-            else if(curCat === 'Sports') list = list.filter(c => c.type.includes('sports'));
+/* ================= ALL SOURCES (YOUR FULL LIST MERGED) ================= */
+const sources = [
+"https://iptvflixbd.github.io/mrgifytv",
+"https://iptv-org.github.io/iptv/index.m3u",
+"https://iptv-org.github.io/iptv/countries/bd.m3u",
+"https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
+"https://raw.githubusercontent.com/Shadmanislam/bdiptv/master/BD%20IPTV.m3u",
+"https://lupael.github.io/IPTV/running.m3u",
+"https://lupael.github.io/IPTV/world.m3u"
+];
 
-            if(list.length === 0) {
-                grid.innerHTML = `<div class="message">No active channels found. Please Sync Live.</div>`;
-                return;
-            }
+let raw=[];
+let channels=[];
+let hls;
+let view="all";
 
-            list.forEach((c, index) => {
-                let isF = favs.includes(c.url);
-                grid.innerHTML += `
-                    <div class="card ${c.dead ? 'dead' : ''}" id="card-${index}" onclick="play('${c.url}', '${c.name.replace(/'/g, "\\'")}', ${index})">
-                        <div class="fav-icon ${isF ? 'active' : ''}" onclick="toggleFav(event, '${c.url}')">♥</div>
-                        <span>${c.name}</span>
-                        <div class="offline-tag">Dead Link</div>
-                    </div>
-                `;
-            });
-        }
+/* FAVORITES */
+let fav = JSON.parse(localStorage.getItem("fav")||"[]");
 
-        window.play = function(u, n, idx) {
-            playInfo.style.display = 'flex';
-            chNameText.innerText = "Connecting...";
-            statusDot.className = 'status-dot dot-live';
-            statusDot.style.background = '#f59e0b'; // Yellow for loading
-            
-            if(hls) hls.destroy();
+/* CLEAN */
+function clean(n){
+return (n||"")
+.replace(/\[.*?\]/g,"")
+.replace(/\(.*?\)/g,"")
+.replace(/\|/g," ")
+.replace(/\s+/g," ")
+.trim();
+}
 
-            if(Hls.isSupported()) {
-                hls = new Hls({ maxLoadingDelay: 4, manifestLoadingTimeOut: 8000 });
-                hls.loadSource(u);
-                hls.attachMedia(video);
-                
-                hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                    chNameText.innerText = n;
-                    statusDot.style.background = '#22c55e'; // Green when live
-                    video.play().catch(e => console.log(e));
-                });
+/* DETECT CATEGORY */
+function category(n){
+n=n.toLowerCase();
+if(n.includes("sport")) return "sports";
+if(n.includes("news")) return "news";
+if(n.includes("movie")) return "movies";
+if(n.includes("music")) return "music";
+if(n.includes("kids")) return "kids";
+return "other";
+}
 
-                hls.on(Hls.Events.ERROR, function(event, data) {
-                    if (data.fatal) {
-                        markOffline(n, idx);
-                        hls.destroy();
-                    }
-                });
-            } else if(video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = u;
-                video.play().catch(() => markOffline(n, idx));
-            }
-            if(window.innerWidth < 992) window.scrollTo({top:0, behavior:'smooth'});
-        }
+/* COUNTRY */
+function country(n){
+n=n.toLowerCase();
+if(n.includes("bangladesh")||n.includes("btv")||n.includes("somoy")) return "bangladesh";
+if(n.includes("india")) return "india";
+return "global";
+}
 
-        function markOffline(name, idx) {
-            chNameText.innerText = name + " (Offline)";
-            statusDot.className = 'status-dot dot-dead';
-            statusDot.style.background = '#ef4444'; // Red for dead
-            
-            myChannels[idx].dead = true;
-            let deadCard = document.getElementById('card-' + idx);
-            if(deadCard) deadCard.classList.add('dead');
-        }
+/* LANGUAGE */
+function language(n){
+n=n.toLowerCase();
+if(n.includes("bangla")) return "bangla";
+if(n.includes("hindi")) return "hindi";
+return "english";
+}
 
-        start();
-    </script>
+/* LIVE */
+function isLive(n){
+return n.toLowerCase().includes("live") || n.toLowerCase().includes("sport");
+}
+
+/* PARSE M3U */
+function parse(data){
+let name="";
+data.split("\n").forEach(l=>{
+l=l.trim();
+
+if(l.startsWith("#EXTINF")){
+name=clean(l.split(",")[1]);
+}
+
+if(l.startsWith("http")){
+raw.push({
+name,
+url:l,
+category:category(name),
+country:country(name),
+language:language(name),
+live:isLive(name)
+});
+}
+});
+}
+
+/* LOAD ALL SOURCES */
+async function load(){
+for(let s of sources){
+try{
+let r=await fetch(s);
+let t=await r.text();
+parse(t);
+}catch(e){}
+}
+
+/* REMOVE DUPLICATES */
+let map={};
+channels = raw.filter(c=>{
+if(map[c.url]) return false;
+map[c.url]=1;
+return true;
+});
+
+render();
+}
+load();
+
+/* FILTER */
+function set(v){
+view=v;
+render();
+}
+
+/* FAVORITE */
+function toggleFav(url){
+if(fav.includes(url)){
+fav=fav.filter(x=>x!==url);
+}else{
+fav.push(url);
+}
+localStorage.setItem("fav",JSON.stringify(fav));
+render();
+}
+
+/* PLAY */
+function play(url){
+if(hls) hls.destroy();
+
+if(Hls.isSupported()){
+hls=new Hls();
+hls.loadSource(url);
+hls.attachMedia(video);
+hls.on(Hls.Events.MANIFEST_PARSED,()=>video.play());
+}else{
+video.src=url;
+video.play();
+}
+}
+
+/* RENDER */
+function render(){
+let box=document.getElementById("list");
+box.innerHTML="";
+
+let q=document.getElementById("search").value.toLowerCase();
+
+let list = channels.filter(c=>c.name.toLowerCase().includes(q));
+
+/* FILTER ENGINE */
+if(view==="sports") list=list.filter(c=>c.category==="sports");
+else if(view==="news") list=list.filter(c=>c.category==="news");
+else if(view==="movies") list=list.filter(c=>c.category==="movies");
+else if(view==="music") list=list.filter(c=>c.category==="music");
+else if(view==="kids") list=list.filter(c=>c.category==="kids");
+
+else if(view==="bangladesh") list=list.filter(c=>c.country==="bangladesh");
+else if(view==="india") list=list.filter(c=>c.country==="india");
+
+else if(view==="bangla") list=list.filter(c=>c.language==="bangla");
+else if(view==="hindi") list=list.filter(c=>c.language==="hindi");
+else if(view==="english") list=list.filter(c=>c.language==="english");
+
+else if(view==="live") list=list.filter(c=>c.live);
+else if(view==="fav") list=list.filter(c=>fav.includes(c.url));
+
+/* CARDS */
+list.forEach(c=>{
+
+let star = fav.includes(c.url) ? "⭐" : "☆";
+
+let d=document.createElement("div");
+d.className="card";
+
+d.innerHTML=`
+<div onclick="play('${c.url}')">
+<b>${c.name}</b>
+<div class="small">${c.category} | ${c.country} | ${c.language}</div>
+</div>
+<div class="star" onclick="toggleFav('${c.url}')">${star}</div>
+`;
+
+box.appendChild(d);
+});
+}
+
+</script>
+
 </body>
 </html>
