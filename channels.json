@@ -1,13 +1,13 @@
 [
   {
-    "name": "157.Bein Sports Xtra",
-    "url": "https://chostv.mobie.in/choos/sports/beinxtra.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Deshe Bideshe",
     "url": "https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8",
     "type": "bd"
+  },
+  {
+    "name": "Welcome to PlayZ TV",
+    "url": "https://playztv.pages.dev/promo/master.m3u8",
+    "type": "sports"
   },
   {
     "name": "DD Sports",
@@ -30,18 +30,13 @@
     "type": "sports"
   },
   {
-    "name": "Live Quran TV",
-    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
+    "name": "G Series Drama",
+    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
     "type": "sports"
   },
   {
-    "name": "Sky Sports",
-    "url": "https://atc.hopto.org/sly-sprts-cricket-hd-sport/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Bein Sports",
-    "url": "http://ua.online24.pm/play/1101/350B326FB34F4B8/video.m3u8",
+    "name": "FM Radio",
+    "url": "https://stream.spicefmbd.com/stream.m3u8",
     "type": "sports"
   },
   {
@@ -55,18 +50,8 @@
     "type": "sports"
   },
   {
-    "name": "India A vs Afghanistan A Shamshad TV",
-    "url": "https://5a1178b42cc03.streamlock.net/shamshadtelevision/shamshadtelevision/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Arabica TV",
-    "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "FM Radio",
-    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "name": "Live Quran TV",
+    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -75,8 +60,13 @@
     "type": "sports"
   },
   {
-    "name": "TPV Sport",
-    "url": "https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8",
+    "name": "Win Sports",
+    "url": "https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Bein Sports Direct",
+    "url": "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8",
     "type": "sports"
   },
   {
@@ -85,24 +75,24 @@
     "type": "sports"
   },
   {
-    "name": "9XM TV",
-    "url": "https://wiselp.wiseplayout.com/9XM/HD1080/HD1080.m3u8",
+    "name": "Arabica TV",
+    "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
     "type": "bd"
   },
   {
-    "name": "Somoy TV",
-    "url": "https://live.thebosstv.com:30443/dwlive/Somoy-TV/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Somoy TV",
-    "url": "https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8",
+    "name": "Bein Sports",
+    "url": "http://ua.online24.pm/play/1101/350B326FB34F4B8/video.m3u8",
     "type": "sports"
   },
   {
     "name": "pcv",
     "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
     "type": "bd"
+  },
+  {
+    "name": "Bein Sports Tekrar",
+    "url": "https://ua.online24.pm/play/1103/350B326FB34F4B8/video.m3u8",
+    "type": "sports"
   },
   {
     "name": "Dhoom Music",
@@ -115,6 +105,11 @@
     "type": "bd"
   },
   {
+    "name": "Star Sports 1",
+    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "R Plus Gold",
     "url": "https://cdn-4.pishow.tv/live/1231/1231_1.m3u8",
     "type": "bd"
@@ -125,18 +120,8 @@
     "type": "bd"
   },
   {
-    "name": "Star Sports 1",
-    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Surongo",
     "url": "https://pub-d8f5af7f053343ed8295b16a145f6c1c.r2.dev/siam/[FGBDVibes]Surongo.(2023).480p.mkv",
-    "type": "bd"
-  },
-  {
-    "name": "R Plus News",
-    "url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8",
     "type": "bd"
   },
   {
@@ -155,8 +140,8 @@
     "type": "bd"
   },
   {
-    "name": "Akash Aath",
-    "url": "https://live.thebosstv.com:30443/dwlive/AAKAASH-AATH/chunks.m3u8",
+    "name": "R Plus",
+    "url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8",
     "type": "bd"
   },
   {
@@ -165,8 +150,48 @@
     "type": "bd"
   },
   {
+    "name": "ATN Music",
+    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "ATN News",
+    "url": "https://bozztv.com/rongo/rongo-ATNNews/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "BTV Chattogram",
+    "url": "https://bozztv.com/rongo/rongo-BTVChattagram/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Channel 24",
+    "url": "https://bozztv.com/rongo/rongo-Channel24HD/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Desh TV",
+    "url": "https://bozztv.com/rongo/rongo-DeshTV/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Independent TV",
+    "url": "https://bozztv.com/rongo/rongo-IndependentTV/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Jamuna TV",
+    "url": "https://bozztv.com/rongo/rongo-JamunaTelevision/index.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Madani Channel Bangla",
     "url": "https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Mohona TV",
+    "url": "https://bozztv.com/rongo/rongo-MohonaTV/index.m3u8",
     "type": "bd"
   },
   {
@@ -177,6 +202,11 @@
   {
     "name": "Peace TV Bangla",
     "url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "RTV",
+    "url": "https://bozztv.com/rongo/rongo-RTV/index.m3u8",
     "type": "bd"
   },
   {
