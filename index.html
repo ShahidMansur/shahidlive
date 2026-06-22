@@ -1,712 +1,609 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SM LIVE ZONE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IPTV Live Player</title>
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
-body{
+
+*{
 margin:0;
-background:#05060c;
-color:#fff;
-font-family:'Rajdhani',sans-serif;
-overflow:hidden;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
 }
 
-.app{display:flex;height:100vh}
+
+body{
+
+background:#080808;
+color:white;
+height:100vh;
+overflow:hidden;
+
+}
+
+
+.container{
+
+display:flex;
+height:100vh;
+
+}
+
+
 
 /* SIDEBAR */
+
 .sidebar{
-width:260px;
-background:#0b1020;
-padding:10px;
-overflow:auto;
-border-right:2px solid #00eaff;
+
+width:300px;
+background:#111;
+border-right:1px solid #333;
+display:flex;
+flex-direction:column;
+
 }
+
 
 .logo{
-font-family:'Orbitron';
-text-align:center;
-color:#00eaff;
-margin:10px 0;
+
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+font-weight:bold;
+color:#00ff88;
+
 }
 
-.menu{
-padding:10px;
-margin:6px 0;
-background:#11182d;
-border-radius:10px;
+
+.search{
+
+margin:10px;
+padding:12px;
+border-radius:20px;
+border:none;
+outline:none;
+background:#222;
+color:white;
+
+}
+
+
+
+.channels{
+
+overflow-y:auto;
+flex:1;
+
+}
+
+
+
+.channel{
+
+padding:15px;
 cursor:pointer;
-border:1px solid #1f2a4a;
+border-bottom:1px solid #222;
+transition:.2s;
+
 }
 
-.menu:hover{
-background:#00eaff;
-color:#000;
+
+.channel:hover{
+
+background:#222;
+
 }
+
+
+
+.channel.active{
+
+background:#00ff88;
+color:#000;
+
+}
+
+
+
+
 
 /* MAIN */
-.main{flex:1;display:flex;flex-direction:column}
 
-.top{
+.main{
+
+flex:1;
 display:flex;
-gap:8px;
-padding:8px;
-background:#070a14;
+flex-direction:column;
+
 }
 
-input{
-flex:1;
-padding:8px;
-border-radius:8px;
-border:1px solid #00eaff;
+
+
+.header{
+
+height:70px;
 background:#111;
-color:#fff;
-}
-
-/* PLAYER */
-.player{
-background:#000;
 display:flex;
-justify-content:center;
-padding:5px;
-}
-
-video{
-width:100%;
-max-width:900px;
-border-radius:10px;
-}
-
-/* GRID */
-.grid{
-flex:1;
-overflow:auto;
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
-gap:10px;
-padding:10px;
-}
-
-.card{
-background:#11182d;
-padding:10px;
-border-radius:10px;
-cursor:pointer;
-border:1px solid #1f2a4a;
-}
-
-.card:hover{
-background:#00eaff;
-color:#000;
-}
-
-.small{font-size:12px;opacity:0.8}
-</style>
-</head>
-
-<body>
-
-<div class="app">
-
-<!-- SIDEBAR -->
-<div class="sidebar">
-<div class="logo">SM LIVE ZONE</div>
-
-<div class="menu" onclick="setView('all')">📺 ALL</div>
-<div class="menu" onclick="setView('sports')">🏆 SPORTS</div>
-<div class="menu" onclick="setView('news')">📰 NEWS</div>
-<div class="menu" onclick="setView('movies')">🎬 MOVIES</div>
-
-<div class="menu" onclick="setView('bd')">🇧🇩 BANGLADESH</div>
-<div class="menu" onclick="setView('in')">🇮🇳 INDIA</div>
-
-<div class="menu" onclick="setView('bn')">বাংলা</div>
-<div class="menu" onclick="setView('en')">English</div>
-
-<div class="menu" onclick="setView('live')">🔥 LIVE SPORTS</div>
-
-<div class="menu" onclick="setView('fav')">⭐ FAVORITES</div>
-
-</div>
-
-<!-- MAIN -->
-<div class="main">
-
-<div class="top">
-<input id="search" placeholder="Search..." onkeyup="render()">
-</div>
-
-<div class="player">
-<video id="video" controls></video>
-</div>
-
-<div id="grid" class="grid"></div>
-
-</div>
-
-</div>
-
-<script>
-
-/* ================= IPTV SOURCES ================= */
-const sources = [
-"https://iptv-org.github.io/iptv/index.m3u",
-"https://iptv-org.github.io/iptv/countries/bd.m3u"
-];
-
-/* ================= DATABASE ================= */
-let DB = [];
-let view = "all";
-let fav = JSON.parse(localStorage.getItem("fav")||"[]");
-let hls;
-
-/* ================= CLEAN ================= */
-function clean(n){
-return (n||"").replace(/\[.*?\]|\(.*?\)/g,"").trim();
-}
-
-/* ================= CLASSIFY ENGINE ================= */
-function classify(name){
-
-let n = (name||"").toLowerCase();
-
-return {
-name,
-url:"",
-genre:
-n.includes("sport") ? "sports" :
-n.includes("news") ? "news" :
-n.includes("movie") ? "movies" : "other",
-
-country:
-n.includes("bangladesh") ? "bd" :
-n.includes("india") ? "in" : "global",
-
-lang:
-n.includes("bangla") ? "bn" : "en",
-
-live: n.includes("live") || n.includes("sport") ? 1 : 0
-};
-}
-
-/* ================= LOAD IPTV ================= */
-async function load(){
-
-let raw=[];
-
-for(let s of sources){
-try{
-let r = await fetch(s);
-let t = await r.text();
-
-let name="";
-
-t.split("\n").forEach(l=>{
-l=l.trim();
-
-if(l.startsWith("#EXTINF")){
-name = clean(l.split(",")[1]);
-}
-
-if(l.startsWith("http")){
-raw.push({
-...classify(name),
-url:l
-});
-}
-});
-
-}catch(e){}
-}
-
-/* REMOVE DUPLICATES */
-let map={};
-DB = raw.filter(x=>{
-if(map[x.url]) return false;
-map[x.url]=1;
-return true;
-});
-
-render();
-}
-
-/* ================= FAVORITES ================= */
-function toggleFav(url){
-
-if(fav.includes(url)){
-fav = fav.filter(x=>x!==url);
-}else{
-fav.push(url);
-}
-
-localStorage.setItem("fav",JSON.stringify(fav));
-render();
-}
-
-/* ================= PLAY ================= */
-function play(url){
-
-if(hls) hls.destroy();
-
-if(Hls.isSupported()){
-hls = new Hls();
-hls.loadSource(url);
-hls.attachMedia(video);
-hls.on(Hls.Events.MANIFEST_PARSED,()=>video.play());
-}else{
-video.src=url;
-}
-}
-
-/* ================= VIEW SYSTEM ================= */
-function setView(v){
-view = v;
-render();
-}
-
-/* ================= RENDER ================= */
-function render(){
-
-let box=document.getElementById("grid");
-box.innerHTML="";
-
-let q=document.getElementById("search").value.toLowerCase();
-
-let list = DB.filter(x=>x.name.toLowerCase().includes(q));
-
-switch(view){
-
-case "sports":
-list = list.filter(x=>x.genre==="sports");
-break;
-
-case "news":
-list = list.filter(x=>x.genre==="news");
-break;
-
-case "movies":
-list = list.filter(x=>x.genre==="movies");
-break;
-
-case "bd":
-list = list.filter(x=>x.country==="bd");
-break;
-
-case "in":
-list = list.filter(x=>x.country==="in");
-break;
-
-case "bn":
-list = list.filter(x=>x.lang==="bn");
-break;
-
-case "en":
-list = list.filter(x=>x.lang==="en");
-break;
-
-case "live":
-list = list.filter(x=>x.live===1);
-break;
-
-case "fav":
-list = list.filter(x=>fav.includes(x.url));
-break;
-}
-
-list.forEach(c=>{
-
-let star = fav.includes(c.url) ? "⭐" : "☆";
-
-let d=document.createElement("div");
-d.className="card";
-
-d.innerHTML=`
-<b>${c.name}</b>
-<div class="small">${c.genre} | ${c.country}</div>
-<div onclick="toggleFav('${c.url}')">${star}</div>
-`;
-
-d.onclick=()=>play(c.url);
-
-box.appendChild(d);
-});
-}
-
-load();
-
-</script>
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SM LIVE ZONE ULTRA MAX</title>
-
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
-
-<style>
-body{
-margin:0;
-background:radial-gradient(circle,#050510,#000,#02030a);
-color:#fff;
-font-family:'Rajdhani',sans-serif;
-overflow:hidden;
-}
-
-.app{display:flex;height:100vh}
-
-/* SIDEBAR */
-.sidebar{
-width:280px;
-background:#0b1020;
-padding:10px;
-overflow:auto;
-border-right:2px solid #00eaff;
-}
-
-.logo{
-font-family:'Orbitron';
-text-align:center;
-color:#00eaff;
+align-items:center;
+padding:20px;
 font-size:18px;
-text-shadow:0 0 12px #00eaff;
-margin-bottom:10px;
+
 }
 
-.menu{
-padding:10px;
-margin:5px 0;
-background:#11182d;
-border-radius:10px;
-cursor:pointer;
-transition:.2s;
-border:1px solid #1f2a4a;
-}
 
-.menu:hover{
-background:#00eaff;
-color:#000;
-}
 
-/* MAIN */
-.main{flex:1;display:flex;flex-direction:column}
-
-.top{
-display:flex;
-padding:8px;
-background:#070a14;
-gap:8px;
-}
-
-input{
-flex:1;
-padding:8px;
-border-radius:8px;
-border:1px solid #00eaff;
-background:#111;
-color:#fff;
-}
-
-/* PLAYER */
 .player{
+
+flex:1;
 background:#000;
 display:flex;
+align-items:center;
 justify-content:center;
-padding:6px;
-border-bottom:1px solid #00eaff;
+
 }
+
+
 
 video{
+
 width:100%;
-max-width:900px;
-border-radius:10px;
+height:100%;
+background:black;
+
 }
 
-/* LIST */
-.list{
-flex:1;
-overflow:auto;
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
-gap:10px;
-padding:10px;
+
+
+.loading{
+
+font-size:20px;
+color:#aaa;
+
 }
 
-.card{
-background:#11182d;
-padding:10px;
-border-radius:10px;
-cursor:pointer;
-border:1px solid #1f2a4a;
-transition:.2s;
+
+
+@media(max-width:700px){
+
+
+.sidebar{
+
+width:200px;
+
 }
 
-.card:hover{
-background:#00eaff;
-color:#000;
-transform:scale(1.03);
+
+.channel{
+
+font-size:13px;
+
 }
 
-.small{font-size:12px;opacity:0.8}
 
-.star{
-float:right;
-cursor:pointer;
 }
 
-hr{border:0;border-top:1px solid #1f2a4a;margin:10px 0}
+
 </style>
+
 </head>
+
+
+
 
 <body>
 
-<div class="app">
 
-<!-- SIDEBAR -->
+<div class="container">
+
+
+
+<!-- CHANNEL AREA -->
+
 <div class="sidebar">
-<div class="logo">SM LIVE ZONE</div>
 
-<div class="menu" onclick="set('all')">📺 ALL</div>
 
-<div class="menu" onclick="set('sports')">🏆 Sports</div>
-<div class="menu" onclick="set('news')">📰 News</div>
-<div class="menu" onclick="set('movies')">🎬 Movies</div>
-<div class="menu" onclick="set('music')">🎵 Music</div>
-<div class="menu" onclick="set('kids')">🧸 Kids</div>
+<div class="logo">
 
-<hr>
-
-<div class="menu" onclick="set('bangladesh')">🇧🇩 Bangladesh</div>
-<div class="menu" onclick="set('india')">🇮🇳 India</div>
-<div class="menu" onclick="set('global')">🌍 Global</div>
-
-<hr>
-
-<div class="menu" onclick="set('bangla')">🗣️ Bangla</div>
-<div class="menu" onclick="set('hindi')">🗣️ Hindi</div>
-<div class="menu" onclick="set('english')">🗣️ English</div>
-
-<hr>
-
-<div class="menu" onclick="set('live')">🔴 Live TV</div>
-<div class="menu" onclick="set('fav')">⭐ Favorites</div>
+🔥 IPTV
 
 </div>
 
-<!-- MAIN -->
+
+
+<input 
+class="search"
+id="search"
+placeholder="Search channel..."
+onkeyup="searchChannel()"
+>
+
+
+
+<div class="channels" id="channels">
+
+
+<div class="loading">
+
+Loading...
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- PLAYER AREA -->
+
+
 <div class="main">
 
-<div class="top">
-<input id="search" placeholder="Search channels..." onkeyup="render()">
+
+<div class="header" id="title">
+
+Select Channel
+
 </div>
+
+
 
 <div class="player">
-<video id="video" controls></video>
+
+
+<video 
+id="video"
+controls
+autoplay>
+
+</video>
+
+
 </div>
 
-<div id="list" class="list"></div>
 
 </div>
 
+
+
 </div>
+
+
+
+
+
+
 
 <script>
 
-/* ================= ALL SOURCES (YOUR FULL LIST MERGED) ================= */
-const sources = [
-"https://iptvflixbd.github.io/mrgifytv",
-"https://iptv-org.github.io/iptv/index.m3u",
-"https://iptv-org.github.io/iptv/countries/bd.m3u",
-"https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
-"https://raw.githubusercontent.com/Shadmanislam/bdiptv/master/BD%20IPTV.m3u",
-"https://lupael.github.io/IPTV/running.m3u",
-"https://lupael.github.io/IPTV/world.m3u"
-];
 
-let raw=[];
-let channels=[];
-let hls;
-let view="all";
+/*
 
-/* FAVORITES */
-let fav = JSON.parse(localStorage.getItem("fav")||"[]");
+PUT YOUR RAW M3U LINK HERE
 
-/* CLEAN */
-function clean(n){
-return (n||"")
-.replace(/\[.*?\]/g,"")
-.replace(/\(.*?\)/g,"")
-.replace(/\|/g," ")
-.replace(/\s+/g," ")
-.trim();
-}
+Example:
 
-/* DETECT CATEGORY */
-function category(n){
-n=n.toLowerCase();
-if(n.includes("sport")) return "sports";
-if(n.includes("news")) return "news";
-if(n.includes("movie")) return "movies";
-if(n.includes("music")) return "music";
-if(n.includes("kids")) return "kids";
-return "other";
-}
+https://raw.githubusercontent.com/user/repo/main/FIFA.m3u
 
-/* COUNTRY */
-function country(n){
-n=n.toLowerCase();
-if(n.includes("bangladesh")||n.includes("btv")||n.includes("somoy")) return "bangladesh";
-if(n.includes("india")) return "india";
-return "global";
-}
+*/
 
-/* LANGUAGE */
-function language(n){
-n=n.toLowerCase();
-if(n.includes("bangla")) return "bangla";
-if(n.includes("hindi")) return "hindi";
-return "english";
-}
 
-/* LIVE */
-function isLive(n){
-return n.toLowerCase().includes("live") || n.toLowerCase().includes("sport");
-}
+const M3U = 
+"https://raw.githubusercontent.com/.../heads/main/FIFA.m3u";
 
-/* PARSE M3U */
-function parse(data){
-let name="";
-data.split("\n").forEach(l=>{
-l=l.trim();
 
-if(l.startsWith("#EXTINF")){
-name=clean(l.split(",")[1]);
-}
 
-if(l.startsWith("http")){
-raw.push({
-name,
-url:l,
-category:category(name),
-country:country(name),
-language:language(name),
-live:isLive(name)
-});
-}
-});
-}
 
-/* LOAD ALL SOURCES */
-async function load(){
-for(let s of sources){
+
+let playlist=[];
+
+
+
+
+
+async function loadM3U(){
+
+
 try{
-let r=await fetch(s);
-let t=await r.text();
-parse(t);
-}catch(e){}
-}
 
-/* REMOVE DUPLICATES */
-let map={};
-channels = raw.filter(c=>{
-if(map[c.url]) return false;
-map[c.url]=1;
-return true;
+
+let response =
+await fetch(M3U);
+
+
+
+let text =
+await response.text();
+
+
+
+
+let lines =
+text.split(/\r?\n/);
+
+
+
+
+for(
+let i=0;
+i<lines.length;
+i++
+){
+
+
+
+if(
+lines[i].startsWith("#EXTINF")
+){
+
+
+
+let name =
+lines[i]
+.substring(
+lines[i].lastIndexOf(",")+1
+);
+
+
+
+let url =
+lines[i+1];
+
+
+
+
+if(url){
+
+playlist.push({
+
+name:name,
+url:url
+
 });
 
-render();
-}
-load();
-
-/* FILTER */
-function set(v){
-view=v;
-render();
 }
 
-/* FAVORITE */
-function toggleFav(url){
-if(fav.includes(url)){
-fav=fav.filter(x=>x!==url);
-}else{
-fav.push(url);
-}
-localStorage.setItem("fav",JSON.stringify(fav));
-render();
+
+
 }
 
-/* PLAY */
-function play(url){
-if(hls) hls.destroy();
 
-if(Hls.isSupported()){
-hls=new Hls();
-hls.loadSource(url);
-hls.attachMedia(video);
-hls.on(Hls.Events.MANIFEST_PARSED,()=>video.play());
-}else{
-video.src=url;
-video.play();
-}
+
 }
 
-/* RENDER */
-function render(){
-let box=document.getElementById("list");
+
+
+
+displayChannels(playlist);
+
+
+
+}
+
+catch(e){
+
+
+document.getElementById("channels")
+.innerHTML =
+"Failed to load playlist";
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+function displayChannels(list){
+
+
+let box =
+document.getElementById("channels");
+
+
+
 box.innerHTML="";
 
-let q=document.getElementById("search").value.toLowerCase();
 
-let list = channels.filter(c=>c.name.toLowerCase().includes(q));
 
-/* FILTER ENGINE */
-if(view==="sports") list=list.filter(c=>c.category==="sports");
-else if(view==="news") list=list.filter(c=>c.category==="news");
-else if(view==="movies") list=list.filter(c=>c.category==="movies");
-else if(view==="music") list=list.filter(c=>c.category==="music");
-else if(view==="kids") list=list.filter(c=>c.category==="kids");
+list.forEach((item,index)=>{
 
-else if(view==="bangladesh") list=list.filter(c=>c.country==="bangladesh");
-else if(view==="india") list=list.filter(c=>c.country==="india");
 
-else if(view==="bangla") list=list.filter(c=>c.language==="bangla");
-else if(view==="hindi") list=list.filter(c=>c.language==="hindi");
-else if(view==="english") list=list.filter(c=>c.language==="english");
+let div =
+document.createElement("div");
 
-else if(view==="live") list=list.filter(c=>c.live);
-else if(view==="fav") list=list.filter(c=>fav.includes(c.url));
 
-/* CARDS */
-list.forEach(c=>{
 
-let star = fav.includes(c.url) ? "⭐" : "☆";
+div.className="channel";
 
-let d=document.createElement("div");
-d.className="card";
 
-d.innerHTML=`
-<div onclick="play('${c.url}')">
-<b>${c.name}</b>
-<div class="small">${c.category} | ${c.country} | ${c.language}</div>
-</div>
-<div class="star" onclick="toggleFav('${c.url}')">${star}</div>
-`;
 
-box.appendChild(d);
+div.innerHTML =
+"📺 "+item.name;
+
+
+
+div.onclick=function(){
+
+
+
+document
+.querySelectorAll(".channel")
+.forEach(x=>
+x.classList.remove("active")
+);
+
+
+
+div.classList.add("active");
+
+
+
+playStream(
+item.url,
+item.name
+);
+
+
+
+};
+
+
+
+
+box.appendChild(div);
+
+
+
 });
+
+
+
 }
+
+
+
+
+
+
+
+function playStream(url,name){
+
+
+
+let video =
+document.getElementById("video");
+
+
+
+document.getElementById("title")
+.innerHTML=name;
+
+
+
+
+
+if(Hls.isSupported()){
+
+
+
+let hls =
+new Hls();
+
+
+
+hls.loadSource(url);
+
+
+
+hls.attachMedia(video);
+
+
+
+hls.on(
+Hls.Events.MANIFEST_PARSED,
+function(){
+
+video.play();
+
+}
+
+);
+
+
+
+}
+
+else{
+
+
+video.src=url;
+
+video.play();
+
+
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+function searchChannel(){
+
+
+
+let text =
+document
+.getElementById("search")
+.value
+.toLowerCase();
+
+
+
+
+let result =
+playlist.filter(x=>
+
+x.name
+.toLowerCase()
+.includes(text)
+
+);
+
+
+
+displayChannels(result);
+
+
+
+}
+
+
+
+
+
+
+
+loadM3U();
+
+
 
 </script>
 
+
+
 </body>
+
 </html>
