@@ -5,6 +5,11 @@
     "type": "bd"
   },
   {
+    "name": "Welcome to PlayZ TV",
+    "url": "https://playztv.pages.dev/promo/master.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "DD Sports",
     "url": "https://cdn-6.pishow.tv/live/13/master.m3u8",
     "type": "sports"
@@ -15,18 +20,8 @@
     "type": "sports"
   },
   {
-    "name": "Fox Sport Fifa",
-    "url": "http://84.17.50.102/fox/index.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Unite Sports FIFA Hindi",
     "url": "http://212.102.34.8:9080/AndFlixHD/video.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Bein Sports 1 Max Arabic",
-    "url": "http://starhub.pro/live/farhat-3379/67897-913379/744517.ts",
     "type": "sports"
   },
   {
@@ -35,33 +30,13 @@
     "type": "sports"
   },
   {
+    "name": "Bein Sports Direct",
+    "url": "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Win Sports",
     "url": "https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "D Sports",
-    "url": "https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Live Quran TV",
-    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "G Series Drama",
-    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Saudia Arabia",
-    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Sky Sports",
-    "url": "https://atc.hopto.org/sly-sprts-cricket-hd-sport/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -70,19 +45,24 @@
     "type": "sports"
   },
   {
+    "name": "Live Quran TV",
+    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Desh TV",
     "url": "https://bozztv.com/rongo/rongo-DeshTV/tracks-v1a1/mono.m3u8",
     "type": "bd"
   },
   {
-    "name": "FM Radio",
-    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "name": "Sky Sports",
+    "url": "https://atc.hopto.org/sly-sprts-cricket-hd-sport/playlist.m3u8",
     "type": "sports"
   },
   {
-    "name": "Arabica TV",
-    "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
-    "type": "bd"
+    "name": "Saudia Arabia",
+    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
+    "type": "sports"
   },
   {
     "name": "Bein Sports 1",
@@ -100,6 +80,11 @@
     "type": "sports"
   },
   {
+    "name": "FM Radio",
+    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "pcv",
     "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
     "type": "bd"
@@ -107,16 +92,6 @@
   {
     "name": "NK",
     "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Kolkata TV",
-    "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Dhoom Music",
-    "url": "http://103.175.73.12:8080/live/378/378_0.m3u8",
     "type": "bd"
   },
   {
@@ -130,9 +105,24 @@
     "type": "bd"
   },
   {
-    "name": "Star Sports 1",
-    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
-    "type": "sports"
+    "name": "Dhoom Music",
+    "url": "http://103.175.73.12:8080/live/378/378_0.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Kolkata TV",
+    "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "G Serise",
+    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Surongo",
+    "url": "https://pub-d8f5af7f053343ed8295b16a145f6c1c.r2.dev/siam/[FGBDVibes]Surongo.(2023).480p.mkv",
+    "type": "bd"
   },
   {
     "name": "Antarjal",
@@ -140,8 +130,8 @@
     "type": "bd"
   },
   {
-    "name": "Surongo",
-    "url": "https://pub-d8f5af7f053343ed8295b16a145f6c1c.r2.dev/siam/[FGBDVibes]Surongo.(2023).480p.mkv",
+    "name": "GAZI TV",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/tracks-v1a1/mono.m3u8",
     "type": "bd"
   },
   {
@@ -155,8 +145,8 @@
     "type": "bd"
   },
   {
-    "name": "Doraemon",
-    "url": "https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8",
+    "name": "R Plus",
+    "url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8",
     "type": "bd"
   },
   {
