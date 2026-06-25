@@ -1,5 +1,10 @@
 [
   {
+    "name": "157.Bein Sports Xtra",
+    "url": "https://chostv.mobie.in/choos/sports/beinxtra.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Deshe Bideshe",
     "url": "https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8",
     "type": "bd"
@@ -20,13 +25,18 @@
     "type": "sports"
   },
   {
+    "name": "Fox Sport Fifa",
+    "url": "http://84.17.50.102/fox/index.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Unite Sports FIFA Hindi",
     "url": "http://212.102.34.8:9080/AndFlixHD/video.m3u8",
     "type": "sports"
   },
   {
-    "name": "TPV Sport",
-    "url": "https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8",
+    "name": "Bein Sports 1 Max Arabic",
+    "url": "http://starhub.pro/live/farhat-3379/67897-913379/744517.ts",
     "type": "sports"
   },
   {
@@ -35,13 +45,13 @@
     "type": "sports"
   },
   {
-    "name": "Win Sports",
-    "url": "https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8",
+    "name": "TPV Sport",
+    "url": "https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8",
     "type": "sports"
   },
   {
-    "name": "Motor Vision",
-    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
+    "name": "Sky Sports",
+    "url": "https://atc.hopto.org/sly-sprts-cricket-hd-sport/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -55,18 +65,13 @@
     "type": "bd"
   },
   {
-    "name": "Sky Sports",
-    "url": "https://atc.hopto.org/sly-sprts-cricket-hd-sport/playlist.m3u8",
+    "name": "Motor Vision",
+    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
     "type": "sports"
   },
   {
-    "name": "Saudia Arabia",
-    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Bein Sports 1",
-    "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8",
+    "name": "Win Sports",
+    "url": "https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8",
     "type": "sports"
   },
   {
@@ -75,14 +80,34 @@
     "type": "sports"
   },
   {
+    "name": "FM Radio",
+    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Bein Sports 1",
+    "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Arabica TV",
+    "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Saudia Arabia",
+    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Bein Sports Tekrar",
     "url": "https://ua.online24.pm/play/1103/350B326FB34F4B8/video.m3u8",
     "type": "sports"
   },
   {
-    "name": "FM Radio",
-    "url": "https://stream.spicefmbd.com/stream.m3u8",
-    "type": "sports"
+    "name": "NK",
+    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
+    "type": "bd"
   },
   {
     "name": "pcv",
@@ -90,8 +115,8 @@
     "type": "bd"
   },
   {
-    "name": "NK",
-    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
+    "name": "Dhoom Music",
+    "url": "http://103.175.73.12:8080/live/378/378_0.m3u8",
     "type": "bd"
   },
   {
@@ -105,18 +130,13 @@
     "type": "bd"
   },
   {
-    "name": "Dhoom Music",
-    "url": "http://103.175.73.12:8080/live/378/378_0.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Kolkata TV",
     "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "G Serise",
-    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
+    "name": "R Plus News",
+    "url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8",
     "type": "bd"
   },
   {
@@ -125,28 +145,18 @@
     "type": "bd"
   },
   {
-    "name": "Antarjal",
-    "url": "http://103.225.94.27/Infobase/hdd-2/Bangla/Antarjal%20(2023)%201080p%20WEBDL.mp4",
-    "type": "bd"
-  },
-  {
-    "name": "GAZI TV",
-    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/tracks-v1a1/mono.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Cowboy tv",
     "url": "https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg17292-tetonridgellc-tetonridgefast-distrotvus/playlist.m3u8",
     "type": "sports"
   },
   {
-    "name": "R Plus Gould",
-    "url": "https://cdn-4.pishow.tv/live/1231/1231_2.m3u8",
+    "name": "Antarjal",
+    "url": "http://103.225.94.27/Infobase/hdd-2/Bangla/Antarjal%20(2023)%201080p%20WEBDL.mp4",
     "type": "bd"
   },
   {
-    "name": "R Plus",
-    "url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8",
+    "name": "R Plus Gould",
+    "url": "https://cdn-4.pishow.tv/live/1231/1231_2.m3u8",
     "type": "bd"
   },
   {
@@ -177,6 +187,11 @@
   {
     "name": "Desh TV",
     "url": "https://bozztv.com/rongo/rongo-DeshTV/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Green TV",
+    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8",
     "type": "bd"
   },
   {
@@ -217,11 +232,6 @@
   {
     "name": "Somoy News TV",
     "url": "https://bozztv.com/rongo/rongo-somoy/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Zee Bangla",
-    "url": "http://217.20.112.199:8080/maamovies/index.m3u8",
     "type": "bd"
   }
 ]
