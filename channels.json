@@ -15,9 +15,124 @@
     "type": "sports"
   },
   {
+    "name": "Channel S",
+    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Drama 24",
+    "url": "https://vods2.aynaott.com/gseriesDrama/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "DW News",
+    "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "TV9 Bangla",
+    "url": "https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9banaen8yq/liveabr/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Bleav Football",
+    "url": "https://linear-493.frequency.stream/dist/glewedtv/493/hls/master/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "KTV Sport Plus",
+    "url": "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Sports First TV",
+    "url": "https://d4ddgdmj1cvnm.cloudfront.net/scheduler/scheduleMaster/409.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Xtrem Sports",
+    "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e0b81a5c-6ab5-48cd-aaa9-f82de4ab5bf9/manifest.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Bahrain Sports 1",
+    "url": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "DD Sports",
     "url": "https://cdn-6.pishow.tv/live/13/master.m3u8",
     "type": "sports"
+  },
+  {
+    "name": "NBC Sports",
+    "url": "https://xumo-xumoent-vc-122-sjv70.fast.nbcuni.com/live/master.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "WOF 1",
+    "url": "https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-mainstreammediafreesportsintl-rakuten/CDN/master.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "speed sports 1",
+    "url": "https://linear-599.frequency.stream/dist/stirr/599/hls/master/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "More Then Sports TV",
+    "url": "https://mts1.iptv-playoutcenter.de/mts/mts-web/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Oman Sports TV",
+    "url": "https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Sangeet Bangla",
+    "url": "https://cdn-4.pishow.tv/live/1143/master.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Goal TV",
+    "url": "https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Sports Fishing TV",
+    "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/eea68b79-bfe2-451e-a227-d637a5b9548a/manifest.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "DD Bangla",
+    "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7ff57cc9046b4c188b51a0d506f36e7f/index_3.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Enter 10 Bangla",
+    "url": "https://live-bangla.akamaized.net/liveabr/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "PBS Kids",
+    "url": "https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "AccuWeather",
+    "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00684-accuweather-accuweather-plex/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Weather SPY",
+    "url": "https://jukin-weatherspy-2-in.samsung.wurl.tv/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Thikana",
+    "url": "https://5dd3981940faa.streamlock.net:443/thikanatv/thikanatv/playlist.m3u8",
+    "type": "bd"
   },
   {
     "name": "T Sports",
@@ -30,8 +145,18 @@
     "type": "sports"
   },
   {
-    "name": "Sky Sports",
-    "url": "https://atc.hopto.org/sly-sprts-cricket-hd-sport/playlist.m3u8",
+    "name": "TPV Sport",
+    "url": "https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Bein Sports Direct",
+    "url": "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "T Sports",
+    "url": "http://114.130.57.233:8080/LIVE-Sports/video.m3u8?token=SkQuhAXZxgBan1",
     "type": "sports"
   },
   {
@@ -40,18 +165,8 @@
     "type": "sports"
   },
   {
-    "name": "Saudia Arabia",
-    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Bein Sports",
-    "url": "http://ua.online24.pm/play/1101/350B326FB34F4B8/video.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Motor Vision",
-    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
+    "name": "Sky Sports",
+    "url": "https://atc.hopto.org/sly-sprts-cricket-hd-sport/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -60,14 +175,14 @@
     "type": "bd"
   },
   {
-    "name": "FM Radio",
-    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "name": "Motor Vision",
+    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
     "type": "sports"
   },
   {
-    "name": "Arabica TV",
-    "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
-    "type": "bd"
+    "name": "T Sports   Aynaott",
+    "url": "https://trs1.aynaott.com/tsports/tracks-v1a1/mono.ts.m3u8",
+    "type": "sports"
   },
   {
     "name": "G Series Drama",
@@ -75,8 +190,18 @@
     "type": "sports"
   },
   {
-    "name": "Bein Sports Tekrar",
-    "url": "https://ua.online24.pm/play/1103/350B326FB34F4B8/video.m3u8",
+    "name": "FM Radio",
+    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Saudia Arabia",
+    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "BTV",
+    "url": "http://114.130.57.233:8080/manik-kutta-moharaza-kuttar-baccha-t.me/tvserverhd/video.m3u8?token=manik-kuttar-baccha-t.me/tvserverhd",
     "type": "sports"
   },
   {
@@ -85,18 +210,28 @@
     "type": "sports"
   },
   {
+    "name": "Arabica TV",
+    "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Bein Sports",
+    "url": "http://ua.online24.pm/play/1101/350B326FB34F4B8/video.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "NK",
     "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
     "type": "bd"
   },
   {
-    "name": "Dhoom Music",
-    "url": "http://103.175.73.12:8080/live/378/378_0.m3u8",
+    "name": "AAKASH AATH",
+    "url": "https://cdn-4.pishow.tv/live/969/master.m3u8",
     "type": "bd"
   },
   {
-    "name": "AAKASH AATH",
-    "url": "https://cdn-4.pishow.tv/live/969/master.m3u8",
+    "name": "Kolkata TV",
+    "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
     "type": "bd"
   },
   {
@@ -110,19 +245,19 @@
     "type": "bd"
   },
   {
-    "name": "Antarjal",
-    "url": "http://103.225.94.27/Infobase/hdd-2/Bangla/Antarjal%20(2023)%201080p%20WEBDL.mp4",
-    "type": "bd"
-  },
-  {
     "name": "Cowboy tv",
     "url": "https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg17292-tetonridgellc-tetonridgefast-distrotvus/playlist.m3u8",
     "type": "sports"
   },
   {
-    "name": "Kolkata TV",
-    "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
+    "name": "Antarjal",
+    "url": "http://103.225.94.27/Infobase/hdd-2/Bangla/Antarjal%20(2023)%201080p%20WEBDL.mp4",
     "type": "bd"
+  },
+  {
+    "name": "T Sports",
+    "url": "http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/130714.ts",
+    "type": "sports"
   },
   {
     "name": "R Plus Gould",
@@ -130,9 +265,9 @@
     "type": "bd"
   },
   {
-    "name": "R Plus",
-    "url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8",
-    "type": "bd"
+    "name": "Sony Sports 5",
+    "url": "https://server.itcnbd.live/stream/sony_sports_5_hd.m3u8",
+    "type": "sports"
   },
   {
     "name": "Aamar Bangla",
