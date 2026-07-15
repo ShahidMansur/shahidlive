@@ -10,23 +10,13 @@
     "type": "bd"
   },
   {
-    "name": "Bein Sports 1 Max Arabic",
-    "url": "http://starhub.pro/live/farhat-3379/67897-913379/744517.ts",
-    "type": "sports"
-  },
-  {
-    "name": "Saudia Arabia",
-    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Motor Vision",
     "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
     "type": "sports"
   },
   {
-    "name": "Live Quran TV",
-    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
+    "name": "Bein Sports 1 Max Arabic",
+    "url": "http://starhub.pro/live/farhat-3379/67897-913379/744517.ts",
     "type": "sports"
   },
   {
@@ -35,9 +25,9 @@
     "type": "sports"
   },
   {
-    "name": "Desh TV",
-    "url": "https://bozztv.com/rongo/rongo-DeshTV/tracks-v1a1/mono.m3u8",
-    "type": "bd"
+    "name": "Saudia Arabia",
+    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
+    "type": "sports"
   },
   {
     "name": "FM Radio",
@@ -45,18 +35,18 @@
     "type": "sports"
   },
   {
+    "name": "Desh TV",
+    "url": "https://bozztv.com/rongo/rongo-DeshTV/tracks-v1a1/mono.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Arabica TV",
     "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
     "type": "bd"
   },
   {
-    "name": "T Sports",
-    "url": "http://114.130.57.233:8080/LIVE-Sports/video.m3u8?token=SkQuhAXZxgBan1",
-    "type": "sports"
-  },
-  {
-    "name": "Somoy TV",
-    "url": "http://114.130.57.233:8080/Somoy-TV-3Mb/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1",
+    "name": "Live Quran TV",
+    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -65,18 +55,23 @@
     "type": "sports"
   },
   {
+    "name": "T Sports",
+    "url": "http://114.130.57.233:8080/LIVE-Sports/video.m3u8?token=SkQuhAXZxgBan1",
+    "type": "sports"
+  },
+  {
     "name": "pcv",
     "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "Dhoom Music",
-    "url": "http://103.175.73.12:8080/live/378/378_0.m3u8",
+    "name": "NK",
+    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
     "type": "bd"
   },
   {
-    "name": "NK",
-    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
+    "name": "Dhoom Music",
+    "url": "http://103.175.73.12:8080/live/378/378_0.m3u8",
     "type": "bd"
   },
   {
@@ -100,11 +95,6 @@
     "type": "sports"
   },
   {
-    "name": "Kolkata TV",
-    "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Surongo",
     "url": "https://pub-d8f5af7f053343ed8295b16a145f6c1c.r2.dev/siam/[FGBDVibes]Surongo.(2023).480p.mkv",
     "type": "bd"
@@ -115,18 +105,23 @@
     "type": "bd"
   },
   {
+    "name": "Kolkata TV",
+    "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "R Plus Gould",
     "url": "https://cdn-4.pishow.tv/live/1231/1231_2.m3u8",
     "type": "bd"
   },
   {
-    "name": "Aamar Bangla",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8",
-    "type": "bd"
+    "name": "Somoy TV",
+    "url": "http://114.130.57.233:8080/Somoy-TV-3Mb/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1",
+    "type": "sports"
   },
   {
-    "name": "ATN Music",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8",
+    "name": "Aamar Bangla",
+    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8",
     "type": "bd"
   },
   {
@@ -137,6 +132,11 @@
   {
     "name": "BTV Chattogram",
     "url": "https://bozztv.com/rongo/rongo-BTVChattagram/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Channel S",
+    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8",
     "type": "bd"
   },
   {
