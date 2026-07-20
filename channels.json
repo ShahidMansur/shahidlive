@@ -10,6 +10,11 @@
     "type": "bd"
   },
   {
+    "name": "Welcome to PlayZ TV",
+    "url": "https://playztv.pages.dev/promo/master.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Fox Sports",
     "url": "http://206.212.244.63/63/index.m3u8",
     "type": "sports"
@@ -17,6 +22,11 @@
   {
     "name": "Bein Sports Direct",
     "url": "http://145.239.5.177/557a/index.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Bein Sports 1 Max Arabic",
+    "url": "http://starhub.pro/live/farhat-3379/67897-913379/744517.ts",
     "type": "sports"
   },
   {
@@ -30,8 +40,8 @@
     "type": "sports"
   },
   {
-    "name": "Bein Sports 1 Max Arabic",
-    "url": "http://starhub.pro/live/farhat-3379/67897-913379/744517.ts",
+    "name": "Motor Vision",
+    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
     "type": "sports"
   },
   {
@@ -40,13 +50,8 @@
     "type": "sports"
   },
   {
-    "name": "Saudia Arabia",
-    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Motor Vision",
-    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
+    "name": "FM Radio",
+    "url": "https://stream.spicefmbd.com/stream.m3u8",
     "type": "sports"
   },
   {
@@ -55,13 +60,8 @@
     "type": "sports"
   },
   {
-    "name": "Bein Sports",
-    "url": "http://ua.online24.pm/play/1101/350B326FB34F4B8/video.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "FM Radio",
-    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "name": "Saudia Arabia",
+    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
     "type": "sports"
   },
   {
@@ -70,14 +70,19 @@
     "type": "sports"
   },
   {
+    "name": "Desh TV",
+    "url": "https://bozztv.com/rongo/rongo-DeshTV/tracks-v1a1/mono.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Unite8 sports 2",
     "url": "http://103.155.18.186:8000/play/a126/index.m3u8",
     "type": "sports"
   },
   {
-    "name": "Desh TV",
-    "url": "https://bozztv.com/rongo/rongo-DeshTV/tracks-v1a1/mono.m3u8",
-    "type": "bd"
+    "name": "Bein Sports",
+    "url": "http://ua.online24.pm/play/1101/350B326FB34F4B8/video.m3u8",
+    "type": "sports"
   },
   {
     "name": "Bein Sports Tekrar",
@@ -87,11 +92,6 @@
   {
     "name": "Arabica TV",
     "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "pcv",
-    "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
     "type": "bd"
   },
   {
@@ -127,11 +127,6 @@
   {
     "name": "Kolkata TV",
     "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Sony Aath",
-    "url": "http://103.114.11.37:8081/Sony-8/tracks-v1a1/mono.m3u8?token=sdfgsdiufsildugfisdgfsdiuygf",
     "type": "bd"
   },
   {
@@ -247,6 +242,11 @@
   {
     "name": "RTV",
     "url": "https://bozztv.com/rongo/rongo-RTV/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Rupashi Bangla TV",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8",
     "type": "bd"
   },
   {
