@@ -10,8 +10,8 @@
     "type": "bd"
   },
   {
-    "name": "Fox Sports",
-    "url": "http://206.212.244.63/63/index.m3u8",
+    "name": "Bein Sports Direct",
+    "url": "http://145.239.5.177/557a/index.m3u8",
     "type": "sports"
   },
   {
@@ -20,43 +20,13 @@
     "type": "sports"
   },
   {
-    "name": "unt s Sports",
-    "url": "http://103.165.93.31:8095/unt-s/video.m3u8",
+    "name": "Fox Sports",
+    "url": "http://206.212.244.63/63/index.m3u8",
     "type": "sports"
   },
   {
-    "name": "Bein Sports Direct",
-    "url": "http://145.239.5.177/557a/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "PTV Sports",
-    "url": "http://103.165.93.31:8095/Fifa-1/tracks-v1a1/mono.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Motor Vision",
-    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Desh TV",
-    "url": "https://bozztv.com/rongo/rongo-DeshTV/tracks-v1a1/mono.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Somoy TV",
-    "url": "http://114.130.57.233:8080/Somoy-TV-3Mb/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1",
-    "type": "sports"
-  },
-  {
-    "name": "Live Quran TV",
-    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "FM Radio",
-    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "name": "Channel 1 News",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/tracks-v1a1/mono.m3u8",
     "type": "sports"
   },
   {
@@ -65,13 +35,43 @@
     "type": "sports"
   },
   {
-    "name": "Bein Sports 1",
-    "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8",
+    "name": "Desh TV",
+    "url": "https://bozztv.com/rongo/rongo-DeshTV/tracks-v1a1/mono.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Motor Vision",
+    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
     "type": "sports"
   },
   {
-    "name": "Saudia Arabia",
-    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
+    "name": "Live Quran TV",
+    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "PTV Sports",
+    "url": "http://103.165.93.31:8095/Fifa-1/tracks-v1a1/mono.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Bein Sports Tekrar",
+    "url": "https://ua.online24.pm/play/1103/350B326FB34F4B8/video.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "FM Radio",
+    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "G Series Drama",
+    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Bein Sports 1",
+    "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -80,18 +80,18 @@
     "type": "bd"
   },
   {
-    "name": "Bein Sports Tekrar",
-    "url": "https://ua.online24.pm/play/1103/350B326FB34F4B8/video.m3u8",
+    "name": "Saudia Arabia",
+    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
     "type": "sports"
   },
   {
-    "name": "pcv",
-    "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
+    "name": "Channel 16",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8",
     "type": "bd"
   },
   {
     "name": "Live Sports",
-    "url": "http://103.165.93.31:8095/ptv/tracks-v1a1/mono.m3u8",
+    "url": "http://103.114.11.37:8081/T-Sports-HD/tracks-v1a1/mono.m3u8?token=sdfgsdiufsildugfisdgfsdiuygf",
     "type": "sports"
   },
   {
@@ -100,14 +100,14 @@
     "type": "sports"
   },
   {
-    "name": "Live Sports",
-    "url": "http://103.114.11.37:8081/T-Sports-HD/tracks-v1a1/mono.m3u8?token=sdfgsdiufsildugfisdgfsdiuygf",
-    "type": "sports"
-  },
-  {
     "name": "Sony Aath",
     "url": "http://103.114.11.37:8081/Sony-8/tracks-v1a1/mono.m3u8?token=sdfgsdiufsildugfisdgfsdiuygf",
     "type": "bd"
+  },
+  {
+    "name": "Live Sports",
+    "url": "http://103.165.93.31:8095/ptv/tracks-v1a1/mono.m3u8",
+    "type": "sports"
   },
   {
     "name": "NK",
@@ -115,18 +115,8 @@
     "type": "bd"
   },
   {
-    "name": "Live Sports",
-    "url": "http://114.130.57.233:8080/PTV/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1",
-    "type": "sports"
-  },
-  {
-    "name": "R Plus Gold",
-    "url": "https://cdn-4.pishow.tv/live/1231/1231_1.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "AAKASH AATH",
-    "url": "https://cdn-4.pishow.tv/live/969/master.m3u8",
+    "name": "Kolkata TV",
+    "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
     "type": "bd"
   },
   {
@@ -135,8 +125,8 @@
     "type": "sports"
   },
   {
-    "name": "R Plus News",
-    "url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8",
+    "name": "AAKASH AATH",
+    "url": "https://cdn-4.pishow.tv/live/969/master.m3u8",
     "type": "bd"
   },
   {
@@ -150,9 +140,34 @@
     "type": "bd"
   },
   {
-    "name": "Live Sports 4",
-    "url": "http://151.80.18.177:86/Eurosport_HD/index.m3u8",
-    "type": "sports"
+    "name": "Rajdhani tv",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ayna.stream/tracks-v1a1/mono.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Channel S",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "GAZI TV",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/tracks-v1a1/mono.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "pcv",
+    "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "EP tv",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/eptv.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Mohona Tv",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mohonatv.stream/tracks-v1a1/mono.m3u8",
+    "type": "bd"
   },
   {
     "name": "Cowboy tv",
@@ -170,8 +185,13 @@
     "type": "bd"
   },
   {
-    "name": "Akash Aath",
-    "url": "https://live.thebosstv.com:30443/dwlive/AAKAASH-AATH/chunks.m3u8",
+    "name": "R Plus",
+    "url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Doraemon",
+    "url": "https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8",
     "type": "bd"
   },
   {
