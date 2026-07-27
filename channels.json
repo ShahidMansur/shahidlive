@@ -10,6 +10,11 @@
     "type": "bd"
   },
   {
+    "name": "Welcome to PlayZ TV",
+    "url": "https://playztv.pages.dev/promo/master.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Iran News",
     "url": "https://dev-live.livetvstream.co.uk/LS-63503-4/chunklist_b1196000.m3u8",
     "type": "sports"
@@ -25,13 +30,8 @@
     "type": "sports"
   },
   {
-    "name": "Saudia Arabia",
-    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "QAZ Sports",
-    "url": "http://stream.mcquack.net/72/index.m3u8",
+    "name": "G Series Drama",
+    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
     "type": "sports"
   },
   {
@@ -40,8 +40,13 @@
     "type": "sports"
   },
   {
-    "name": "G Series Drama",
-    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
+    "name": "Bein Sports 1",
+    "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "QAZ Sports",
+    "url": "http://stream.mcquack.net/72/index.m3u8",
     "type": "sports"
   },
   {
@@ -50,24 +55,24 @@
     "type": "bd"
   },
   {
-    "name": "FM Radio",
-    "url": "https://stream.spicefmbd.com/stream.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Bein Sports Direct",
     "url": "http://145.239.5.177/557a/index.m3u8",
     "type": "sports"
   },
   {
-    "name": "Bein Sports 1",
-    "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8",
+    "name": "Saudia Arabia",
+    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
     "type": "sports"
   },
   {
     "name": "Somoy TV",
     "url": "http://103.165.93.31:8095/somoyTv/tracks-v1a1/mono.m3u8",
     "type": "bd"
+  },
+  {
+    "name": "FM Radio",
+    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "type": "sports"
   },
   {
     "name": "BTV",
@@ -85,24 +90,19 @@
     "type": "bd"
   },
   {
+    "name": "Live Sports",
+    "url": "http://103.165.93.31:8095/tsports/video.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "NK",
     "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
     "type": "bd"
   },
   {
     "name": "Live Sports",
-    "url": "http://103.165.93.31:8095/tsports/video.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Live Sports",
     "url": "http://103.165.93.31:8095/ptv/tracks-v1a1/mono.m3u8",
     "type": "sports"
-  },
-  {
-    "name": "Kolkata TV",
-    "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
-    "type": "bd"
   },
   {
     "name": "R Plus Gold",
@@ -115,18 +115,13 @@
     "type": "bd"
   },
   {
-    "name": "Star Sports 1",
-    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
-    "type": "sports"
+    "name": "Kolkata TV",
+    "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
+    "type": "bd"
   },
   {
     "name": "Surongo",
     "url": "https://pub-d8f5af7f053343ed8295b16a145f6c1c.r2.dev/siam/[FGBDVibes]Surongo.(2023).480p.mkv",
-    "type": "bd"
-  },
-  {
-    "name": "Star Jalsha",
-    "url": "http://premiumtvs.space/live/1Aoen7elp5/IgMJ60tmAa/8540.ts",
     "type": "bd"
   },
   {
@@ -138,6 +133,11 @@
     "name": "Star Sports 1 Hindi",
     "url": "https://starsportshindiii.pages.dev/index.m3u8",
     "type": "sports"
+  },
+  {
+    "name": "Star Jalsha",
+    "url": "http://premiumtvs.space/live/1Aoen7elp5/IgMJ60tmAa/8540.ts",
+    "type": "bd"
   },
   {
     "name": "Cowboy tv",
@@ -167,6 +167,11 @@
   {
     "name": "Aamar Bangla",
     "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "ATN Bangla",
+    "url": "https://tvsen5.aynaott.com/atnbangla/index.m3u8",
     "type": "bd"
   },
   {
