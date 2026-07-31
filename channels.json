@@ -45,8 +45,13 @@
     "type": "sports"
   },
   {
-    "name": "Mundial Sports",
-    "url": "https://s2.bufaloweb.com/bufalo9/tracks-v4a1/mono.ts.m3u8",
+    "name": "QAZ Sports",
+    "url": "http://stream.mcquack.net/72/index.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Live Quran TV",
+    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -55,8 +60,8 @@
     "type": "sports"
   },
   {
-    "name": "QAZ Sports",
-    "url": "http://stream.mcquack.net/72/index.m3u8",
+    "name": "Saudia Arabia",
+    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
     "type": "sports"
   },
   {
@@ -65,8 +70,8 @@
     "type": "bd"
   },
   {
-    "name": "Live Quran TV",
-    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
+    "name": "Mundial Sports",
+    "url": "https://s2.bufaloweb.com/bufalo9/tracks-v4a1/mono.ts.m3u8",
     "type": "sports"
   },
   {
@@ -75,19 +80,9 @@
     "type": "bd"
   },
   {
-    "name": "Saudia Arabia",
-    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "BTV",
     "url": "http://103.165.93.31:8095/btv/tracks-v1a1/mono.m3u8",
     "type": "bd"
-  },
-  {
-    "name": "Ten Cricket",
-    "url": "https://s2.itcnbd.live/server-2/stream/ten_cricket.m3u8",
-    "type": "sports"
   },
   {
     "name": "Watch FIFA IN FULL",
@@ -100,9 +95,9 @@
     "type": "bd"
   },
   {
-    "name": "Jalsha Movies",
-    "url": "http://103.151.61.12/Jalsha_Movie/tracks-v1a1/mono.m3u8?token=i7bZaZWaFrSIE0",
-    "type": "bd"
+    "name": "Live Sports",
+    "url": "https://tvsen3.aynaott.com/Sports1/mono.m3u8",
+    "type": "sports"
   },
   {
     "name": "NK",
@@ -110,13 +105,23 @@
     "type": "bd"
   },
   {
-    "name": "Live Sports",
-    "url": "https://s1.itcnbd.live/T-Sports-HD/tracks-v1a1/mono.m3u8",
-    "type": "sports"
+    "name": "Jalsha Movies",
+    "url": "http://103.151.61.12/Jalsha_Movie/tracks-v1a1/mono.m3u8?token=i7bZaZWaFrSIE0",
+    "type": "bd"
+  },
+  {
+    "name": "G Serise",
+    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
+    "type": "bd"
   },
   {
     "name": "R Plus Gold",
     "url": "https://cdn-4.pishow.tv/live/1231/1231_1.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "AAKASH AATH",
+    "url": "https://cdn-4.pishow.tv/live/969/master.m3u8",
     "type": "bd"
   },
   {
@@ -125,14 +130,19 @@
     "type": "sports"
   },
   {
-    "name": "AAKASH AATH",
-    "url": "https://cdn-4.pishow.tv/live/969/master.m3u8",
-    "type": "bd"
+    "name": "Live Sports",
+    "url": "https://s1.itcnbd.live/T-Sports-HD/tracks-v1a1/mono.m3u8",
+    "type": "sports"
   },
   {
     "name": "Kolkata TV",
     "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
     "type": "bd"
+  },
+  {
+    "name": "Star Sports 1",
+    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
+    "type": "sports"
   },
   {
     "name": "R Plus News",
@@ -165,11 +175,6 @@
     "type": "bd"
   },
   {
-    "name": "Akash Aath",
-    "url": "https://live.thebosstv.com:30443/dwlive/AAKAASH-AATH/chunks.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Aamar Bangla",
     "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8",
     "type": "bd"
@@ -177,11 +182,6 @@
   {
     "name": "ATN Bangla",
     "url": "https://tvsen5.aynaott.com/atnbangla/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "ATN Music",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8",
     "type": "bd"
   },
   {
@@ -207,11 +207,6 @@
   {
     "name": "Desh TV",
     "url": "https://bozztv.com/rongo/rongo-DeshTV/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Green TV",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8",
     "type": "bd"
   },
   {
