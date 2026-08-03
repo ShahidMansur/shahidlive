@@ -25,11 +25,6 @@
     "type": "sports"
   },
   {
-    "name": "Bangla Vision",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bangla_vision&format=.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "ATN Bangla",
     "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=atn_bangla&format=.m3u8",
     "type": "bd"
@@ -65,23 +60,8 @@
     "type": "sports"
   },
   {
-    "name": "A Sports",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=a_sports&format=.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Cricket Gold",
     "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=cricket_gold&format=.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "BT Sports 2",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bt_sports_2&format=.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "TNT Sport 1",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=tnt_sport_1&format=.m3u8",
     "type": "sports"
   },
   {
@@ -107,11 +87,6 @@
   {
     "name": "Sangeet Bangla",
     "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sangeet_bangla&format=.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "News Time Bangla",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=news_time_bangla&format=.m3u8",
     "type": "bd"
   },
   {
@@ -160,19 +135,9 @@
     "type": "bd"
   },
   {
-    "name": "And Pictures",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=and_pictures_hd&format=.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Talk Sport",
     "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=talk_sport&format=.m3u8",
     "type": "sports"
-  },
-  {
-    "name": "Dhoom Music Bangla",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=dhoom_music_bangla&format=.m3u8",
-    "type": "bd"
   },
   {
     "name": "Drama 24",
@@ -180,18 +145,8 @@
     "type": "bd"
   },
   {
-    "name": "Movie Bangla",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=movie_bangla&format=.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Republic Bangla",
     "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=republic_bangla&format=.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Peace TV Bangla",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=peace_tv_bangla_hd&format=.m3u8",
     "type": "bd"
   },
   {
@@ -202,16 +157,6 @@
   {
     "name": "Sports Fishing TV",
     "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sports_fishing_tv&format=.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "beIN SPORTS",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bein_sports&format=.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Dubai Sports 1",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=dubai_sports_1&format=.m3u8",
     "type": "sports"
   },
   {
@@ -235,13 +180,18 @@
     "type": "sports"
   },
   {
-    "name": "Iran News",
-    "url": "https://dev-live.livetvstream.co.uk/LS-63503-4/chunklist_b1196000.m3u8",
+    "name": "Live Quran TV",
+    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
     "type": "sports"
   },
   {
-    "name": "Live Quran TV",
-    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
+    "name": "Pk Sports",
+    "url": "https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Iran News",
+    "url": "https://dev-live.livetvstream.co.uk/LS-63503-4/chunklist_b1196000.m3u8",
     "type": "sports"
   },
   {
@@ -250,8 +200,8 @@
     "type": "sports"
   },
   {
-    "name": "Pk Sports",
-    "url": "https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8",
+    "name": "QAZ Sports",
+    "url": "http://stream.mcquack.net/72/index.m3u8",
     "type": "sports"
   },
   {
@@ -267,11 +217,6 @@
   {
     "name": "Bein Sports Direct",
     "url": "http://145.239.5.177/557a/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "QAZ Sports",
-    "url": "http://stream.mcquack.net/72/index.m3u8",
     "type": "sports"
   },
   {
@@ -300,6 +245,11 @@
     "type": "bd"
   },
   {
+    "name": "BTV News",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/btvbd-office-sg.stream/index.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Live Sports",
     "url": "https://tvsen3.aynaott.com/Sports1/mono.m3u8",
     "type": "sports"
@@ -308,26 +258,6 @@
     "name": "Live Sports",
     "url": "https://s1.itcnbd.live/T-Sports-HD/tracks-v1a1/mono.m3u8",
     "type": "sports"
-  },
-  {
-    "name": "NK",
-    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "G Serise",
-    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Live Sports",
-    "url": "https://s2.itcnbd.live/server-2/proxy/ten_cricket/playlist?u=https%3A%2F%2Fbldcmprod-cdn.toffeelive.com%2Fcdn%2Flive%2Fslang%2Ften_cricket_576%2Ften_cricket_576.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Jalsha Movies",
-    "url": "http://103.151.61.12/Jalsha_Movie/tracks-v1a1/mono.m3u8?token=i7bZaZWaFrSIE0",
-    "type": "bd"
   },
   {
     "name": "Live Sports",
@@ -340,6 +270,41 @@
     "type": "sports"
   },
   {
+    "name": "Live Sports",
+    "url": "https://s2.itcnbd.live/server-2/proxy/ten_cricket/playlist?u=https%3A%2F%2Fbldcmprod-cdn.toffeelive.com%2Fcdn%2Flive%2Fslang%2Ften_cricket_576%2Ften_cricket_576.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "G Serise",
+    "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Live Sports",
+    "url": "https://s2.itcnbd.live/server-2/stream/euro_sports_hd.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "NK",
+    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Live Sports",
+    "url": "https://s2.itcnbd.live/server-2/stream/sony_sports_1_hd.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Anando TV",
+    "url": "https://s2.itcnbd.live/server-2/stream/anandatv.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Jalsha Movies",
+    "url": "http://103.151.61.12/Jalsha_Movie/tracks-v1a1/mono.m3u8?token=i7bZaZWaFrSIE0",
+    "type": "bd"
+  },
+  {
     "name": "R Plus Gold",
     "url": "https://cdn-4.pishow.tv/live/1231/1231_1.m3u8",
     "type": "bd"
@@ -350,34 +315,14 @@
     "type": "bd"
   },
   {
-    "name": "Live Sports",
-    "url": "https://s2.itcnbd.live/server-2/stream/sony_sports_1_hd.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Live Sports",
-    "url": "https://s2.itcnbd.live/server-2/stream/euro_sports_hd.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Kolkata TV",
     "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Anando TV",
-    "url": "https://s2.itcnbd.live/server-2/stream/anandatv.m3u8",
     "type": "bd"
   },
   {
     "name": "Star Sports 1",
     "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
     "type": "sports"
-  },
-  {
-    "name": "R Plus News",
-    "url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8",
-    "type": "bd"
   },
   {
     "name": "Surongo",
@@ -395,13 +340,28 @@
     "type": "sports"
   },
   {
-    "name": "Live Sports 3",
-    "url": "http://151.80.18.177:86/Eurosport_HD/index.m3u8",
-    "type": "sports"
+    "name": "Channel S",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/playlist.m3u8",
+    "type": "bd"
   },
   {
     "name": "Willow",
     "url": "https://warm-caverns-48629-92fab798385f.herokuapp.com/https://d36r8jifhgsk5j.cloudfront.net/Willow_TV540p.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "EP tv",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/eptv.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "RTV",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/tracks-v1a1/mono.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Live Sports 3",
+    "url": "http://151.80.18.177:86/Eurosport_HD/index.m3u8",
     "type": "sports"
   },
   {
@@ -412,6 +372,11 @@
   {
     "name": "Akash Aath",
     "url": "https://live.thebosstv.com:30443/dwlive/AAKAASH-AATH/chunks.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "R Plus News",
+    "url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8",
     "type": "bd"
   },
   {
@@ -502,6 +467,11 @@
   {
     "name": "RTV",
     "url": "https://bozztv.com/rongo/rongo-RTV/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Rupashi Bangla TV",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8",
     "type": "bd"
   },
   {
