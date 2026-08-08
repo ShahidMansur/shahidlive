@@ -185,6 +185,11 @@
     "type": "sports"
   },
   {
+    "name": "Channel 1 News",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/tracks-v1a1/mono.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Arabica TV",
     "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
     "type": "bd"
@@ -232,11 +237,6 @@
   {
     "name": "pcv",
     "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "BTV News",
-    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/btvbd-office-sg.stream/index.m3u8",
     "type": "bd"
   },
   {
@@ -412,6 +412,11 @@
   {
     "name": "Rupashi Bangla TV",
     "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Zee Bangla",
+    "url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8",
     "type": "bd"
   },
   {
