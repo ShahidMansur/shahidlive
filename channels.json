@@ -80,13 +80,18 @@
     "type": "bd"
   },
   {
+    "name": "Global TV",
+    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=global_tv&format=.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Rupshi Bangla",
     "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=rupshi_bangla&format=.m3u8",
     "type": "bd"
   },
   {
-    "name": "Sangeet Bangla",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sangeet_bangla&format=.m3u8",
+    "name": "Sadhna Prime News",
+    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sadhna_prime_news&format=.m3u8",
     "type": "bd"
   },
   {
@@ -337,6 +342,11 @@
   {
     "name": "ATN Bangla",
     "url": "https://tvsen5.aynaott.com/atnbangla/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "ATN Music",
+    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8",
     "type": "bd"
   },
   {
