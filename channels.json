@@ -10,16 +10,6 @@
     "type": "bd"
   },
   {
-    "name": "Talk Sport",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=talk_sport&format=.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Drama 24",
-    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=drama_24&format=.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "T Sports",
     "url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8",
     "type": "sports"
@@ -237,11 +227,6 @@
   {
     "name": "ATN Bangla",
     "url": "https://tvsen5.aynaott.com/atnbangla/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "ATN Music",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8",
     "type": "bd"
   },
   {
