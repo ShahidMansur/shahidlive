@@ -11,6 +11,11 @@
   },
   {
     "name": "T Sports",
+    "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=t_sports_hd&format=.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "T Sports",
     "url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8",
     "type": "sports"
   },
@@ -35,13 +40,18 @@
     "type": "sports"
   },
   {
+    "name": "FM Radio",
+    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Motor Vision",
     "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
     "type": "sports"
   },
   {
-    "name": "FM Radio",
-    "url": "https://stream.spicefmbd.com/stream.m3u8",
+    "name": "Saudia Arabia",
+    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
     "type": "sports"
   },
   {
@@ -52,11 +62,6 @@
   {
     "name": "QAZ Sports",
     "url": "http://stream.mcquack.net/72/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Saudia Arabia",
-    "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
     "type": "sports"
   },
   {
@@ -80,24 +85,14 @@
     "type": "bd"
   },
   {
-    "name": "PTV Sports",
-    "url": "https://s1.itcnbd.live/PTV-Sports/tracks-v1a1/mono.m3u8?nocache=1785582200018",
-    "type": "sports"
-  },
-  {
     "name": "BTV",
     "url": "http://103.165.93.31:8095/btv/tracks-v1a1/mono.m3u8",
     "type": "bd"
   },
   {
-    "name": "pcv",
-    "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "NK",
-    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
-    "type": "bd"
+    "name": "Live Sports",
+    "url": "https://tvsen3.aynaott.com/Sports1/mono.m3u8",
+    "type": "sports"
   },
   {
     "name": "Live Sports",
@@ -106,18 +101,13 @@
   },
   {
     "name": "Live Sports",
-    "url": "https://s3.itcnbd.live/channel/2929059f34d114ca.m3u8",
+    "url": "https://s2.itcnbd.live/server-2/proxy/ten_cricket/playlist?u=https%3A%2F%2Fbldcmprod-cdn.toffeelive.com%2Fcdn%2Flive%2Fslang%2Ften_cricket_576%2Ften_cricket_576.m3u8",
     "type": "sports"
   },
   {
-    "name": "Live Sports",
-    "url": "https://s3.itcnbd.live/channel/ea25a516d781cb1c.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Live Sports",
-    "url": "https://tvsen3.aynaott.com/Sports1/mono.m3u8",
-    "type": "sports"
+    "name": "NK",
+    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
+    "type": "bd"
   },
   {
     "name": "R Plus Gold",
@@ -131,7 +121,12 @@
   },
   {
     "name": "Live Sports",
-    "url": "https://s2.itcnbd.live/server-2/proxy/ten_cricket/playlist?u=https%3A%2F%2Fbldcmprod-cdn.toffeelive.com%2Fcdn%2Flive%2Fslang%2Ften_cricket_576%2Ften_cricket_576.m3u8",
+    "url": "https://s3.itcnbd.live/channel/ea25a516d781cb1c.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Live Sports",
+    "url": "https://s3.itcnbd.live/channel/2929059f34d114ca.m3u8",
     "type": "sports"
   },
   {
@@ -155,11 +150,6 @@
     "type": "sports"
   },
   {
-    "name": "Live Sports 3",
-    "url": "http://151.80.18.177:86/Eurosport_HD/index.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Willow",
     "url": "https://warm-caverns-48629-92fab798385f.herokuapp.com/https://d36r8jifhgsk5j.cloudfront.net/Willow_TV540p.m3u8",
     "type": "sports"
@@ -172,6 +162,11 @@
   {
     "name": "R Plus Gould",
     "url": "https://cdn-4.pishow.tv/live/1231/1231_2.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "pcv",
+    "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
     "type": "bd"
   },
   {
