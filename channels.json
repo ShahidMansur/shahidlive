@@ -20,23 +20,18 @@
     "type": "bd"
   },
   {
-    "name": "Iran News",
-    "url": "https://dev-live.livetvstream.co.uk/LS-63503-4/chunklist_b1196000.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "A Sports",
     "url": "https://playztv-apps.pages.dev/asports/index.m3u8",
     "type": "sports"
   },
   {
-    "name": "Motor Vision",
-    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
+    "name": "Iran News",
+    "url": "https://dev-live.livetvstream.co.uk/LS-63503-4/chunklist_b1196000.m3u8",
     "type": "sports"
   },
   {
-    "name": "Channel 1 News",
-    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/tracks-v1a1/mono.m3u8",
+    "name": "Motor Vision",
+    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
     "type": "sports"
   },
   {
@@ -50,18 +45,13 @@
     "type": "sports"
   },
   {
-    "name": "Live Quran TV",
-    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "QAZ Sports",
-    "url": "http://stream.mcquack.net/72/index.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Mundial Sports",
     "url": "https://s2.bufaloweb.com/bufalo9/tracks-v4a1/mono.ts.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Live Quran TV",
+    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -70,19 +60,29 @@
     "type": "bd"
   },
   {
-    "name": "BTV News",
-    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/btvbd-office-sg.stream/index.m3u8",
+    "name": "QAZ Sports",
+    "url": "http://stream.mcquack.net/72/index.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "PTV Sports",
+    "url": "https://s1.itcnbd.live/PTV-Sports/tracks-v1a1/mono.m3u8?nocache=1785582200018",
+    "type": "sports"
+  },
+  {
+    "name": "pcv",
+    "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
     "type": "bd"
+  },
+  {
+    "name": "Live Sports",
+    "url": "https://s1.itcnbd.live/T-Sports-HD/tracks-v1a1/mono.m3u8",
+    "type": "sports"
   },
   {
     "name": "NK",
     "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
     "type": "bd"
-  },
-  {
-    "name": "Live Sports",
-    "url": "https://tvsen3.aynaott.com/Sports1/mono.m3u8",
-    "type": "sports"
   },
   {
     "name": "R Plus Gold",
@@ -115,6 +115,11 @@
     "type": "bd"
   },
   {
+    "name": "Cowboy tv",
+    "url": "https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg17292-tetonridgellc-tetonridgefast-distrotvus/playlist.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Willow",
     "url": "https://warm-caverns-48629-92fab798385f.herokuapp.com/https://d36r8jifhgsk5j.cloudfront.net/Willow_TV540p.m3u8",
     "type": "sports"
@@ -125,18 +130,8 @@
     "type": "sports"
   },
   {
-    "name": "Cowboy tv",
-    "url": "https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg17292-tetonridgellc-tetonridgefast-distrotvus/playlist.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "R Plus Gould",
     "url": "https://cdn-4.pishow.tv/live/1231/1231_2.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "pcv",
-    "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
     "type": "bd"
   },
   {
@@ -160,6 +155,11 @@
     "type": "bd"
   },
   {
+    "name": "ATN Music",
+    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Bangla Vision",
     "url": "https://tvsen5.aynaott.com/banglavision/index.m3u8",
     "type": "bd"
@@ -177,11 +177,6 @@
   {
     "name": "Duronto TV",
     "url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Ekushey TV",
-    "url": "https://ekusheyserver.com/etvlivesn.m3u8",
     "type": "bd"
   },
   {
