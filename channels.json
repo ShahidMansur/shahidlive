@@ -20,8 +20,8 @@
     "type": "bd"
   },
   {
-    "name": "Iran News",
-    "url": "https://dev-live.livetvstream.co.uk/LS-63503-4/chunklist_b1196000.m3u8",
+    "name": "Welcome to PlayZ TV",
+    "url": "https://playztv.pages.dev/promo/master.m3u8",
     "type": "sports"
   },
   {
@@ -35,13 +35,13 @@
     "type": "sports"
   },
   {
-    "name": "Motor Vision",
-    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
+    "name": "Iran News",
+    "url": "https://dev-live.livetvstream.co.uk/LS-63503-4/chunklist_b1196000.m3u8",
     "type": "sports"
   },
   {
-    "name": "Live Quran TV",
-    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
+    "name": "Motor Vision",
+    "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
     "type": "sports"
   },
   {
@@ -50,13 +50,18 @@
     "type": "sports"
   },
   {
-    "name": "QAZ Sports",
-    "url": "http://stream.mcquack.net/72/index.m3u8",
+    "name": "Live Quran TV",
+    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
     "type": "sports"
   },
   {
     "name": "Saudia Arabia",
     "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "QAZ Sports",
+    "url": "http://stream.mcquack.net/72/index.m3u8",
     "type": "sports"
   },
   {
@@ -70,14 +75,14 @@
     "type": "bd"
   },
   {
-    "name": "NK",
-    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Live Sports",
     "url": "https://tvsen3.aynaott.com/Sports1/mono.m3u8",
     "type": "sports"
+  },
+  {
+    "name": "NK",
+    "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
+    "type": "bd"
   },
   {
     "name": "R Plus Gold",
@@ -100,23 +105,8 @@
     "type": "bd"
   },
   {
-    "name": "Willow",
-    "url": "https://warm-caverns-48629-92fab798385f.herokuapp.com/https://d36r8jifhgsk5j.cloudfront.net/Willow_TV540p.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Star Sports 1 Hindi",
     "url": "https://starsportshindiii.pages.dev/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Live Sports 3",
-    "url": "http://151.80.18.177:86/Eurosport_HD/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Cowboy tv",
-    "url": "https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg17292-tetonridgellc-tetonridgefast-distrotvus/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -125,14 +115,29 @@
     "type": "bd"
   },
   {
-    "name": "T Sports",
-    "url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/tracks-v1a1/mono.ts.m3u8",
+    "name": "Cowboy tv",
+    "url": "https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg17292-tetonridgellc-tetonridgefast-distrotvus/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Willow",
+    "url": "https://warm-caverns-48629-92fab798385f.herokuapp.com/https://d36r8jifhgsk5j.cloudfront.net/Willow_TV540p.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Live Sports 3",
+    "url": "http://151.80.18.177:86/Eurosport_HD/index.m3u8",
     "type": "sports"
   },
   {
     "name": "Maasranga Tv",
     "url": "https://mtv.sunplex.live/MAASRANGA/tracks-v1a1/mono.m3u8",
     "type": "bd"
+  },
+  {
+    "name": "T Sports",
+    "url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/tracks-v1a1/mono.ts.m3u8",
+    "type": "sports"
   },
   {
     "name": "Aamar Bangla",
@@ -205,11 +210,6 @@
     "type": "bd"
   },
   {
-    "name": "Nexus TV",
-    "url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "NTV",
     "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8",
     "type": "bd"
@@ -227,6 +227,11 @@
   {
     "name": "RTV",
     "url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Rupashi Bangla TV",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8",
     "type": "bd"
   },
   {
