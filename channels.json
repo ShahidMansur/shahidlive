@@ -20,6 +20,11 @@
     "type": "sports"
   },
   {
+    "name": "Welcome to PlayZ TV",
+    "url": "https://playztv.pages.dev/promo/master.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "FIFA+",
     "url": "https://4397879b.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWRlX0ZJRkFQbHVzR2VybWFuX0hMUw/playlist.m3u8",
     "type": "sports"
@@ -28,6 +33,11 @@
     "name": "Willow TV",
     "url": "https://tvsen5.aynaott.com/willowhd/index.m3u8?e=1784102512&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=7058af1b60fb3bcfd7f687bf5b7866aa",
     "type": "bd,sports"
+  },
+  {
+    "name": "A sports",
+    "url": "https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/index.m3u8?e=1784102512&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=968935df4fd0678de5d7fe392c0610d9",
+    "type": "sports"
   },
   {
     "name": "Sports First TV",
@@ -245,11 +255,6 @@
     "type": "bd"
   },
   {
-    "name": "Channel 9",
-    "url": "https://tvsen6.aynaott.com/kajlsd57jnkdf/index.m3u8?e=1784102566&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=de9d33cfd8daf9a7f2e56a88534d0548",
-    "type": "bd"
-  },
-  {
     "name": "Duronto TV",
     "url": "https://tvsen5.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.fmp4.m3u8?token=26849003e1fe1bed0b0c40f6d3be853eb9a2b4f7-6a6a5971089a426fc1829aad7d929e8a-1784095967-1784095067&remote=no_check_ip",
     "type": "bd"
@@ -380,6 +385,11 @@
     "type": "bd"
   },
   {
+    "name": "Khushboo",
+    "url": "https://tvsen6.aynaott.com/mzwbzfZ4/index.m3u8?e=1784102631&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=98108f8c82a0dc91e30e52fe77713a09",
+    "type": "bd"
+  },
+  {
     "name": "Republic Bangla",
     "url": "https://tvsen5.aynaott.com/qRHda6ax/index.m3u8?e=1784102632&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=f74b592fbf23b79d3f770baf76fefd5d",
     "type": "bd"
@@ -460,8 +470,13 @@
     "type": "bd,sports"
   },
   {
-    "name": "BTV Chattogram",
-    "url": "https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8",
+    "name": "ATN News",
+    "url": "https://tvsen6.aynaott.com/da6WMXAk/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Ananda TV",
+    "url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8",
     "type": "bd"
   },
   {
@@ -470,8 +485,13 @@
     "type": "bd"
   },
   {
-    "name": "ATN News",
-    "url": "https://tvsen6.aynaott.com/da6WMXAk/index.m3u8",
+    "name": "BTV Chattogram",
+    "url": "https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "CTVN AKD Plus",
+    "url": "https://live.legitpro.co.in/ctvnakdplus/index.m3u8",
     "type": "bd"
   },
   {
@@ -480,18 +500,13 @@
     "type": "bd"
   },
   {
+    "name": "Sony 8",
+    "url": "https://stream.ottplus.live/live/sony_aath_abr/index.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Desh TV",
     "url": "https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Channel 9",
-    "url": "https://tvsen6.aynaott.com/kajlsd57jnkdf/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Ekhon TV",
-    "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
     "type": "bd"
   },
   {
@@ -505,13 +520,8 @@
     "type": "bd"
   },
   {
-    "name": "RTV",
-    "url": "http://tvsen5.aynascope.net/RtvHD/tracks-v1a1/mono.ts.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "NTV",
-    "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8",
+    "name": "Bijoy TV",
+    "url": "https://stream.ottplus.live/live/bijoy_tv_abr/live/bijoy_tv_720/chunks.m3u8",
     "type": "bd"
   },
   {
@@ -520,13 +530,8 @@
     "type": "sports"
   },
   {
-    "name": "Global TV",
-    "url": "https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "My TV",
-    "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
+    "name": "Ekhon TV",
+    "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
     "type": "bd"
   },
   {
@@ -540,14 +545,34 @@
     "type": "sports"
   },
   {
+    "name": "RTV",
+    "url": "http://tvsen5.aynascope.net/RtvHD/tracks-v1a1/mono.ts.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Global TV",
+    "url": "https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "News 21",
+    "url": "http://103.190.133.68:1935/news21live/live/chunklist_w54225199.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "NTV",
+    "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Trace Sport",
     "url": "https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8",
     "type": "sports"
   },
   {
-    "name": "Star Sports 1 Hindi",
-    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
-    "type": "sports"
+    "name": "Channel 1",
+    "url": "https://stream.ottplus.live/live/channel_1_hd_abr/live/channel_1_hd_720/chunks.m3u8",
+    "type": "bd"
   },
   {
     "name": "SA TV",
@@ -555,18 +580,28 @@
     "type": "bd"
   },
   {
+    "name": "Star Sports 1 Hindi",
+    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Willow",
     "url": "https://tvsen5.aynaott.com/willowhd/tracks-v1a1/mono.ts.m3u8",
     "type": "sports"
   },
   {
-    "name": "Doraemon",
-    "url": "https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8",
-    "type": "bd"
+    "name": "Sony Sports 2",
+    "url": "https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/chunks.m3u8",
+    "type": "sports"
   },
   {
-    "name": "Aamar Bangla",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8",
+    "name": "Euro Sports",
+    "url": "https://stream.ottplus.bd/live/euro_sports_hd_abr/live/euro_sports_hd/chunks.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Doraemon",
+    "url": "https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8",
     "type": "bd"
   },
   {
@@ -666,7 +701,7 @@
   },
   {
     "name": "Zee Bangla",
-    "url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8",
+    "url": "http://103.165.93.31:8095/zeeBangla/index.m3u8",
     "type": "bd"
   },
   {
