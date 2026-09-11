@@ -20,6 +20,11 @@
     "type": "sports"
   },
   {
+    "name": "Welcome to PlayZ TV",
+    "url": "https://playztv.pages.dev/promo/master.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "FIFA+",
     "url": "https://4397879b.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWRlX0ZJRkFQbHVzR2VybWFuX0hMUw/playlist.m3u8",
     "type": "sports"
@@ -135,6 +140,11 @@
     "type": "bd"
   },
   {
+    "name": "Independent TV",
+    "url": "https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=faa76e200f238010e464d45a3135f138",
+    "type": "bd"
+  },
+  {
     "name": "DW News",
     "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8",
     "type": "bd"
@@ -170,8 +180,18 @@
     "type": "bd"
   },
   {
+    "name": "Republic TV Bharat",
+    "url": "https://tvsen6.aynaott.com/faGd3tuq/index.m3u8?e=1784102553&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=8133079644fb0609090a409e519aaa73",
+    "type": "bd"
+  },
+  {
     "name": "India Today",
     "url": "https://feeds.intoday.in/hltapps/api/master.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Sadhna Prime News",
+    "url": "https://tvsen6.aynaott.com/WZUs6gAU/index.m3u8?e=1784102556&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=49ac20f3ecb8e9577b16afd7195615fa",
     "type": "bd"
   },
   {
@@ -345,6 +365,11 @@
     "type": "bd"
   },
   {
+    "name": "Sangeet Bangla",
+    "url": "https://tvsen6.aynaott.com/hT5jHczt/index.m3u8?e=1784102630&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=36c90e8e5a1cee8374378d93fb7c4971",
+    "type": "bd"
+  },
+  {
     "name": "TV9 Bangla",
     "url": "https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9banaen8yq/liveabr/playlist.m3u8",
     "type": "bd"
@@ -420,8 +445,13 @@
     "type": "bd,sports"
   },
   {
-    "name": "Ananda TV",
-    "url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8",
+    "name": "Sony 8",
+    "url": "https://stream.ottplus.live/live/sony_aath_abr/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Boishakhi TV",
+    "url": "https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8",
     "type": "bd"
   },
   {
@@ -430,8 +460,8 @@
     "type": "bd"
   },
   {
-    "name": "Sony 8",
-    "url": "https://stream.ottplus.live/live/sony_aath_abr/index.m3u8",
+    "name": "Ananda TV",
+    "url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8",
     "type": "bd"
   },
   {
@@ -440,8 +470,13 @@
     "type": "bd"
   },
   {
-    "name": "Boishakhi TV",
-    "url": "https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8",
+    "name": "Ekhon TV",
+    "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Ekattor TV",
+    "url": "https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8",
     "type": "bd"
   },
   {
@@ -455,13 +490,8 @@
     "type": "bd"
   },
   {
-    "name": "Ekattor TV",
-    "url": "https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Ekhon TV",
-    "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
+    "name": "Ekushe ETV",
+    "url": "https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8",
     "type": "bd"
   },
   {
@@ -470,8 +500,8 @@
     "type": "sports"
   },
   {
-    "name": "Ekushe ETV",
-    "url": "https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8",
+    "name": "NTV",
+    "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8",
     "type": "bd"
   },
   {
@@ -480,13 +510,18 @@
     "type": "bd"
   },
   {
-    "name": "My TV",
-    "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
+    "name": "Horse & Country",
+    "url": "https://hncfree-samsungau.amagi.tv/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "CTVN AKD Plus",
+    "url": "https://live.legitpro.co.in/ctvnakdplus/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "NTV",
-    "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8",
+    "name": "Bijoy TV",
+    "url": "https://stream.ottplus.live/live/bijoy_tv_abr/live/bijoy_tv_720/chunks.m3u8",
     "type": "bd"
   },
   {
@@ -495,18 +530,13 @@
     "type": "bd"
   },
   {
-    "name": "MTRSPT",
-    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Bijoy TV",
-    "url": "https://stream.ottplus.live/live/bijoy_tv_abr/live/bijoy_tv_720/chunks.m3u8",
+    "name": "My TV",
+    "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "Horse & Country",
-    "url": "https://hncfree-samsungau.amagi.tv/playlist.m3u8",
+    "name": "Star Sports 1 Hindi",
+    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
     "type": "sports"
   },
   {
@@ -515,8 +545,8 @@
     "type": "bd"
   },
   {
-    "name": "Willow",
-    "url": "https://tvsen5.aynaott.com/willowhd/tracks-v1a1/mono.ts.m3u8",
+    "name": "A Sports",
+    "url": "https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/index.m3u8",
     "type": "sports"
   },
   {
@@ -525,23 +555,18 @@
     "type": "sports"
   },
   {
-    "name": "Mohona TV",
-    "url": "https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "A Sports",
-    "url": "https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Sony Sports 2",
-    "url": "https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/chunks.m3u8",
+    "name": "Willow",
+    "url": "https://tvsen5.aynaott.com/willowhd/tracks-v1a1/mono.ts.m3u8",
     "type": "sports"
   },
   {
     "name": "Sony Sports 5",
     "url": "https://stream.ottplus.live/live/ten_5_hd_abr/live/ten_5_hd_720/chunks.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Sony Sports 2",
+    "url": "https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/chunks.m3u8",
     "type": "sports"
   },
   {
