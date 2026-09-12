@@ -180,6 +180,11 @@
     "type": "bd"
   },
   {
+    "name": "Republic TV Bharat",
+    "url": "https://tvsen6.aynaott.com/faGd3tuq/index.m3u8?e=1784102553&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=8133079644fb0609090a409e519aaa73",
+    "type": "bd"
+  },
+  {
     "name": "India Today",
     "url": "https://feeds.intoday.in/hltapps/api/master.m3u8",
     "type": "bd"
@@ -370,11 +375,6 @@
     "type": "bd"
   },
   {
-    "name": "Khushboo",
-    "url": "https://tvsen6.aynaott.com/mzwbzfZ4/index.m3u8?e=1784102631&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=98108f8c82a0dc91e30e52fe77713a09",
-    "type": "bd"
-  },
-  {
     "name": "TV9 Bangla",
     "url": "https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9banaen8yq/liveabr/playlist.m3u8",
     "type": "bd"
@@ -420,6 +420,11 @@
     "type": "bd"
   },
   {
+    "name": "Relaks Radio",
+    "url": "http://stream.spicefmbd.com/stream.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Green TV",
     "url": "https://tvsen6.aynaott.com/cLuA3hJR/index.m3u8?e=1784102650&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=4611739ee78a2cc302c5eb6c7e0ec1d9",
     "type": "bd"
@@ -445,11 +450,6 @@
     "type": "bd,sports"
   },
   {
-    "name": "Sony 8",
-    "url": "https://stream.ottplus.live/live/sony_aath_abr/index.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Ananda TV",
     "url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8",
     "type": "bd"
@@ -457,6 +457,11 @@
   {
     "name": "ATN News",
     "url": "https://tvsen6.aynaott.com/da6WMXAk/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Sony 8",
+    "url": "https://stream.ottplus.live/live/sony_aath_abr/index.m3u8",
     "type": "bd"
   },
   {
@@ -470,6 +475,21 @@
     "type": "bd"
   },
   {
+    "name": "Ekattor TV",
+    "url": "https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Ekhon TV",
+    "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Bein Sports Extra 2",
+    "url": "https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Ekushe ETV",
     "url": "https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8",
     "type": "bd"
@@ -480,43 +500,13 @@
     "type": "bd"
   },
   {
-    "name": "Ekattor TV",
-    "url": "https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Bijoy TV",
     "url": "https://stream.ottplus.live/live/bijoy_tv_abr/live/bijoy_tv_720/chunks.m3u8",
     "type": "bd"
   },
   {
-    "name": "RTV",
-    "url": "http://tvsen5.aynascope.net/RtvHD/tracks-v1a1/mono.ts.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Bein Sports Extra 2",
-    "url": "https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "MTRSPT",
-    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "Ekhon TV",
-    "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "My TV",
-    "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "NTV",
-    "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8",
+    "name": "CTVN AKD Plus",
+    "url": "https://live.legitpro.co.in/ctvnakdplus/index.m3u8",
     "type": "bd"
   },
   {
@@ -525,9 +515,14 @@
     "type": "sports"
   },
   {
-    "name": "Trace Sport",
-    "url": "https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8",
+    "name": "MTRSPT",
+    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
     "type": "sports"
+  },
+  {
+    "name": "RTV",
+    "url": "http://tvsen5.aynascope.net/RtvHD/tracks-v1a1/mono.ts.m3u8",
+    "type": "bd"
   },
   {
     "name": "SA TV",
@@ -535,24 +530,29 @@
     "type": "bd"
   },
   {
+    "name": "A Sports",
+    "url": "https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/index.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Willow",
     "url": "https://tvsen5.aynaott.com/willowhd/tracks-v1a1/mono.ts.m3u8",
     "type": "sports"
   },
   {
-    "name": "A Sports",
-    "url": "https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/index.m3u8",
+    "name": "Trace Sport",
+    "url": "https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Star Sports 1 Hindi",
+    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
     "type": "sports"
   },
   {
     "name": "Mohona TV",
     "url": "https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8",
     "type": "bd"
-  },
-  {
-    "name": "Cricket Gold",
-    "url": "https://tvsen6.aynaott.com/M2W2UR49dmeKbZnmdRzN/index.m3u8",
-    "type": "sports"
   },
   {
     "name": "Sony Sports 2",
@@ -602,6 +602,11 @@
   {
     "name": "Duronto TV",
     "url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Ekushey TV",
+    "url": "https://ekusheyserver.com/etvlivesn.m3u8",
     "type": "bd"
   },
   {
