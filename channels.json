@@ -10,16 +10,6 @@
     "type": "bd"
   },
   {
-    "name": "T Sports",
-    "url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "T Sports",
-    "url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/tracks-v1a1/mono.ts.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Welcome to PlayZ TV",
     "url": "https://playztv.pages.dev/promo/master.m3u8",
     "type": "sports"
@@ -112,6 +102,11 @@
   {
     "name": "News 24 BD",
     "url": "https://tvsen6.aynaott.com/cdgr3tw6WoG7JyRnLbi0/index.m3u8?e=1784102534&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ff40b53535a0e90b724ac25ff41c590c",
+    "type": "bd"
+  },
+  {
+    "name": "Independent TV",
+    "url": "https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=faa76e200f238010e464d45a3135f138",
     "type": "bd"
   },
   {
@@ -275,8 +270,8 @@
     "type": "bd"
   },
   {
-    "name": "Thikana",
-    "url": "https://5dd3981940faa.streamlock.net:443/thikanatv/thikanatv/playlist.m3u8",
+    "name": "Green TV",
+    "url": "https://tvsen6.aynaott.com/cLuA3hJR/index.m3u8?e=1784102578&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=57bcdefd396bd85d72461ff29cbde00d",
     "type": "bd"
   },
   {
@@ -287,6 +282,11 @@
   {
     "name": "Sony ATTH",
     "url": "https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Shemaroo TV",
+    "url": "https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=1784102595&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=2347b8a1b6f0ba558b12440528ea38a5",
     "type": "bd"
   },
   {
@@ -305,6 +305,11 @@
     "type": "bd"
   },
   {
+    "name": "Sangeet Bangla",
+    "url": "https://tvsen6.aynaott.com/hT5jHczt/index.m3u8?e=1784102630&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=36c90e8e5a1cee8374378d93fb7c4971",
+    "type": "bd"
+  },
+  {
     "name": "Khushboo",
     "url": "https://tvsen6.aynaott.com/mzwbzfZ4/index.m3u8?e=1784102631&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=98108f8c82a0dc91e30e52fe77713a09",
     "type": "bd"
@@ -312,11 +317,6 @@
   {
     "name": "TV9 Bangla",
     "url": "https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9banaen8yq/liveabr/playlist.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Zee 24 Ghanta",
-    "url": "https://tvsen6.aynaott.com/DpPnXP9r/index.m3u8?e=1784102633&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=4dfe1eedcd3d06e8d4e5f73751abcf2a",
     "type": "bd"
   },
   {
@@ -350,8 +350,18 @@
     "type": "bd"
   },
   {
+    "name": "Radio Bangladesh CO",
+    "url": "http://radiobangladesh.co.uk:8000/live",
+    "type": "bd"
+  },
+  {
     "name": "Relaks Radio",
     "url": "http://stream.spicefmbd.com/stream.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Green TV",
+    "url": "https://tvsen6.aynaott.com/cLuA3hJR/index.m3u8?e=1784102650&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=4611739ee78a2cc302c5eb6c7e0ec1d9",
     "type": "bd"
   },
   {
@@ -562,11 +572,6 @@
   {
     "name": "Movie Bangla",
     "url": "http://alvetv.com/moviebanglatv/8080/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "My TV",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8",
     "type": "bd"
   },
   {
