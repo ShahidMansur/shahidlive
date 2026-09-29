@@ -135,6 +135,11 @@
     "type": "bd"
   },
   {
+    "name": "AccuWeather",
+    "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00684-accuweather-accuweather-plex/playlist.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Weather SPY",
     "url": "https://jukin-weatherspy-2-in.samsung.wurl.tv/playlist.m3u8",
     "type": "bd"
@@ -300,11 +305,6 @@
     "type": "bd"
   },
   {
-    "name": "Shemaroo TV",
-    "url": "https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=1784102595&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=2347b8a1b6f0ba558b12440528ea38a5",
-    "type": "bd"
-  },
-  {
     "name": "Adventure Earth",
     "url": "https://autentic-adventure-earth-1-eu.rakuten.wurl.tv/playlist.m3u8",
     "type": "bd"
@@ -322,11 +322,6 @@
   {
     "name": "Sangeet Bangla",
     "url": "https://tvsen6.aynaott.com/hT5jHczt/index.m3u8?e=1784102630&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=36c90e8e5a1cee8374378d93fb7c4971",
-    "type": "bd"
-  },
-  {
-    "name": "Khushboo",
-    "url": "https://tvsen6.aynaott.com/mzwbzfZ4/index.m3u8?e=1784102631&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=98108f8c82a0dc91e30e52fe77713a09",
     "type": "bd"
   },
   {
@@ -445,6 +440,11 @@
     "type": "sports"
   },
   {
+    "name": "Sony 8",
+    "url": "https://stream.ottplus.live/live/sony_aath_abr/index.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Ekhon TV",
     "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
     "type": "bd"
@@ -535,11 +535,6 @@
     "type": "bd"
   },
   {
-    "name": "ATN Music",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Bangla Vision",
     "url": "https://tvsen5.aynaott.com/banglavision/index.m3u8",
     "type": "bd"
@@ -557,6 +552,11 @@
   {
     "name": "Duronto TV",
     "url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Ekushey TV",
+    "url": "https://ekusheyserver.com/etvlivesn.m3u8",
     "type": "bd"
   },
   {
@@ -595,11 +595,6 @@
     "type": "bd"
   },
   {
-    "name": "News 21 Bangla TV",
-    "url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Nexus TV",
     "url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8",
     "type": "bd"
@@ -612,11 +607,6 @@
   {
     "name": "Peace TV Bangla",
     "url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Rajdhani TV",
-    "url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8",
     "type": "bd"
   },
   {
