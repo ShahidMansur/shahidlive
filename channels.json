@@ -105,6 +105,11 @@
     "type": "bd"
   },
   {
+    "name": "Independent TV",
+    "url": "https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=faa76e200f238010e464d45a3135f138",
+    "type": "bd"
+  },
+  {
     "name": "DW News",
     "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8",
     "type": "bd"
@@ -132,6 +137,11 @@
   {
     "name": "India Today",
     "url": "https://feeds.intoday.in/hltapps/api/master.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Sadhna Prime News",
+    "url": "https://tvsen6.aynaott.com/WZUs6gAU/index.m3u8?e=1784102556&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=49ac20f3ecb8e9577b16afd7195615fa",
     "type": "bd"
   },
   {
@@ -478,11 +488,6 @@
     "name": "Mohona TV",
     "url": "https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8",
     "type": "bd"
-  },
-  {
-    "name": "Sony Sports 2",
-    "url": "https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/chunks.m3u8",
-    "type": "sports"
   },
   {
     "name": "Doraemon",
