@@ -1,10 +1,5 @@
 [
   {
-    "name": "157.Bein Sports Xtra",
-    "url": "https://chostv.mobie.in/choos/sports/beinxtra.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "Deshe Bideshe",
     "url": "https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8",
     "type": "bd"
@@ -115,11 +110,6 @@
     "type": "bd"
   },
   {
-    "name": "NHK World",
-    "url": "https://tvsen6.aynaott.com/xfJ3PuYS/index.m3u8?e=1784102545&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=dbc117649b51bf27bb2048647c01a038",
-    "type": "bd"
-  },
-  {
     "name": "ABN",
     "url": "https://mediaserver.abnvideos.com/streams/abnurdu.m3u8",
     "type": "bd"
@@ -142,11 +132,6 @@
   {
     "name": "India Today",
     "url": "https://feeds.intoday.in/hltapps/api/master.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Sadhna Prime News",
-    "url": "https://tvsen6.aynaott.com/WZUs6gAU/index.m3u8?e=1784102556&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=49ac20f3ecb8e9577b16afd7195615fa",
     "type": "bd"
   },
   {
@@ -265,8 +250,8 @@
     "type": "bd"
   },
   {
-    "name": "Channel S",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8",
+    "name": "Green TV",
+    "url": "https://tvsen6.aynaott.com/cLuA3hJR/index.m3u8?e=1784102578&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=57bcdefd396bd85d72461ff29cbde00d",
     "type": "bd"
   },
   {
@@ -302,6 +287,16 @@
   {
     "name": "Wild TV",
     "url": "https://dfhsahpa45kk2.cloudfront.net/scheduler/scheduleMaster/476.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Sangeet Bangla",
+    "url": "https://tvsen6.aynaott.com/hT5jHczt/index.m3u8?e=1784102630&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=36c90e8e5a1cee8374378d93fb7c4971",
+    "type": "bd"
+  },
+  {
+    "name": "Khushboo",
+    "url": "https://tvsen6.aynaott.com/mzwbzfZ4/index.m3u8?e=1784102631&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=98108f8c82a0dc91e30e52fe77713a09",
     "type": "bd"
   },
   {
