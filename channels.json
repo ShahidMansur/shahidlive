@@ -320,6 +320,11 @@
     "type": "bd"
   },
   {
+    "name": "Shemaroo TV",
+    "url": "https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=1784102595&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=2347b8a1b6f0ba558b12440528ea38a5",
+    "type": "bd"
+  },
+  {
     "name": "Adventure Earth",
     "url": "https://autentic-adventure-earth-1-eu.rakuten.wurl.tv/playlist.m3u8",
     "type": "bd"
@@ -342,6 +347,11 @@
   {
     "name": "Food Network",
     "url": "https://tvsen6.aynaott.com/foodnetwork/index.m3u8?e=1784102622&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=dabd0667017770543635be4bb1f63c22",
+    "type": "bd"
+  },
+  {
+    "name": "Sangeet Bangla",
+    "url": "https://tvsen6.aynaott.com/hT5jHczt/index.m3u8?e=1784102630&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=36c90e8e5a1cee8374378d93fb7c4971",
     "type": "bd"
   },
   {
@@ -380,6 +390,11 @@
     "type": "bd"
   },
   {
+    "name": "Zee Bangla Sonar",
+    "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Radio Bangladesh CO",
     "url": "http://radiobangladesh.co.uk:8000/live",
     "type": "bd"
@@ -415,28 +430,13 @@
     "type": "bd,sports"
   },
   {
-    "name": "Ananda TV",
-    "url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "ATN News",
     "url": "https://tvsen6.aynaott.com/da6WMXAk/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "BTV Chattogram",
-    "url": "https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Ekattor TV",
-    "url": "https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Channel I",
-    "url": "https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8",
+    "name": "Ananda TV",
+    "url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8",
     "type": "bd"
   },
   {
@@ -445,9 +445,24 @@
     "type": "bd"
   },
   {
+    "name": "BTV Chattogram",
+    "url": "https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Bein Sports Extra 2",
     "url": "https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8",
     "type": "sports"
+  },
+  {
+    "name": "Channel I",
+    "url": "https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Ekattor TV",
+    "url": "https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8",
+    "type": "bd"
   },
   {
     "name": "Ekhon TV",
@@ -465,8 +480,8 @@
     "type": "bd"
   },
   {
-    "name": "Horse & Country",
-    "url": "https://hncfree-samsungau.amagi.tv/playlist.m3u8",
+    "name": "MTRSPT",
+    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -480,6 +495,11 @@
     "type": "bd"
   },
   {
+    "name": "Horse & Country",
+    "url": "https://hncfree-samsungau.amagi.tv/playlist.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Willow Extra",
     "url": "http://27.124.71.27/Willow_Extra/index.m3u8",
     "type": "sports"
@@ -490,23 +510,18 @@
     "type": "sports"
   },
   {
-    "name": "MTRSPT",
-    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
-    "type": "sports"
-  },
-  {
     "name": "NTV",
     "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8",
     "type": "bd"
   },
   {
-    "name": "SA TV",
-    "url": "https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8",
+    "name": "My TV",
+    "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "My TV",
-    "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
+    "name": "SA TV",
+    "url": "https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8",
     "type": "bd"
   },
   {
@@ -535,6 +550,11 @@
     "type": "bd"
   },
   {
+    "name": "ATN Music",
+    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Bangla Vision",
     "url": "https://tvsen5.aynaott.com/banglavision/index.m3u8",
     "type": "bd"
@@ -542,11 +562,6 @@
   {
     "name": "Boishakhi TV",
     "url": "https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Channel S",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8",
     "type": "bd"
   },
   {
@@ -575,6 +590,11 @@
     "type": "bd"
   },
   {
+    "name": "Matribhumi TV",
+    "url": "http://live.playmax.live/matribhumi/index.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Movie Bangla",
     "url": "http://alvetv.com/moviebanglatv/8080/index.m3u8",
     "type": "bd"
@@ -582,6 +602,11 @@
   {
     "name": "My TV",
     "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "NAN TV",
+    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8",
     "type": "bd"
   },
   {
@@ -605,18 +630,8 @@
     "type": "bd"
   },
   {
-    "name": "Rajdhani TV",
-    "url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "RTV",
     "url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Rupashi Bangla TV",
-    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8",
     "type": "bd"
   },
   {
