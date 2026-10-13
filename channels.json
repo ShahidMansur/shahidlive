@@ -130,18 +130,8 @@
     "type": "bd"
   },
   {
-    "name": "Independent TV",
-    "url": "https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=faa76e200f238010e464d45a3135f138",
-    "type": "bd"
-  },
-  {
     "name": "DW News",
     "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "NHK World",
-    "url": "https://tvsen6.aynaott.com/xfJ3PuYS/index.m3u8?e=1784102545&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=dbc117649b51bf27bb2048647c01a038",
     "type": "bd"
   },
   {
@@ -460,8 +450,8 @@
     "type": "bd"
   },
   {
-    "name": "Boishakhi TV",
-    "url": "https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8",
+    "name": "Channel I",
+    "url": "https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8",
     "type": "bd"
   },
   {
@@ -470,8 +460,8 @@
     "type": "bd"
   },
   {
-    "name": "Channel I",
-    "url": "https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8",
+    "name": "Boishakhi TV",
+    "url": "https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8",
     "type": "bd"
   },
   {
@@ -485,13 +475,13 @@
     "type": "bd"
   },
   {
-    "name": "Ekhon TV",
-    "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
+    "name": "Desh TV",
+    "url": "https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "Desh TV",
-    "url": "https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8",
+    "name": "Ekhon TV",
+    "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
     "type": "bd"
   },
   {
@@ -500,9 +490,9 @@
     "type": "bd"
   },
   {
-    "name": "MTRSPT",
-    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
-    "type": "sports"
+    "name": "Global TV",
+    "url": "https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8",
+    "type": "bd"
   },
   {
     "name": "RTV",
@@ -510,18 +500,8 @@
     "type": "bd"
   },
   {
-    "name": "Global TV",
-    "url": "https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "NTV",
-    "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Willow Extra",
-    "url": "http://27.124.71.27/Willow_Extra/index.m3u8",
+    "name": "MTRSPT",
+    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
     "type": "sports"
   },
   {
@@ -530,9 +510,19 @@
     "type": "sports"
   },
   {
+    "name": "NTV",
+    "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "My TV",
     "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
     "type": "bd"
+  },
+  {
+    "name": "Willow Extra",
+    "url": "http://27.124.71.27/Willow_Extra/index.m3u8",
+    "type": "sports"
   },
   {
     "name": "SA TV",
@@ -570,6 +560,11 @@
     "type": "bd"
   },
   {
+    "name": "ATN Music",
+    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Bangla Vision",
     "url": "https://tvsen5.aynaott.com/banglavision/index.m3u8",
     "type": "bd"
@@ -587,6 +582,11 @@
   {
     "name": "Duronto TV",
     "url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Ekushey TV",
+    "url": "https://ekusheyserver.com/etvlivesn.m3u8",
     "type": "bd"
   },
   {
@@ -617,11 +617,6 @@
   {
     "name": "My TV",
     "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "NAN TV",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8",
     "type": "bd"
   },
   {
@@ -657,6 +652,11 @@
   {
     "name": "Zee Bangla",
     "url": "http://103.151.60.162:2122/play/a011/index.m3u8?hls",
+    "type": "bd"
+  },
+  {
+    "name": "Zee Bangla",
+    "url": "http://103.151.60.162:2122/play/a02p/index.m3u8?hls",
     "type": "bd"
   },
   {
