@@ -130,6 +130,11 @@
     "type": "bd"
   },
   {
+    "name": "Independent TV",
+    "url": "https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8?e=1784102536&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=faa76e200f238010e464d45a3135f138",
+    "type": "bd"
+  },
+  {
     "name": "DW News",
     "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8",
     "type": "bd"
@@ -152,6 +157,11 @@
   {
     "name": "Weather SPY",
     "url": "https://jukin-weatherspy-2-in.samsung.wurl.tv/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Republic TV Bharat",
+    "url": "https://tvsen6.aynaott.com/faGd3tuq/index.m3u8?e=1784102553&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=8133079644fb0609090a409e519aaa73",
     "type": "bd"
   },
   {
@@ -197,11 +207,6 @@
   {
     "name": "Maasranga TV",
     "url": "https://tvsen5.aynaott.com/maasrangatv/index.m3u8?e=1784102562&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=2044540ee613d44b1175f2885b2ab1ee",
-    "type": "bd"
-  },
-  {
-    "name": "Deepto TV",
-    "url": "https://tvsen5.aynaott.com/tK2BNdfsdfsdf/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=89a6bfdee0a7ecb358080b2c44f18b41",
     "type": "bd"
   },
   {
@@ -310,11 +315,6 @@
     "type": "bd"
   },
   {
-    "name": "Shemaroo TV",
-    "url": "https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=1784102595&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=2347b8a1b6f0ba558b12440528ea38a5",
-    "type": "bd"
-  },
-  {
     "name": "Adventure Earth",
     "url": "https://autentic-adventure-earth-1-eu.rakuten.wurl.tv/playlist.m3u8",
     "type": "bd"
@@ -337,6 +337,11 @@
   {
     "name": "Food Network",
     "url": "https://tvsen6.aynaott.com/foodnetwork/index.m3u8?e=1784102622&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=dabd0667017770543635be4bb1f63c22",
+    "type": "bd"
+  },
+  {
+    "name": "Sangeet Bangla",
+    "url": "https://tvsen6.aynaott.com/hT5jHczt/index.m3u8?e=1784102630&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=36c90e8e5a1cee8374378d93fb7c4971",
     "type": "bd"
   },
   {
@@ -415,9 +420,9 @@
     "type": "bd"
   },
   {
-    "name": "Bein Sports Extra 2",
-    "url": "https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8",
-    "type": "sports"
+    "name": "Ananda TV",
+    "url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8",
+    "type": "bd"
   },
   {
     "name": "ATN News",
@@ -425,8 +430,13 @@
     "type": "bd"
   },
   {
-    "name": "Ananda TV",
-    "url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8",
+    "name": "Bein Sports Extra 2",
+    "url": "https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "BTV Chattogram",
+    "url": "https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8",
     "type": "bd"
   },
   {
@@ -435,23 +445,28 @@
     "type": "bd"
   },
   {
-    "name": "BTV Chattogram",
-    "url": "https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Channel I",
     "url": "https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "Ekhon TV",
-    "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
+    "name": "Ekattor TV",
+    "url": "https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "Ekattor TV",
-    "url": "https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8",
+    "name": "Horse & Country",
+    "url": "https://hncfree-samsungau.amagi.tv/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "MTRSPT",
+    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
+    "type": "sports"
+  },
+  {
+    "name": "Ekhon TV",
+    "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
     "type": "bd"
   },
   {
@@ -470,18 +485,13 @@
     "type": "bd"
   },
   {
-    "name": "MTRSPT",
-    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
+    "name": "Willow Extra",
+    "url": "http://27.124.71.27/Willow_Extra/index.m3u8",
     "type": "sports"
   },
   {
-    "name": "Horse & Country",
-    "url": "https://hncfree-samsungau.amagi.tv/playlist.m3u8",
-    "type": "sports"
-  },
-  {
-    "name": "RTV",
-    "url": "http://tvsen5.aynascope.net/RtvHD/tracks-v1a1/mono.ts.m3u8",
+    "name": "My TV",
+    "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
     "type": "bd"
   },
   {
@@ -493,16 +503,6 @@
     "name": "Trace Sport",
     "url": "https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8",
     "type": "sports"
-  },
-  {
-    "name": "My TV",
-    "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Sananda TV",
-    "url": "https://live.sanandatelevision.in/sananda/index.m3u8",
-    "type": "bd"
   },
   {
     "name": "SA TV",
@@ -520,18 +520,13 @@
     "type": "sports"
   },
   {
-    "name": "Willow Extra",
-    "url": "http://27.124.71.27/Willow_Extra/index.m3u8",
-    "type": "sports"
+    "name": "RTV",
+    "url": "http://tvsen5.aynascope.net/RtvHD/tracks-v1a1/mono.ts.m3u8",
+    "type": "bd"
   },
   {
     "name": "Doraemon",
     "url": "https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Aamar Bangla",
-    "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8",
     "type": "bd"
   },
   {
@@ -570,11 +565,6 @@
     "type": "bd"
   },
   {
-    "name": "Matribhumi TV",
-    "url": "http://live.playmax.live/matribhumi/index.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Movie Bangla",
     "url": "http://alvetv.com/moviebanglatv/8080/index.m3u8",
     "type": "bd"
@@ -602,11 +592,6 @@
   {
     "name": "NTV",
     "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "Peace TV Bangla",
-    "url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8",
     "type": "bd"
   },
   {
