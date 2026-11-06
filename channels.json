@@ -125,6 +125,11 @@
     "type": "sports"
   },
   {
+    "name": "Cricket Gold",
+    "url": "https://tvsen6.aynaott.com/M2W2UR49dmeKbZnmdRzN/index.m3u8?e=1784102529&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ae32567acc583949116a1ea5f4410044",
+    "type": "bd,sports"
+  },
+  {
     "name": "News 24 BD",
     "url": "https://tvsen6.aynaott.com/cdgr3tw6WoG7JyRnLbi0/index.m3u8?e=1784102534&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ff40b53535a0e90b724ac25ff41c590c",
     "type": "bd"
@@ -137,11 +142,6 @@
   {
     "name": "DW News",
     "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8",
-    "type": "bd"
-  },
-  {
-    "name": "NHK World",
-    "url": "https://tvsen6.aynaott.com/xfJ3PuYS/index.m3u8?e=1784102545&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=dbc117649b51bf27bb2048647c01a038",
     "type": "bd"
   },
   {
@@ -320,11 +320,6 @@
     "type": "bd"
   },
   {
-    "name": "Shemaroo TV",
-    "url": "https://tvsen6.aynaott.com/D3NDt6gn/index.m3u8?e=1784102595&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=2347b8a1b6f0ba558b12440528ea38a5",
-    "type": "bd"
-  },
-  {
     "name": "Adventure Earth",
     "url": "https://autentic-adventure-earth-1-eu.rakuten.wurl.tv/playlist.m3u8",
     "type": "bd"
@@ -385,11 +380,6 @@
     "type": "bd"
   },
   {
-    "name": "Radio Bangladesh CO",
-    "url": "http://radiobangladesh.co.uk:8000/live",
-    "type": "bd"
-  },
-  {
     "name": "Relaks Radio",
     "url": "http://stream.spicefmbd.com/stream.m3u8",
     "type": "bd"
@@ -440,11 +430,6 @@
     "type": "sports"
   },
   {
-    "name": "BTV Chattogram",
-    "url": "https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8",
-    "type": "bd"
-  },
-  {
     "name": "Boishakhi TV",
     "url": "https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8",
     "type": "bd"
@@ -455,9 +440,9 @@
     "type": "bd"
   },
   {
-    "name": "MTRSPT",
-    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
-    "type": "sports"
+    "name": "BTV Chattogram",
+    "url": "https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8",
+    "type": "bd"
   },
   {
     "name": "Ekattor TV",
@@ -465,14 +450,24 @@
     "type": "bd"
   },
   {
+    "name": "MTRSPT",
+    "url": "https://amg02873-kravemedia-mtrspt1-sportstribal-ajosc.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-sportstribal/playlist.m3u8",
+    "type": "sports"
+  },
+  {
     "name": "Ekhon TV",
     "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8",
     "type": "bd"
   },
   {
-    "name": "Ekushe ETV",
-    "url": "https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8",
+    "name": "RTV",
+    "url": "http://tvsen5.aynascope.net/RtvHD/tracks-v1a1/mono.ts.m3u8",
     "type": "bd"
+  },
+  {
+    "name": "Horse & Country",
+    "url": "https://hncfree-samsungau.amagi.tv/playlist.m3u8",
+    "type": "sports"
   },
   {
     "name": "Desh TV",
@@ -485,14 +480,19 @@
     "type": "bd"
   },
   {
-    "name": "Horse & Country",
-    "url": "https://hncfree-samsungau.amagi.tv/playlist.m3u8",
-    "type": "sports"
+    "name": "Ekushe ETV",
+    "url": "https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8",
+    "type": "bd"
   },
   {
     "name": "Willow Extra",
     "url": "http://27.124.71.27/Willow_Extra/index.m3u8",
     "type": "sports"
+  },
+  {
+    "name": "My TV",
+    "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
+    "type": "bd"
   },
   {
     "name": "NTV",
@@ -503,11 +503,6 @@
     "name": "Trace Sport",
     "url": "https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8",
     "type": "sports"
-  },
-  {
-    "name": "My TV",
-    "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8",
-    "type": "bd"
   },
   {
     "name": "SA TV",
@@ -540,6 +535,11 @@
     "type": "bd"
   },
   {
+    "name": "ATN Bangla",
+    "url": "http://tvsen5.aynascope.net/atnbangla/index.m3u8",
+    "type": "bd"
+  },
+  {
     "name": "Bangla Vision",
     "url": "https://tvsen5.aynaott.com/banglavision/index.m3u8",
     "type": "bd"
@@ -557,6 +557,11 @@
   {
     "name": "Green TV",
     "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Maasranga TV",
+    "url": "http://tvsen5.aynascope.net/maasrangatv/index.m3u8",
     "type": "bd"
   },
   {
@@ -607,6 +612,16 @@
   {
     "name": "Rajdhani TV",
     "url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "RTV",
+    "url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8",
+    "type": "bd"
+  },
+  {
+    "name": "Rupashi Bangla TV",
+    "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8",
     "type": "bd"
   },
   {
